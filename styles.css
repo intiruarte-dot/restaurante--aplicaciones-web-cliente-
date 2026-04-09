@@ -1,0 +1,57 @@
+/* ============================================
+   ESTILOS PARA LA BARRA DE NAVEGACIÓN
+   TechComputers - Tienda de Computadoras
+   ============================================ */
+
+/* Reset básico para eliminar márgenes y padding por defecto del navegador */
+* {
+    margin: 0;          /* Elimina el margen exterior de todos los elementos */
+    padding: 0;         /* Elimina el relleno interior de todos los elementos */
+    box-sizing: border-box; /* Incluye padding y borde en el ancho/alto total */
+}
+
+/* Estilos para el header que contiene la barra de navegación */
+header {
+    background-color: #2c3e50;  /* Color de fondo oscuro (azul grisáceo) */
+    color: white;              /* Color del texto blanco */
+    padding: 20px;             /* Espacio interior de 20px en todos los lados */
+}
+
+/* Estilos para el contenedor flex del header (título + navegación) */
+header {
+    display: flex;             /* Activa flexbox para organizar elementos en línea */
+    justify-content: space-between; /* Distribuye espacio entre elementos (título a izquierda, nav a derecha) */
+    align-items: center;      /* Centra verticalmente los elementos */
+}
+
+/* Estilos para el título principal del sitio */
+header h1 {
+    font-size: 28px;           /* Tamaño de fuente de 28 píxeles */
+}
+
+/* Estilos para la barra de navegación */
+nav ul {
+    list-style: none;          /* Elimina los puntos de lista por defecto */
+    display: flex;             /* Organiza los elementos de lista en una fila horizontal */
+    gap: 30px;                 /* Espacio de 30px entre cada elemento de menú */
+}
+
+/* Estilos para los enlaces de navegación */
+nav ul li a {
+    color: white;              /* Color del texto del enlace en blanco */
+    text-decoration: none;    /* Elimina el subrayado de los enlaces */
+    font-size: 16px;           /* Tamaño de fuente de 16 píxeles */
+    padding: 10px 15px;        /* Espacio interior para crear área clickeable */
+    border-radius: 5px;        /* Esquinas redondeadas de 5px */
+    transition: background-color 0.3s; /* Animación suave al cambiar el fondo */
+}
+
+/* Estilos para enlaces al pasar el mouse por encima */
+nav ul li a:hover {
+    background-color: #34495e;  /* Color de fondo más claro al hacer hover */
+}
+
+/* Estilos para el enlace activo (página actual) */
+nav ul li a.active {
+    background-color: #3498db;  /* Color azul para indicar la página activa */
+}
