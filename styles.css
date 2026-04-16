@@ -55,3 +55,141 @@ nav ul li a:hover {
 nav ul li a.active {
     background-color: #3498db;  /* Color azul para indicar la página activa */
 }
+
+/* ============================================
+   ESTILOS PARA LA SECCIÓN DE PRODUCTOS
+   ============================================ */
+
+/* Estilos para la sección de productos */
+#productos {
+    padding: 40px 20px;          /* Espacio interior: 40px arriba/abajo, 20px laterales */
+    background-color: #f5f6fa;    /* Fondo gris claro para la sección */
+}
+
+/* Estilos para el título de la sección */
+#productos h2 {
+    text-align: center;           /* Centra el texto del título */
+    margin-bottom: 40px;          /* Espacio debajo del título */
+    font-size: 32px;              /* Tamaño de fuente grande */
+    color: #2c3e50;               /* Color del texto oscuro */
+}
+
+/* Contenedor flex para organizar las cajas de productos en fila */
+.productos-container {
+    display: flex;                /* Activa flexbox para organizar en línea */
+    flex-wrap: wrap;              /* Permite que los productos salten a siguiente línea si no caben */
+    justify-content: center;      /* Centra los productos horizontalmente */
+    gap: 30px;                    /* Espacio de 30px entre cada caja de producto */
+}
+
+/* Estilos para cada caja de producto */
+#productos article {
+    background-color: white;      /* Fondo blanco para la caja */
+    border: 1px solid #dcdde1;   /* Borde sólido gris claro de 1px */
+    border-radius: 10px;          /* Esquinas redondeadas de 10px */
+    padding: 25px;                /* Espacio interior de 25px */
+    width: 300px;                 /* Ancho fijo de 300px para cada caja */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra suave para dar profundidad */
+    transition: transform 0.3s, box-shadow 0.3s; /* Animación suave al hacer hover */
+    text-align: center;           /* Centra el texto dentro de la caja */
+}
+
+/* Efecto al pasar el mouse sobre la caja del producto */
+#productos article:hover {
+    transform: translateY(-5px);  /* Mueve la caja 5px hacia arriba */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Sombra más pronunciada al hover */
+}
+
+/* Estilos para el título del producto */
+#productos article h3 {
+    color: #2c3e50;               /* Color del título oscuro */
+    margin-bottom: 15px;          /* Espacio debajo del título */
+    font-size: 20px;              /* Tamaño de fuente del título */
+}
+
+/* Estilos para los párrafos de descripción y precio */
+#productos article p {
+    color: #7f8c8d;               /* Color gris para el texto */
+    margin-bottom: 10px;           /* Espacio entre párrafos */
+    font-size: 14px;              /* Tamaño de fuente del texto */
+}
+
+/* Estilos para el precio (más destacado) */
+#productos article p:last-of-type {
+    color: #27ae60;               /* Color verde para el precio */
+    font-size: 22px;              /* Fuente más grande para el precio */
+    font-weight: bold;            /* Texto en negrita */
+    margin-bottom: 20px;          /* Espacio debajo del precio */
+}
+
+/* Estilos para el botón de agregar al carrito */
+#productos article button {
+    background-color: #3498db;    /* Color azul de fondo */
+    color: white;                 /* Texto blanco */
+    border: none;                 /* Sin borde */
+    padding: 12px 30px;           /* Espacio interior: 12px arriba/abajo, 30px laterales */
+    border-radius: 5px;            /* Esquinas redondeadas */
+    font-size: 16px;              /* Tamaño de fuente */
+    cursor: pointer;              /* Cambia el cursor a mano al pasar por encima */
+    transition: background-color 0.3s; /* Animación suave al hacer hover */
+}
+
+/* Efecto al pasar el mouse sobre el botón */
+#productos article button:hover {
+    background-color: #2980b9;    /* Color azul más oscuro al hover */
+}
+
+/* ============================================
+   ESTILOS PARA LA SECCIÓN DE INICIO
+   ============================================ */
+
+/* Estilos para la sección de inicio */
+#inicio {
+    background: linear-gradient(135deg, #2c3e50 0%, #3498db 100%); /* Degradado de fondo azul oscuro a azul claro */
+    color: white;                      /* Texto blanco */
+    padding: 60px 20px;                /* Espacio interior amplio */
+    text-align: center;                /* Texto centrado */
+}
+
+/* Estilos para el título de inicio */
+#inicio h2 {
+    font-size: 42px;                   /* Fuente muy grande */
+    margin-bottom: 20px;               /* Espacio debajo del título */
+}
+
+/* Estilos para el párrafo de inicio */
+#inicio p {
+    font-size: 18px;                   /* Fuente de tamaño medio */
+    margin-bottom: 40px;               /* Espacio amplio debajo del párrafo */
+    opacity: 0.9;                       /* Texto ligeramente transparente */
+}
+
+/* Contenedor flex para las características */
+.features {
+    display: flex;                     /* Activa flexbox para organizar en fila */
+    justify-content: center;           /* Centra los elementos horizontalmente */
+    gap: 50px;                         /* Espacio de 50px entre cada característica */
+    flex-wrap: wrap;                   /* Permite saltar a siguiente línea si no caben */
+}
+
+/* Estilos para cada caja de característica */
+.feature {
+    background-color: rgba(255, 255, 255, 0.15); /* Fondo semi-transparente blanco */
+    padding: 30px;                     /* Espacio interior amplio */
+    border-radius: 10px;               /* Esquinas redondeadas */
+    width: 250px;                      /* Ancho fijo de 250px */
+    backdrop-filter: blur(5px);        /* Efecto de desenfoque detrás del elemento */
+}
+
+/* Estilos para el título de la característica */
+.feature h3 {
+    font-size: 20px;                   /* Tamaño de fuente del título */
+    margin-bottom: 10px;               /* Espacio debajo del título */
+}
+
+/* Estilos para el párrafo de la característica */
+.feature p {
+    font-size: 14px;                   /* Tamaño de fuente pequeño */
+    margin-bottom: 0;                  /* Sin margen inferior */
+    opacity: 0.9;                      /* Texto ligeramente transparente */
+}
