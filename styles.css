@@ -193,3 +193,209 @@ nav ul li a.active {
     margin-bottom: 0;                  /* Sin margen inferior */
     opacity: 0.9;                      /* Texto ligeramente transparente */
 }
+
+/* ============================================
+   ESTILOS PARA LA SECCIÓN NOSOTROS
+   ============================================ */
+
+/* Estilos para la sección nosotros */
+#nosotros {
+    padding: 60px 20px;                /* Espacio interior amplio: 60px arriba/abajo, 20px laterales */
+    background-color: white;            /* Fondo blanco */
+}
+
+/* Contenedor flex para organizar contenido e imagen lado a lado */
+.nosotros-contenido {
+    display: flex;                      /* Activa flexbox para organizar en línea */
+    align-items: center;                /* Centra verticalmente los elementos */
+    gap: 50px;                         /* Espacio de 50px entre texto e imagen */
+    max-width: 1200px;                  /* Ancho máximo del contenedor */
+    margin: 0 auto;                     /* Centra el contenedor horizontalmente */
+}
+
+/* Estilos para el texto de nosotros */
+.nosotros-texto {
+    flex: 1;                           /* Ocupa el espacio restante (1 parte) */
+}
+
+/* Estilos para el título de la sección */
+#nosotros h2 {
+    font-size: 36px;                   /* Tamaño de fuente grande */
+    color: #2c3e50;                    /* Color del título oscuro */
+    margin-bottom: 30px;                /* Espacio debajo del título */
+    text-align: center;                 /* Centra el texto */
+}
+
+/* Estilos para el párrafo de nosotros */
+.nosotros-texto p {
+    font-size: 16px;                   /* Tamaño de fuente medio */
+    color: #7f8c8d;                    /* Color gris para el texto */
+    line-height: 1.8;                   /* Altura de línea para mejor legibilidad */
+    margin-bottom: 15px;                /* Espacio entre párrafos */
+}
+
+/* Contenedor para la imagen de nosotros */
+.nosotros-imagen {
+    flex: 1;                           /* Ocupa el espacio restante (1 parte) */
+    background-color: #ecf0f1;         /* Fondo gris claro para el placeholder */
+    border-radius: 10px;               /* Esquinas redondeadas */
+    height: 300px;                     /* Altura fija de 300px */
+    display: flex;                     /* Activa flexbox */
+    align-items: center;               /* Centra verticalmente */
+    justify-content: center;           /* Centra horizontalmente */
+    color: #95a5a6;                    /* Color del texto placeholder */
+    font-size: 18px;                   /* Tamaño de fuente */
+}
+
+/* Contenedor flex para los valores/beneficios */
+.valores {
+    display: flex;                     /* Activa flexbox para organizar en fila */
+    justify-content: center;            /* Centra los elementos horizontalmente */
+    gap: 40px;                         /* Espacio de 40px entre cada valor */
+    margin-top: 50px;                   /* Espacio arriba del contenedor */
+    flex-wrap: wrap;                   /* Permite saltar a siguiente línea si no caben */
+}
+
+/* Estilos para cada caja de valor */
+.valor {
+    text-align: center;                /* Centra el texto */
+    width: 200px;                       /* Ancho fijo de 200px */
+}
+
+/* Estilos para el icono/emoji del valor */
+.valor-icon {
+    font-size: 40px;                   /* Tamaño grande del icono */
+    margin-bottom: 15px;                /* Espacio debajo del icono */
+}
+
+/* Estilos para el título del valor */
+.valor h3 {
+    font-size: 18px;                   /* Tamaño de fuente */
+    color: #2c3e50;                    /* Color del título oscuro */
+    margin-bottom: 10px;                /* Espacio debajo del título */
+}
+
+/* Estilos para el párrafo del valor */
+.valor p {
+    font-size: 14px;                   /* Tamaño de fuente pequeño */
+    color: #7f8c8d;                    /* Color gris */
+}
+
+/* ============================================
+   ESTILOS PARA LA SECCIÓN CONTACTO
+   ============================================ */
+
+/* Estilos para la sección contacto */
+#contacto {
+    padding: 60px 20px;                /* Espacio interior amplio */
+    background-color: #f5f6fa;          /* Fondo gris claro */
+}
+
+/* Estilos para el título de la sección */
+#contacto h2 {
+    font-size: 36px;                   /* Tamaño de fuente grande */
+    color: #2c3e50;                    /* Color del título oscuro */
+    margin-bottom: 40px;                /* Espacio debajo del título */
+    text-align: center;                 /* Centra el texto */
+}
+
+/* Contenedor flex para organizar formulario e información lado a lado */
+.contacto-contenido {
+    display: flex;                      /* Activa flexbox para organizar en línea */
+    gap: 50px;                         /* Espacio de 50px entre elementos */
+    max-width: 1000px;                  /* Ancho máximo del contenedor */
+    margin: 0 auto;                     /* Centra el contenedor horizontalmente */
+    flex-wrap: wrap;                   /* Permite saltar a siguiente línea si no caben */
+}
+
+/* Estilos para el formulario */
+form {
+    flex: 1;                           /* Ocupa el espacio restante */
+    min-width: 300px;                   /* Ancho mínimo de 300px */
+    background-color: white;           /* Fondo blanco */
+    padding: 40px;                      /* Espacio interior amplio */
+    border-radius: 10px;               /* Esquinas redondeadas */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+/* Estilos para las etiquetas del formulario */
+form label {
+    display: block;                    /* Hace que la etiqueta ocupe toda la línea */
+    font-size: 14px;                   /* Tamaño de fuente */
+    color: #2c3e50;                    /* Color del texto oscuro */
+    margin-bottom: 8px;                 /* Espacio debajo de la etiqueta */
+    font-weight: bold;                 /* Texto en negrita */
+}
+
+/* Estilos para los campos de entrada y textarea */
+form input,
+form textarea {
+    width: 100%;                       /* Ocupa el 100% del ancho disponible */
+    padding: 12px;                     /* Espacio interior */
+    border: 1px solid #dcdde1;        /* Borde sólido gris claro */
+    border-radius: 5px;                /* Esquinas redondeadas */
+    font-size: 14px;                   /* Tamaño de fuente */
+    margin-bottom: 20px;               /* Espacio debajo de cada campo */
+    font-family: inherit;               /* Usa la fuente del documento */
+}
+
+/* Estilos para el textarea (campo de mensaje) */
+form textarea {
+    height: 120px;                     /* Altura fija de 120px */
+    resize: vertical;                  /* Permite redimensionar solo verticalmente */
+}
+
+/* Estilos para el botón del formulario */
+form button {
+    background-color: #3498db;          /* Color azul de fondo */
+    color: white;                       /* Texto blanco */
+    border: none;                        /* Sin borde */
+    padding: 15px 40px;                /* Espacio interior: 15px arriba/abajo, 40px laterales */
+    border-radius: 5px;                 /* Esquinas redondeadas */
+    font-size: 16px;                    /* Tamaño de fuente */
+    cursor: pointer;                   /* Cursor de mano */
+    width: 100%;                        /* Ocupa el 100% del ancho */
+    transition: background-color 0.3s; /* Animación suave al hacer hover */
+}
+
+/* Efecto al pasar el mouse sobre el botón */
+form button:hover {
+    background-color: #2980b9;          /* Color azul más oscuro al hover */
+}
+
+/* Estilos para la información de contacto */
+.contacto-info {
+    flex: 1;                            /* Ocupa el espacio restante */
+    min-width: 300px;                   /* Ancho mínimo de 300px */
+}
+
+/* Estilos para cada item de información */
+.info-item {
+    background-color: white;            /* Fondo blanco */
+    padding: 25px;                     /* Espacio interior amplio */
+    border-radius: 10px;                /* Esquinas redondeadas */
+    margin-bottom: 20px;                /* Espacio debajo de cada item */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    display: flex;                     /* Activa flexbox */
+    align-items: center;                /* Centra verticalmente */
+    gap: 20px;                         /* Espacio entre icono y texto */
+}
+
+/* Estilos para el icono de la info */
+.info-icon {
+    font-size: 30px;                   /* Tamaño grande del icono */
+    color: #3498db;                    /* Color azul para el icono */
+}
+
+/* Estilos para el título de la info */
+.info-item h3 {
+    font-size: 16px;                   /* Tamaño de fuente */
+    color: #2c3e50;                    /* Color del título oscuro */
+    margin-bottom: 5px;                 /* Espacio debajo del título */
+}
+
+/* Estilos para el texto de la info */
+.info-item p {
+    font-size: 14px;                   /* Tamaño de fuente pequeño */
+    color: #7f8c8d;                    /* Color gris */
+}
