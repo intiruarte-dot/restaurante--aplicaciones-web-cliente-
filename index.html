@@ -9,14 +9,21 @@
 <body>
     <header>
         <h1>compra electronica</h1>
-        <nav>
-            <ul>
-                <li><a href="index.html">Inicio</a></li>
-                <li><a href="productos.html">Productos</a></li>
-                <li><a href="nosotros.html">Nosotros</a></li>
-                <li><a href="contacto.html">Contacto</a></li>
-            </ul>
-        </nav>
+        <div class="header-derecha">
+            
+            <nav>
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="productos.html">Productos</a></li>
+                    <li><a href="nosotros.html">Nosotros</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                </ul>
+            </nav>
+            <div class="busqueda">
+                <input type="text" placeholder="Buscar productos...">
+                <button type="submit">🔍</button>
+            </div>
+        </div>
     </header>
 
     <main>
@@ -39,6 +46,54 @@
             </div>
         </section>
     </main>
+
+    <section id="productos-destacados">
+        <h2>Productos Destacados</h2>
+        <div class="productos-destacados-container">
+            <article class="producto-destacado">
+                <img src="https://via.placeholder.com/300x200/2c3e50/ffffff?text=PC+Gamer" alt="Computadora Gamer" class="producto-img">
+                <h3>Computadora Gamer Pro</h3>
+                <p class="descripcion">Equipo de alto rendimiento para gaming</p>
+                <p class="precio">$1,299.99</p>
+                <button>Agregar al carrito</button>
+            </article>
+            <article class="producto-destacado">
+                <img src="https://via.placeholder.com/300x200/3498db/ffffff?text=Laptop" alt="Laptop Ultrabook" class="producto-img">
+                <h3>Laptop Ultrabook 15"</h3>
+                <p class="descripcion">Ligera y potente para trabajo</p>
+                <p class="precio">$899.99</p>
+                <button>Agregar al carrito</button>
+            </article>
+            <article class="producto-destacado">
+                <img src="https://via.placeholder.com/300x200/27ae60/ffffff?text=Monitor" alt="Monitor 4K" class="producto-img">
+                <h3>Monitor 27" 4K</h3>
+                <p class="descripcion">Pantalla ultra HD para gaming</p>
+                <p class="precio">$349.99</p>
+                <button>Agregar al carrito</button>
+            </article>
+            <article class="producto-destacado">
+                <img src="https://via.placeholder.com/300x200/9b59b6/ffffff?text=Teclado" alt="Teclado Mecánico" class="producto-img">
+                <h3>Teclado Mecánico RGB</h3>
+                <p class="descripcion">Switches azules con iluminación</p>
+                <p class="precio">$79.99</p>
+                <button>Agregar al carrito</button>
+            </article>
+            <article class="producto-destacado">
+                <img src="https://via.placeholder.com/300x200/e74c3c/ffffff?text=Mouse" alt="Mouse Gamer" class="producto-img">
+                <h3>Mouse Gamer Inalámbrico</h3>
+                <p class="descripcion">Alta precisión 16000 DPI</p>
+                <p class="precio">$59.99</p>
+                <button>Agregar al carrito</button>
+            </article>
+            <article class="producto-destacado">
+                <img src="https://via.placeholder.com/300x200/f39c12/ffffff?text=Auriculares" alt="Auriculares" class="producto-img">
+                <h3>Auriculares Bluetooth</h3>
+                <p class="descripcion">Cancelación de ruido 30h</p>
+                <p class="precio">$129.99</p>
+                <button>Agregar al carrito</button>
+            </article>
+        </div>
+    </section>
 
     <footer>
         <div class="footer-contenido">
@@ -66,12 +121,7 @@
                 <p>📞 +52 123 456 7890</p>
                 <p>✉️ contacto@compraelectronica.net</p>
             </div>
-              <div class="footer-columna">
-                <h3>Contacto</h3>
-                <p>📍 Av. Tecnológica 1234</p>
-                <p>📞 +52 123 456 7890</p>
-                <p>✉️ contacto@compraelectronica.net</p>
-            </div>
+            
         </div>
         <div class="footer-inferior">
             <p>&copy; 2026 compra electronica. Todos los derechos reservados.</p>

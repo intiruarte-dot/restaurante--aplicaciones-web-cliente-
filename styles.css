@@ -29,6 +29,60 @@ header h1 {
     font-size: 28px;           /* Tamaño de fuente de 28 píxeles */
 }
 
+/* Contenedor para agrupar nav y búsqueda */
+.header-derecha {
+    display: flex;             /* Activa flexbox para alinear elementos */
+    align-items: center;       /* Centra verticalmente */
+    gap: 30px;                 /* Espacio de 30px entre nav y búsqueda */
+}
+
+/* ============================================
+   ESTILOS PARA LA BARRA DE BÚSQUEDA
+   ============================================ */
+
+/* Contenedor de la barra de búsqueda */
+.busqueda {
+    display: flex;                  /* Activa flexbox para organizar input y botón en línea */
+    align-items: center;            /* Centra verticalmente los elementos */
+    background-color: white;        /* Fondo blanco */
+    border-radius: 25px;            /* Bordes redondeados en forma de píldora */
+    padding: 5px;                   /* Espacio interior pequeño */
+    overflow: hidden;               /* Oculta el contenido que desborda */
+}
+
+/* Estilos para el campo de texto de búsqueda */
+.busqueda input {
+    border: none;                   /* Sin borde */
+    outline: none;                  /* Sin contorno al hacer focus */
+    padding: 10px 15px;             /* Espacio interior: 10px arriba/abajo, 15px laterales */
+    font-size: 14px;                /* Tamaño de fuente */
+    width: 250px;                   /* Ancho fijo de 250px */
+    background: transparent;        /* Fondo transparente */
+    color: #333;                    /* Color del texto gris oscuro */
+}
+
+/* Placeholder del campo de búsqueda */
+.busqueda input::placeholder {
+    color: #999;                    /* Color gris claro para el texto de ejemplo */
+}
+
+/* Estilos para el botón de búsqueda */
+.busqueda button {
+    background-color: #3498db;      /* Color azul de fondo */
+    border: none;                   /* Sin borde */
+    color: white;                   /* Icono blanco */
+    padding: 10px 15px;             /* Espacio interior */
+    border-radius: 20px;            /* Bordes redondeados */
+    cursor: pointer;                /* Cursor de mano */
+    font-size: 16px;                /* Tamaño del icono */
+    transition: background-color 0.3s; /* Animación suave al hacer hover */
+}
+
+/* Efecto al pasar el mouse sobre el botón */
+.busqueda button:hover {
+    background-color: #2980b9;      /* Color azul más oscuro al hover */
+}
+
 /* Estilos para la barra de navegación */
 nav ul {
     list-style: none;          /* Elimina los puntos de lista por defecto */
