@@ -1,0 +1,641 @@
+/* ============================================
+   ESTILOS PARA LA BARRA DE NAVEGACIÓN
+   TechComputers - Tienda de Computadoras
+   ============================================ */
+
+/* Reset básico para eliminar márgenes y padding por defecto del navegador */
+* {
+    margin: 0;          /* Elimina el margen exterior de todos los elementos */
+    padding: 0;         /* Elimina el relleno interior de todos los elementos */
+    box-sizing: border-box; /* Incluye padding y borde en el ancho/alto total */
+}
+
+/* Estilos para el header que contiene la barra de navegación */
+header {
+    background-color: #2c3e50;  /* Color de fondo oscuro (azul grisáceo) */
+    color: white;              /* Color del texto blanco */
+    padding: 20px;             /* Espacio interior de 20px en todos los lados */
+}
+
+/* Estilos para el contenedor flex del header (título + navegación) */
+header {
+    display: flex;             /* Activa flexbox para organizar elementos en línea */
+    justify-content: space-between; /* Distribuye espacio entre elementos (título a izquierda, nav a derecha) */
+    align-items: center;      /* Centra verticalmente los elementos */
+}
+
+/* Estilos para el título principal del sitio */
+header h1 {
+    font-size: 28px;           /* Tamaño de fuente de 28 píxeles */
+}
+
+/* Contenedor para agrupar nav y búsqueda */
+.header-derecha {
+    display: flex;             /* Activa flexbox para alinear elementos */
+    align-items: center;       /* Centra verticalmente */
+    gap: 30px;                 /* Espacio de 30px entre nav y búsqueda */
+}
+
+/* ============================================
+   ESTILOS PARA LA BARRA DE BÚSQUEDA
+   ============================================ */
+
+/* Contenedor de la barra de búsqueda */
+.busqueda {
+    display: flex;                  /* Activa flexbox para organizar input y botón en línea */
+    align-items: center;            /* Centra verticalmente los elementos */
+    background-color: white;        /* Fondo blanco */
+    border-radius: 25px;            /* Bordes redondeados en forma de píldora */
+    padding: 5px;                   /* Espacio interior pequeño */
+    overflow: hidden;               /* Oculta el contenido que desborda */
+}
+
+/* Estilos para el campo de texto de búsqueda */
+.busqueda input {
+    border: none;                   /* Sin borde */
+    outline: none;                  /* Sin contorno al hacer focus */
+    padding: 10px 15px;             /* Espacio interior: 10px arriba/abajo, 15px laterales */
+    font-size: 14px;                /* Tamaño de fuente */
+    width: 250px;                   /* Ancho fijo de 250px */
+    background: transparent;        /* Fondo transparente */
+    color: #333;                    /* Color del texto gris oscuro */
+}
+
+/* Placeholder del campo de búsqueda */
+.busqueda input::placeholder {
+    color: #999;                    /* Color gris claro para el texto de ejemplo */
+}
+
+/* Estilos para el botón de búsqueda */
+.busqueda button {
+    background-color: #3498db;      /* Color azul de fondo */
+    border: none;                   /* Sin borde */
+    color: white;                   /* Icono blanco */
+    padding: 10px 15px;             /* Espacio interior */
+    border-radius: 20px;            /* Bordes redondeados */
+    cursor: pointer;                /* Cursor de mano */
+    font-size: 16px;                /* Tamaño del icono */
+    transition: background-color 0.3s; /* Animación suave al hacer hover */
+}
+
+/* Efecto al pasar el mouse sobre el botón */
+.busqueda button:hover {
+    background-color: #2980b9;      /* Color azul más oscuro al hover */
+}
+
+/* Estilos para la barra de navegación */
+nav ul {
+    list-style: none;          /* Elimina los puntos de lista por defecto */
+    display: flex;             /* Organiza los elementos de lista en una fila horizontal */
+    gap: 30px;                 /* Espacio de 30px entre cada elemento de menú */
+}
+
+/* Estilos para los enlaces de navegación */
+nav ul li a {
+    color: white;              /* Color del texto del enlace en blanco */
+    text-decoration: none;    /* Elimina el subrayado de los enlaces */
+    font-size: 16px;           /* Tamaño de fuente de 16 píxeles */
+    padding: 10px 15px;        /* Espacio interior para crear área clickeable */
+    border-radius: 5px;        /* Esquinas redondeadas de 5px */
+    transition: background-color 0.3s; /* Animación suave al cambiar el fondo */
+}
+
+/* Estilos para enlaces al pasar el mouse por encima */
+nav ul li a:hover {
+    background-color: #34495e;  /* Color de fondo más claro al hacer hover */
+}
+
+/* Estilos para el enlace activo (página actual) */
+nav ul li a.active {
+    background-color: #3498db;  /* Color azul para indicar la página activa */
+}
+
+/* ============================================
+   ESTILOS PARA LA SECCIÓN DE PRODUCTOS
+   ============================================ */
+
+/* Estilos para la sección de productos */
+#productos {
+    padding: 40px 20px;          /* Espacio interior: 40px arriba/abajo, 20px laterales */
+    background-color: #f5f6fa;    /* Fondo gris claro para la sección */
+}
+
+/* Estilos para el título de la sección */
+#productos h2 {
+    text-align: center;           /* Centra el texto del título */
+    margin-bottom: 40px;          /* Espacio debajo del título */
+    font-size: 32px;              /* Tamaño de fuente grande */
+    color: #2c3e50;               /* Color del texto oscuro */
+}
+
+/* Contenedor flex para organizar las cajas de productos en fila */
+.productos-container {
+    display: flex;                /* Activa flexbox para organizar en línea */
+    flex-wrap: wrap;              /* Permite que los productos salten a siguiente línea si no caben */
+    justify-content: center;      /* Centra los productos horizontalmente */
+    gap: 30px;                    /* Espacio de 30px entre cada caja de producto */
+}
+
+/* Estilos para cada caja de producto */
+#productos article {
+    background-color: white;      /* Fondo blanco para la caja */
+    border: 1px solid #dcdde1;   /* Borde sólido gris claro de 1px */
+    border-radius: 10px;          /* Esquinas redondeadas de 10px */
+    padding: 25px;                /* Espacio interior de 25px */
+    width: 300px;                 /* Ancho fijo de 300px para cada caja */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra suave para dar profundidad */
+    transition: transform 0.3s, box-shadow 0.3s; /* Animación suave al hacer hover */
+    text-align: center;           /* Centra el texto dentro de la caja */
+}
+
+/* Efecto al pasar el mouse sobre la caja del producto */
+#productos article:hover {
+    transform: translateY(-5px);  /* Mueve la caja 5px hacia arriba */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Sombra más pronunciada al hover */
+}
+
+/* Estilos para el título del producto */
+#productos article h3 {
+    color: #2c3e50;               /* Color del título oscuro */
+    margin-bottom: 15px;          /* Espacio debajo del título */
+    font-size: 20px;              /* Tamaño de fuente del título */
+}
+
+/* Estilos para los párrafos de descripción y precio */
+#productos article p {
+    color: #7f8c8d;               /* Color gris para el texto */
+    margin-bottom: 10px;           /* Espacio entre párrafos */
+    font-size: 14px;              /* Tamaño de fuente del texto */
+}
+
+/* Estilos para el precio (más destacado) */
+#productos article p:last-of-type {
+    color: #27ae60;               /* Color verde para el precio */
+    font-size: 22px;              /* Fuente más grande para el precio */
+    font-weight: bold;            /* Texto en negrita */
+    margin-bottom: 20px;          /* Espacio debajo del precio */
+}
+
+/* Estilos para la imagen del producto */
+.producto-img {
+    width: 100%;                  /* Ocupa el 100% del ancho de la caja */
+    height: 180px;                /* Altura fija de 180px */
+    object-fit: cover;            /* Ajusta la imagen sin deformarla */
+    border-radius: 8px;           /* Esquinas redondeadas de 8px */
+    margin-bottom: 15px;          /* Espacio debajo de la imagen */
+    background-color: #ecf0f1;   /* Color de fondo gris claro */
+}
+
+/* Estilos para sección de productos destacados en inicio */
+#productos-destacados {
+    padding: 60px 20px;            /* Espacio interior amplio */
+    background-color: #f5f6fa;    /* Fondo gris claro */
+}
+
+/* Estilos para el título de la sección */
+#productos-destacados h2 {
+    text-align: center;            /* Centra el texto */
+    font-size: 36px;               /* Tamaño de fuente grande */
+    color: #2c3e50;                /* Color del título oscuro */
+    margin-bottom: 40px;           /* Espacio debajo del título */
+}
+
+/* Contenedor flex para los productos destacados */
+.productos-destacados-container {
+    display: flex;                 /* Activa flexbox para organizar en fila */
+    flex-wrap: wrap;               /* Permite saltar a siguiente línea */
+    justify-content: center;       /* Centra los productos */
+    gap: 30px;                     /* Espacio de 30px entre productos */
+    max-width: 1200px;             /* Ancho máximo del contenedor */
+    margin: 0 auto;                /* Centra el contenedor */
+}
+
+/* Estilos para cada caja de producto destacado */
+.producto-destacado {
+    background-color: white;       /* Fondo blanco */
+    border-radius: 10px;           /* Esquinas redondeadas */
+    padding: 20px;                 /* Espacio interior */
+    width: 280px;                  /* Ancho fijo de 280px */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    transition: transform 0.3s;    /* Animación suave al hover */
+    text-align: center;            /* Centra el texto */
+}
+
+/* Efecto al pasar el mouse */
+.producto-destacado:hover {
+    transform: translateY(-5px);   /* Eleva la caja 5px */
+}
+
+/* Estilos para la imagen del producto destacado */
+.producto-destacado .producto-img {
+    width: 100%;                   /* Ocupa todo el ancho */
+    height: 200px;                 /* Altura de 200px */
+    object-fit: cover;             /* Ajusta la imagen sin deformar */
+    border-radius: 8px;            /* Esquinas redondeadas */
+    background-color: #ecf0f1;    /* Color placeholder */
+    margin-bottom: 15px;           /* Espacio debajo de la imagen */
+}
+
+/* Estilos para el título del producto */
+.producto-destacado h3 {
+    font-size: 18px;               /* Tamaño de fuente */
+    color: #2c3e50;                /* Color oscuro */
+    margin-bottom: 10px;           /* Espacio debajo del título */
+}
+
+/* Estilos para la descripción */
+.producto-destacado .descripcion {
+    font-size: 14px;               /* Tamaño pequeño */
+    color: #7f8c8d;                /* Color gris */
+    margin-bottom: 10px;           /* Espacio debajo */
+}
+
+/* Estilos para el precio */
+.producto-destacado .precio {
+    font-size: 20px;               /* Tamaño mediano */
+    color: #27ae60;                /* Color verde */
+    font-weight: bold;             /* Negrita */
+    margin-bottom: 15px;           /* Espacio debajo */
+}
+
+/* Estilos para el botón */
+.producto-destacado button {
+    background-color: #3498db;     /* Color azul */
+    color: white;                  /* Texto blanco */
+    border: none;                  /* Sin borde */
+    padding: 10px 25px;            /* Espacio interior */
+    border-radius: 5px;            /* Esquinas redondeadas */
+    cursor: pointer;               /* Cursor de mano */
+    font-size: 14px;               /* Tamaño de fuente */
+    transition: background-color 0.3s; /* Animación suave */
+}
+
+/* Efecto al pasar el mouse sobre el botón */
+.producto-destacado button:hover {
+    background-color: #2980b9;     /* Color azul más oscuro */
+}
+
+/* Estilos para el botón de agregar al carrito */
+#productos article button {
+    background-color: #3498db;    /* Color azul de fondo */
+    color: white;                 /* Texto blanco */
+    border: none;                 /* Sin borde */
+    padding: 12px 30px;           /* Espacio interior: 12px arriba/abajo, 30px laterales */
+    border-radius: 5px;            /* Esquinas redondeadas */
+    font-size: 16px;              /* Tamaño de fuente */
+    cursor: pointer;              /* Cambia el cursor a mano al pasar por encima */
+    transition: background-color 0.3s; /* Animación suave al hacer hover */
+}
+
+/* Efecto al pasar el mouse sobre el botón */
+#productos article button:hover {
+    background-color: #2980b9;    /* Color azul más oscuro al hover */
+}
+
+/* ============================================
+   ESTILOS PARA LA SECCIÓN DE INICIO
+   ============================================ */
+
+/* Estilos para la sección de inicio */
+#inicio {
+    background: linear-gradient(135deg, #2c3e50 0%, #3498db 100%); /* Degradado de fondo azul oscuro a azul claro */
+    color: white;                      /* Texto blanco */
+    padding: 60px 20px;                /* Espacio interior amplio */
+    text-align: center;                /* Texto centrado */
+}
+
+/* Estilos para el título de inicio */
+#inicio h2 {
+    font-size: 42px;                   /* Fuente muy grande */
+    margin-bottom: 20px;               /* Espacio debajo del título */
+}
+
+/* Estilos para el párrafo de inicio */
+#inicio p {
+    font-size: 18px;                   /* Fuente de tamaño medio */
+    margin-bottom: 40px;               /* Espacio amplio debajo del párrafo */
+    opacity: 0.9;                       /* Texto ligeramente transparente */
+}
+
+/* Contenedor flex para las características */
+.features {
+    display: flex;                     /* Activa flexbox para organizar en fila */
+    justify-content: center;           /* Centra los elementos horizontalmente */
+    gap: 50px;                         /* Espacio de 50px entre cada característica */
+    flex-wrap: wrap;                   /* Permite saltar a siguiente línea si no caben */
+}
+
+/* Estilos para cada caja de característica */
+.feature {
+    background-color: rgba(255, 255, 255, 0.15); /* Fondo semi-transparente blanco */
+    padding: 30px;                     /* Espacio interior amplio */
+    border-radius: 10px;               /* Esquinas redondeadas */
+    width: 250px;                      /* Ancho fijo de 250px */
+    backdrop-filter: blur(5px);        /* Efecto de desenfoque detrás del elemento */
+}
+
+/* Estilos para el título de la característica */
+.feature h3 {
+    font-size: 20px;                   /* Tamaño de fuente del título */
+    margin-bottom: 10px;               /* Espacio debajo del título */
+}
+
+/* Estilos para el párrafo de la característica */
+.feature p {
+    font-size: 14px;                   /* Tamaño de fuente pequeño */
+    margin-bottom: 0;                  /* Sin margen inferior */
+    opacity: 0.9;                      /* Texto ligeramente transparente */
+}
+
+/* ============================================
+   ESTILOS PARA LA SECCIÓN NOSOTROS
+   ============================================ */
+
+/* Estilos para la sección nosotros */
+#nosotros {
+    padding: 60px 20px;                /* Espacio interior amplio: 60px arriba/abajo, 20px laterales */
+    background-color: white;            /* Fondo blanco */
+}
+
+/* Contenedor flex para organizar contenido e imagen lado a lado */
+.nosotros-contenido {
+    display: flex;                      /* Activa flexbox para organizar en línea */
+    align-items: center;                /* Centra verticalmente los elementos */
+    gap: 50px;                         /* Espacio de 50px entre texto e imagen */
+    max-width: 1200px;                  /* Ancho máximo del contenedor */
+    margin: 0 auto;                     /* Centra el contenedor horizontalmente */
+}
+
+/* Estilos para el texto de nosotros */
+.nosotros-texto {
+    flex: 1;                           /* Ocupa el espacio restante (1 parte) */
+}
+
+/* Estilos para el título de la sección */
+#nosotros h2 {
+    font-size: 36px;                   /* Tamaño de fuente grande */
+    color: #2c3e50;                    /* Color del título oscuro */
+    margin-bottom: 30px;                /* Espacio debajo del título */
+    text-align: center;                 /* Centra el texto */
+}
+
+/* Estilos para el párrafo de nosotros */
+.nosotros-texto p {
+    font-size: 16px;                   /* Tamaño de fuente medio */
+    color: #7f8c8d;                    /* Color gris para el texto */
+    line-height: 1.8;                   /* Altura de línea para mejor legibilidad */
+    margin-bottom: 15px;                /* Espacio entre párrafos */
+}
+
+/* Contenedor para la imagen de nosotros */
+.nosotros-imagen {
+    flex: 1;                           /* Ocupa el espacio restante (1 parte) */
+    background-color: #ecf0f1;         /* Fondo gris claro para el placeholder */
+    border-radius: 10px;               /* Esquinas redondeadas */
+    height: 300px;                     /* Altura fija de 300px */
+    display: flex;                     /* Activa flexbox */
+    align-items: center;               /* Centra verticalmente */
+    justify-content: center;           /* Centra horizontalmente */
+    color: #95a5a6;                    /* Color del texto placeholder */
+    font-size: 18px;                   /* Tamaño de fuente */
+}
+
+/* Contenedor flex para los valores/beneficios */
+.valores {
+    display: flex;                     /* Activa flexbox para organizar en fila */
+    justify-content: center;            /* Centra los elementos horizontalmente */
+    gap: 40px;                         /* Espacio de 40px entre cada valor */
+    margin-top: 50px;                   /* Espacio arriba del contenedor */
+    flex-wrap: wrap;                   /* Permite saltar a siguiente línea si no caben */
+}
+
+/* Estilos para cada caja de valor */
+.valor {
+    text-align: center;                /* Centra el texto */
+    width: 200px;                       /* Ancho fijo de 200px */
+}
+
+/* Estilos para el icono/emoji del valor */
+.valor-icon {
+    font-size: 40px;                   /* Tamaño grande del icono */
+    margin-bottom: 15px;                /* Espacio debajo del icono */
+}
+
+/* Estilos para el título del valor */
+.valor h3 {
+    font-size: 18px;                   /* Tamaño de fuente */
+    color: #2c3e50;                    /* Color del título oscuro */
+    margin-bottom: 10px;                /* Espacio debajo del título */
+}
+
+/* Estilos para el párrafo del valor */
+.valor p {
+    font-size: 14px;                   /* Tamaño de fuente pequeño */
+    color: #7f8c8d;                    /* Color gris */
+}
+
+/* ============================================
+   ESTILOS PARA LA SECCIÓN CONTACTO
+   ============================================ */
+
+/* Estilos para la sección contacto */
+#contacto {
+    padding: 60px 20px;                /* Espacio interior amplio */
+    background-color: #f5f6fa;          /* Fondo gris claro */
+}
+
+/* Estilos para el título de la sección */
+#contacto h2 {
+    font-size: 36px;                   /* Tamaño de fuente grande */
+    color: #2c3e50;                    /* Color del título oscuro */
+    margin-bottom: 40px;                /* Espacio debajo del título */
+    text-align: center;                 /* Centra el texto */
+}
+
+/* Contenedor flex para organizar formulario e información lado a lado */
+.contacto-contenido {
+    display: flex;                      /* Activa flexbox para organizar en línea */
+    gap: 50px;                         /* Espacio de 50px entre elementos */
+    max-width: 1000px;                  /* Ancho máximo del contenedor */
+    margin: 0 auto;                     /* Centra el contenedor horizontalmente */
+    flex-wrap: wrap;                   /* Permite saltar a siguiente línea si no caben */
+}
+
+/* Estilos para el formulario */
+form {
+    flex: 1;                           /* Ocupa el espacio restante */
+    min-width: 300px;                   /* Ancho mínimo de 300px */
+    background-color: white;           /* Fondo blanco */
+    padding: 40px;                      /* Espacio interior amplio */
+    border-radius: 10px;               /* Esquinas redondeadas */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+/* Estilos para las etiquetas del formulario */
+form label {
+    display: block;                    /* Hace que la etiqueta ocupe toda la línea */
+    font-size: 14px;                   /* Tamaño de fuente */
+    color: #2c3e50;                    /* Color del texto oscuro */
+    margin-bottom: 8px;                 /* Espacio debajo de la etiqueta */
+    font-weight: bold;                 /* Texto en negrita */
+}
+
+/* Estilos para los campos de entrada y textarea */
+form input,
+form textarea {
+    width: 100%;                       /* Ocupa el 100% del ancho disponible */
+    padding: 12px;                     /* Espacio interior */
+    border: 1px solid #dcdde1;        /* Borde sólido gris claro */
+    border-radius: 5px;                /* Esquinas redondeadas */
+    font-size: 14px;                   /* Tamaño de fuente */
+    margin-bottom: 20px;               /* Espacio debajo de cada campo */
+    font-family: inherit;               /* Usa la fuente del documento */
+}
+
+/* Estilos para el textarea (campo de mensaje) */
+form textarea {
+    height: 120px;                     /* Altura fija de 120px */
+    resize: vertical;                  /* Permite redimensionar solo verticalmente */
+}
+
+/* Estilos para el botón del formulario */
+form button {
+    background-color: #3498db;          /* Color azul de fondo */
+    color: white;                       /* Texto blanco */
+    border: none;                        /* Sin borde */
+    padding: 15px 40px;                /* Espacio interior: 15px arriba/abajo, 40px laterales */
+    border-radius: 5px;                 /* Esquinas redondeadas */
+    font-size: 16px;                    /* Tamaño de fuente */
+    cursor: pointer;                   /* Cursor de mano */
+    width: 100%;                        /* Ocupa el 100% del ancho */
+    transition: background-color 0.3s; /* Animación suave al hacer hover */
+}
+
+/* Efecto al pasar el mouse sobre el botón */
+form button:hover {
+    background-color: #2980b9;          /* Color azul más oscuro al hover */
+}
+
+/* Estilos para la información de contacto */
+.contacto-info {
+    flex: 1;                            /* Ocupa el espacio restante */
+    min-width: 300px;                   /* Ancho mínimo de 300px */
+}
+
+/* Estilos para cada item de información */
+.info-item {
+    background-color: white;            /* Fondo blanco */
+    padding: 25px;                     /* Espacio interior amplio */
+    border-radius: 10px;                /* Esquinas redondeadas */
+    margin-bottom: 20px;                /* Espacio debajo de cada item */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    display: flex;                     /* Activa flexbox */
+    align-items: center;                /* Centra verticalmente */
+    gap: 20px;                         /* Espacio entre icono y texto */
+}
+
+/* Estilos para el icono de la info */
+.info-icon {
+    font-size: 30px;                   /* Tamaño grande del icono */
+    color: #3498db;                    /* Color azul para el icono */
+}
+
+/* Estilos para el título de la info */
+.info-item h3 {
+    font-size: 16px;                   /* Tamaño de fuente */
+    color: #2c3e50;                    /* Color del título oscuro */
+    margin-bottom: 5px;                 /* Espacio debajo del título */
+}
+
+/* Estilos para el texto de la info */
+.info-item p {
+    font-size: 14px;                   /* Tamaño de fuente pequeño */
+    color: #7f8c8d;                    /* Color gris */
+}
+
+/* ============================================
+   ESTILOS PARA EL FOOTER
+   ============================================ */
+
+/* Estilos para el pie de página */
+footer {
+    background-color: #2c3e50;          /* Color de fondo oscuro (azul grisáceo) */
+    color: white;                       /* Texto blanco */
+    padding: 40px 20px;                 /* Espacio interior: 40px arriba/abajo, 20px laterales */
+}
+
+/* Contenedor flex para organizar el contenido del footer */
+.footer-contenido {
+    display: flex;                      /* Activa flexbox para organizar en línea */
+    justify-content: space-between;     /* Distribuye espacio entre elementos */
+    flex-wrap: wrap;                    /* Permite saltar a siguiente línea si no caben */
+    max-width: 1200px;                  /* Ancho máximo del contenedor */
+    margin: 0 auto;                     /* Centra el contenedor horizontalmente */
+    gap: 30px;                          /* Espacio de 30px entre columnas */
+}
+
+/* Estilos para cada columna del footer */
+.footer-columna {
+    flex: 1;                            /* Ocupa el espacio restante */
+    min-width: 200px;                   /* Ancho mínimo de 200px */
+}
+
+/* Estilos para el título de cada columna */
+.footer-columna h3 {
+    font-size: 18px;                    /* Tamaño de fuente */
+    margin-bottom: 20px;                /* Espacio debajo del título */
+    color: #3498db;                     /* Color azul para los títulos */
+}
+
+/* Estilos para los párrafos y enlaces del footer */
+.footer-columna p,
+.footer-columna a {
+    font-size: 14px;                    /* Tamaño de fuente pequeño */
+    color: #ecf0f1;                     /* Color blanco grisáceo */
+    margin-bottom: 10px;                /* Espacio entre elementos */
+    display: block;                     /* Hace que cada elemento ocupe una línea */
+    text-decoration: none;              /* Elimina el subrayado de los enlaces */
+}
+
+/* Estilos para los enlaces al pasar el mouse */
+.footer-columna a:hover {
+    color: #3498db;                     /* Color azul al hacer hover */
+}
+
+/* Estilos para la parte inferior del footer (copyright y redes) */
+.footer-inferior {
+    display: flex;                      /* Activa flexbox */
+    justify-content: space-between;     /* Distribuye espacio entre elementos */
+    align-items: center;                /* Centra verticalmente */
+    max-width: 1200px;                  /* Ancho máximo */
+    margin: 30px auto 0;                /* Espacio arriba, centrado horizontalmente */
+    padding-top: 20px;                  /* Espacio superior */
+    border-top: 1px solid #34495e;      /* Línea divisoria superior */
+    flex-wrap: wrap;                    /* Permite saltar a siguiente línea si no caben */
+    gap: 15px;                          /* Espacio entre elementos */
+}
+
+/* Estilos para el texto de copyright */
+.footer-inferior p {
+    font-size: 14px;                    /* Tamaño de fuente pequeño */
+    color: #95a5a6;                     /* Color gris claro */
+    margin: 0;                          /* Sin margen */
+}
+
+/* Contenedor flex para los iconos de redes sociales */
+.redes-sociales {
+    display: flex;                      /* Activa flexbox para organizar iconos en fila */
+    gap: 15px;                         /* Espacio de 15px entre cada icono */
+}
+
+/* Estilos para los iconos de redes sociales */
+.redes-sociales a {
+    font-size: 24px;                    /* Tamaño grande del icono */
+    color: white;                       /* Color blanco */
+    transition: color 0.3s;             /* Animación suave al cambiar el color */
+}
+
+/* Efecto al pasar el mouse sobre los iconos de redes */
+.redes-sociales a:hover {
+    color: #3498db;                     /* Color azul al hover */
+}
