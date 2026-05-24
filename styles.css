@@ -200,79 +200,161 @@ nav ul li a.active {
     margin-bottom: 40px;           /* Espacio debajo del título */
 }
 
-/* Contenedor flex para los productos destacados */
-.productos-destacados-container {
-    display: flex;                 /* Activa flexbox para organizar en fila */
-    flex-wrap: wrap;               /* Permite saltar a siguiente línea */
-    justify-content: center;       /* Centra los productos */
-    gap: 30px;                     /* Espacio de 30px entre productos */
-    max-width: 1200px;             /* Ancho máximo del contenedor */
-    margin: 0 auto;                /* Centra el contenedor */
+/* ============================================
+   ESTILOS PARA EL CARRUSEL
+   ============================================ */
+
+/* Contenedor principal del carrusel */
+.carrusel {
+    max-width: 800px;              /* Ancho máximo del carrusel */
+    margin: 0 auto;                /* Centra horizontalmente */
+    position: relative;            /* Posición relativa para los elementos internos */
+    overflow: hidden;              /* Oculta los slides que desbordan */
+    border-radius: 15px;           /* Esquinas redondeadas */
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2); /* Sombra suave */
 }
 
-/* Estilos para cada caja de producto destacado */
-.producto-destacado {
-    background-color: white;       /* Fondo blanco */
-    border-radius: 10px;           /* Esquinas redondeadas */
-    padding: 20px;                 /* Espacio interior */
-    width: 280px;                  /* Ancho fijo de 280px */
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
-    transition: transform 0.3s;    /* Animación suave al hover */
-    text-align: center;            /* Centra el texto */
+/* Oculta los radio buttons de navegación */
+.carrusel input {
+    display: none;                 /* Oculta los inputs */
 }
 
-/* Efecto al pasar el mouse */
-.producto-destacado:hover {
-    transform: translateY(-5px);   /* Eleva la caja 5px */
+/* Contenedor de todos los slides */
+.slides {
+    display: flex;                 /* Organiza los slides en fila horizontal */
+    width: 600%;                  /* 6 slides x 100% = 600% del ancho visible */
+    transition: transform 0.5s ease; /* Animación suave al desplazar */
 }
 
-/* Estilos para la imagen del producto destacado */
-.producto-destacado .producto-img {
-    width: 100%;                   /* Ocupa todo el ancho */
-    height: 200px;                 /* Altura de 200px */
+/* Estilos para cada slide */
+.slide {
+    width: 16.666%;               /* 100% / 6 slides = 16.666% cada uno */
+    position: relative;            /* Para posicionar la info encima */
+}
+
+/* Imagen del slide */
+.slide img {
+    width: 100%;                   /* Ocupa todo el ancho del slide */
+    height: 400px;                 /* Altura fija de 400px */
     object-fit: cover;             /* Ajusta la imagen sin deformar */
-    border-radius: 8px;            /* Esquinas redondeadas */
-    background-color: #ecf0f1;    /* Color placeholder */
-    margin-bottom: 15px;           /* Espacio debajo de la imagen */
+    display: block;                /* Elimina espacio extra debajo */
 }
 
-/* Estilos para el título del producto */
-.producto-destacado h3 {
-    font-size: 18px;               /* Tamaño de fuente */
-    color: #2c3e50;                /* Color oscuro */
-    margin-bottom: 10px;           /* Espacio debajo del título */
+/* Información superpuesta en la imagen */
+.slide-info {
+    position: absolute;            /* Posiciona sobre la imagen */
+    bottom: 0;                     /* Alinea al borde inferior */
+    left: 0;                       /* Alinea al borde izquierdo */
+    right: 0;                      /* Alinea al borde derecho */
+    background: linear-gradient(transparent, rgba(0,0,0,0.8)); /* Degradado oscuro */
+    color: white;                  /* Texto blanco */
+    padding: 40px 30px 30px;       /* Espacio interior */
 }
 
-/* Estilos para la descripción */
-.producto-destacado .descripcion {
-    font-size: 14px;               /* Tamaño pequeño */
-    color: #7f8c8d;                /* Color gris */
+/* Título del slide */
+.slide-info h3 {
+    font-size: 24px;               /* Tamaño de fuente */
     margin-bottom: 10px;           /* Espacio debajo */
 }
 
-/* Estilos para el precio */
-.producto-destacado .precio {
-    font-size: 20px;               /* Tamaño mediano */
-    color: #27ae60;                /* Color verde */
+/* Precio del slide */
+.slide-info p {
+    font-size: 20px;               /* Tamaño de fuente */
     font-weight: bold;             /* Negrita */
     margin-bottom: 15px;           /* Espacio debajo */
 }
 
-/* Estilos para el botón */
-.producto-destacado button {
-    background-color: #3498db;     /* Color azul */
+/* Botón del slide */
+.slide-info button {
+    background-color: #e67e22;     /* Color naranja */
     color: white;                  /* Texto blanco */
     border: none;                  /* Sin borde */
-    padding: 10px 25px;            /* Espacio interior */
+    padding: 12px 30px;            /* Espacio interior */
     border-radius: 5px;            /* Esquinas redondeadas */
     cursor: pointer;               /* Cursor de mano */
-    font-size: 14px;               /* Tamaño de fuente */
+    font-size: 16px;               /* Tamaño de fuente */
     transition: background-color 0.3s; /* Animación suave */
 }
 
-/* Efecto al pasar el mouse sobre el botón */
-.producto-destacado button:hover {
-    background-color: #2980b9;     /* Color azul más oscuro */
+/* Hover del botón */
+.slide-info button:hover {
+    background-color: #d35400;     /* Naranja más oscuro */
+}
+
+/* Indicadores (puntos) de navegación */
+.carrusel-navegacion {
+    display: flex;                 /* Organiza los puntos en fila */
+    justify-content: center;       /* Centra los puntos */
+    gap: 10px;                     /* Espacio entre puntos */
+    padding: 15px 0;               /* Espacio interior */
+    background-color: white;       /* Fondo blanco */
+}
+
+/* Estilos para cada punto indicador */
+.carrusel-navegacion label {
+    width: 12px;                   /* Ancho del punto */
+    height: 12px;                  /* Altura del punto */
+    border-radius: 50%;           /* Forma circular */
+    background-color: #bdc3c7;     /* Color gris claro */
+    cursor: pointer;               /* Cursor de mano */
+    transition: background-color 0.3s; /* Animación suave */
+}
+
+/* Cambio de slide al seleccionar cada radio */
+#slide1:checked ~ .slides { transform: translateX(0); }
+#slide2:checked ~ .slides { transform: translateX(-16.666%); }
+#slide3:checked ~ .slides { transform: translateX(-33.333%); }
+#slide4:checked ~ .slides { transform: translateX(-50%); }
+#slide5:checked ~ .slides { transform: translateX(-66.666%); }
+#slide6:checked ~ .slides { transform: translateX(-83.333%); }
+
+/* Color del punto activo según el slide seleccionado */
+#slide1:checked ~ .carrusel-navegacion label:nth-child(1) { background-color: #2c3e50; }
+#slide2:checked ~ .carrusel-navegacion label:nth-child(2) { background-color: #2c3e50; }
+#slide3:checked ~ .carrusel-navegacion label:nth-child(3) { background-color: #2c3e50; }
+#slide4:checked ~ .carrusel-navegacion label:nth-child(4) { background-color: #2c3e50; }
+#slide5:checked ~ .carrusel-navegacion label:nth-child(5) { background-color: #2c3e50; }
+#slide6:checked ~ .carrusel-navegacion label:nth-child(6) { background-color: #2c3e50; }
+
+/* Flechas de navegación */
+.carrusel-flechas {
+    position: absolute;            /* Posición absoluta sobre el carrusel */
+    top: 50%;                      /* Centrado vertical */
+    width: 100%;                   /* Ancho completo */
+    transform: translateY(-50%);   /* Ajuste de centrado */
+    pointer-events: none;          /* Permite click a través del contenedor */
+}
+
+/* Oculta todos los pares de flechas por defecto */
+.flecha-par {
+    display: none;
+    justify-content: space-between;
+    pointer-events: none;
+}
+
+/* Muestra solo el par de flechas del slide activo */
+#slide1:checked ~ .carrusel-flechas .flecha-par:nth-child(1) { display: flex; }
+#slide2:checked ~ .carrusel-flechas .flecha-par:nth-child(2) { display: flex; }
+#slide3:checked ~ .carrusel-flechas .flecha-par:nth-child(3) { display: flex; }
+#slide4:checked ~ .carrusel-flechas .flecha-par:nth-child(4) { display: flex; }
+#slide5:checked ~ .carrusel-flechas .flecha-par:nth-child(5) { display: flex; }
+#slide6:checked ~ .carrusel-flechas .flecha-par:nth-child(6) { display: flex; }
+
+/* Estilos para cada flecha */
+.carrusel-flechas .flecha {
+    pointer-events: auto;          /* Activa clicks en las etiquetas */
+    background-color: rgba(0,0,0,0.5); /* Fondo semi-transparente */
+    color: white;                  /* Flecha blanca */
+    padding: 15px;                 /* Espacio interior */
+    cursor: pointer;               /* Cursor de mano */
+    font-size: 24px;               /* Tamaño de la flecha */
+    transition: background-color 0.3s; /* Animación suave */
+    user-select: none;             /* Evita selección de texto */
+}
+
+/* Hover de la flecha */
+.carrusel-flechas .flecha:hover {
+    background-color: rgba(0,0,0,0.8); /* Más oscuro al hover */
 }
 
 /* Estilos para el botón de agregar al carrito */
