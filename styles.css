@@ -1,6 +1,6 @@
 /* ============================================
    ESTILOS PARA LA BARRA DE NAVEGACIÓN
-   TechComputers - Tienda de Computadoras
+   TechComputers - Tienda de Computadoras (Gamer Edition)
    ============================================ */
 
 /* Reset básico para eliminar márgenes y padding por defecto del navegador */
@@ -12,21 +12,23 @@
 
 /* Estilos para el header que contiene la barra de navegación */
 header {
-    background-color: #2c3e50;  /* Color de fondo oscuro (azul grisáceo) */
-    color: white;              /* Color del texto blanco */
+    background-color: #0b0e14;  /* Fondo negro profundo gamer */
+    color: #ffffff;              /* Color del texto blanco */
     padding: 20px;             /* Espacio interior de 20px en todos los lados */
 }
 
 /* Estilos para el contenedor flex del header (título + navegación) */
 header {
     display: flex;             /* Activa flexbox para organizar elementos en línea */
-    justify-content: space-between; /* Distribuye espacio entre elementos (título a izquierda, nav a derecha) */
+    justify-content: space-between; /* Distribuye espacio entre elementos */
     align-items: center;      /* Centra verticalmente los elementos */
 }
 
 /* Estilos para el título principal del sitio */
 header h1 {
     font-size: 28px;           /* Tamaño de fuente de 28 píxeles */
+    color: #ffffff;
+    text-shadow: 0 0 10px rgba(0, 242, 254, 0.3); /* Sutil brillo cian */
 }
 
 /* Contenedor para agrupar nav y búsqueda */
@@ -44,7 +46,8 @@ header h1 {
 .busqueda {
     display: flex;                  /* Activa flexbox para organizar input y botón en línea */
     align-items: center;            /* Centra verticalmente los elementos */
-    background-color: white;        /* Fondo blanco */
+    background-color: #161a23;        /* Fondo gris oscuro */
+    border: 1px solid #232a36;      /* Borde oscuro integrado */
     border-radius: 25px;            /* Bordes redondeados en forma de píldora */
     padding: 5px;                   /* Espacio interior pequeño */
     overflow: hidden;               /* Oculta el contenido que desborda */
@@ -58,29 +61,30 @@ header h1 {
     font-size: 14px;                /* Tamaño de fuente */
     width: 250px;                   /* Ancho fijo de 250px */
     background: transparent;        /* Fondo transparente */
-    color: #333;                    /* Color del texto gris oscuro */
+    color: #ffffff;                    /* Texto blanco */
 }
 
 /* Placeholder del campo de búsqueda */
 .busqueda input::placeholder {
-    color: #999;                    /* Color gris claro para el texto de ejemplo */
+    color: #626f8a;                    /* Gris azulado apagado */
 }
 
 /* Estilos para el botón de búsqueda */
 .busqueda button {
-    background-color: #3498db;      /* Color azul de fondo */
+    background-color: #00f2fe;      /* Cian eléctrico gamer */
     border: none;                   /* Sin borde */
-    color: white;                   /* Icono blanco */
+    color: #0b0e14;                   /* Icono oscuro para contraste */
     padding: 10px 15px;             /* Espacio interior */
     border-radius: 20px;            /* Bordes redondeados */
     cursor: pointer;                /* Cursor de mano */
     font-size: 16px;                /* Tamaño del icono */
-    transition: background-color 0.3s; /* Animación suave al hacer hover */
+    transition: background-color 0.3s, box-shadow 0.3s; /* Animación suave */
 }
 
 /* Efecto al pasar el mouse sobre el botón */
 .busqueda button:hover {
-    background-color: #2980b9;      /* Color azul más oscuro al hover */
+    background-color: #00b8c4;      /* Cian más oscuro */
+    box-shadow: 0 0 10px rgba(0, 242, 254, 0.5); /* Brillo neón al hover */
 }
 
 /* Estilos para la barra de navegación */
@@ -92,22 +96,24 @@ nav ul {
 
 /* Estilos para los enlaces de navegación */
 nav ul li a {
-    color: white;              /* Color del texto del enlace en blanco */
+    color: #b3b9c9;              /* Color plata/gris claro */
     text-decoration: none;    /* Elimina el subrayado de los enlaces */
     font-size: 16px;           /* Tamaño de fuente de 16 píxeles */
     padding: 10px 15px;        /* Espacio interior para crear área clickeable */
     border-radius: 5px;        /* Esquinas redondeadas de 5px */
-    transition: background-color 0.3s; /* Animación suave al cambiar el fondo */
+    transition: background-color 0.3s, color 0.3s; /* Animación suave */
 }
 
 /* Estilos para enlaces al pasar el mouse por encima */
 nav ul li a:hover {
-    background-color: #34495e;  /* Color de fondo más claro al hacer hover */
+    background-color: #161a23;  /* Fondo gris oscuro en hover */
+    color: #00f2fe;             /* Texto cian eléctrico */
 }
 
 /* Estilos para el enlace activo (página actual) */
 nav ul li a.active {
-    background-color: #3498db;  /* Color azul para indicar la página activa */
+    background-color: rgba(0, 242, 254, 0.1);  /* Fondo cian semi-transparente */
+    color: #00f2fe;             /* Texto cian activo */
 }
 
 /* ============================================
@@ -116,8 +122,8 @@ nav ul li a.active {
 
 /* Estilos para la sección de productos */
 #productos {
-    padding: 40px 20px;          /* Espacio interior: 40px arriba/abajo, 20px laterales */
-    background-color: #f5f6fa;    /* Fondo gris claro para la sección */
+    padding: 40px 20px;          /* Espacio interior */
+    background-color: #0b0e14;    /* Fondo oscuro principal */
 }
 
 /* Estilos para el título de la sección */
@@ -125,83 +131,85 @@ nav ul li a.active {
     text-align: center;           /* Centra el texto del título */
     margin-bottom: 40px;          /* Espacio debajo del título */
     font-size: 32px;              /* Tamaño de fuente grande */
-    color: #2c3e50;               /* Color del texto oscuro */
+    color: #ffffff;               /* Texto blanco */
 }
 
 /* Contenedor flex para organizar las cajas de productos en fila */
 .productos-container {
-    display: flex;                /* Activa flexbox para organizar en línea */
-    flex-wrap: wrap;              /* Permite que los productos salten a siguiente línea si no caben */
-    justify-content: center;      /* Centra los productos horizontalmente */
-    gap: 30px;                    /* Espacio de 30px entre cada caja de producto */
+    display: flex;                /* Activa flexbox */
+    flex-wrap: wrap;              /* Permite salto de línea */
+    justify-content: center;      /* Centra los productos */
+    gap: 30px;                    /* Espacio entre cajas */
 }
 
 /* Estilos para cada caja de producto */
 #productos article {
-    background-color: white;      /* Fondo blanco para la caja */
-    border: 1px solid #dcdde1;   /* Borde sólido gris claro de 1px */
-    border-radius: 10px;          /* Esquinas redondeadas de 10px */
-    padding: 25px;                /* Espacio interior de 25px */
-    width: 300px;                 /* Ancho fijo de 300px para cada caja */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra suave para dar profundidad */
-    transition: transform 0.3s, box-shadow 0.3s; /* Animación suave al hacer hover */
-    text-align: center;           /* Centra el texto dentro de la caja */
+    background-color: #161a23;      /* Tarjeta gris oscuro */
+    border: 1px solid #232a36;   /* Borde sutil oscuro */
+    border-radius: 10px;          /* Esquinas redondeadas */
+    padding: 25px;                /* Espacio interior */
+    width: 300px;                 /* Ancho fijo */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4); /* Sombra más pesada y gamer */
+    transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s; /* Animación */
+    text-align: center;           /* Centra el texto */
 }
 
 /* Efecto al pasar el mouse sobre la caja del producto */
 #productos article:hover {
     transform: translateY(-5px);  /* Mueve la caja 5px hacia arriba */
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Sombra más pronunciada al hover */
+    border-color: #00f2fe;        /* Borde se ilumina en cian */
+    box-shadow: 0 5px 20px rgba(0, 242, 254, 0.2); /* Resplandor cian suave */
 }
 
 /* Estilos para el título del producto */
 #productos article h3 {
-    color: #2c3e50;               /* Color del título oscuro */
+    color: #ffffff;               /* Título de producto en blanco */
     margin-bottom: 15px;          /* Espacio debajo del título */
-    font-size: 20px;              /* Tamaño de fuente del título */
+    font-size: 20px;              /* Tamaño de fuente */
 }
 
 /* Estilos para los párrafos de descripción y precio */
 #productos article p {
-    color: #7f8c8d;               /* Color gris para el texto */
+    color: #b3b9c9;               /* Texto de descripción gris plata */
     margin-bottom: 10px;           /* Espacio entre párrafos */
-    font-size: 14px;              /* Tamaño de fuente del texto */
+    font-size: 14px;              /* Tamaño de fuente */
 }
 
 /* Estilos para el precio (más destacado) */
 #productos article p:last-of-type {
-    color: #27ae60;               /* Color verde para el precio */
-    font-size: 22px;              /* Fuente más grande para el precio */
-    font-weight: bold;            /* Texto en negrita */
-    margin-bottom: 20px;          /* Espacio debajo del precio */
+    color: #9d4edf;               /* Violeta neón para el precio gamer */
+    font-size: 22px;              /* Fuente más grande */
+    font-weight: bold;            /* Negrita */
+    margin-bottom: 20px;          /* Espacio debajo */
+    text-shadow: 0 0 10px rgba(157, 78, 223, 0.3); /* Brillo violeta */
 }
 
 /* Estilos para la imagen del producto */
 .producto-img {
-    width: 100%;                  /* Ocupa el 100% del ancho de la caja */
-    height: 180px;                /* Altura fija de 180px */
-    object-fit: cover;            /* Ajusta la imagen sin deformarla */
-    border-radius: 8px;           /* Esquinas redondeadas de 8px */
-    margin-bottom: 15px;          /* Espacio debajo de la imagen */
-    background-color: #ecf0f1;   /* Color de fondo gris claro */
+    width: 100%;                  /* Ocupa el 100% del ancho */
+    height: 180px;                /* Altura fija */
+    object-fit: cover;            /* Ajusta sin deformar */
+    border-radius: 8px;           /* Esquinas redondeadas */
+    margin-bottom: 15px;          /* Espacio debajo */
+    background-color: #0b0e14;   /* Fondo oscuro para las fotos por si tienen transparencia */
 }
 
 /* Estilos para sección de productos destacados en inicio */
 #productos-destacados {
     padding: 60px 20px;            /* Espacio interior amplio */
-    background-color: #f5f6fa;    /* Fondo gris claro */
+    background-color: #0b0e14;    /* Fondo oscuro principal */
 }
 
 /* Estilos para el título de la sección */
 #productos-destacados h2 {
     text-align: center;            /* Centra el texto */
     font-size: 36px;               /* Tamaño de fuente grande */
-    color: #2c3e50;                /* Color del título oscuro */
-    margin-bottom: 40px;           /* Espacio debajo del título */
+    color: #ffffff;                /* Texto blanco */
+    margin-bottom: 40px;           /* Espacio debajo */
 }
 
 /* ============================================
-   ESTILOS PARA EL CARRUSEL
+   ESTILOS PARA EL CARRUSEL (Mantenidos Originales)
    ============================================ */
 
 /* Contenedor principal del carrusel */
@@ -294,7 +302,7 @@ nav ul li a.active {
 .carrusel-navegacion label {
     width: 12px;                   /* Ancho del punto */
     height: 12px;                  /* Altura del punto */
-    border-radius: 50%;           /* Forma circular */
+    border-radius: 50%;            /* Forma circular */
     background-color: #bdc3c7;     /* Color gris claro */
     cursor: pointer;               /* Cursor de mano */
     transition: background-color 0.3s; /* Animación suave */
@@ -357,21 +365,27 @@ nav ul li a.active {
     background-color: rgba(0,0,0,0.8); /* Más oscuro al hover */
 }
 
+/* ============================================
+   SECCIÓN DE PRODUCTOS (BOTONES)
+   ============================================ */
+
 /* Estilos para el botón de agregar al carrito */
 #productos article button {
-    background-color: #3498db;    /* Color azul de fondo */
-    color: white;                 /* Texto blanco */
+    background-color: #00f2fe;    /* Botón cian eléctrico */
+    color: #0b0e14;                 /* Texto oscuro para legibilidad */
     border: none;                 /* Sin borde */
-    padding: 12px 30px;           /* Espacio interior: 12px arriba/abajo, 30px laterales */
+    padding: 12px 30px;           /* Espacio interior */
     border-radius: 5px;            /* Esquinas redondeadas */
     font-size: 16px;              /* Tamaño de fuente */
-    cursor: pointer;              /* Cambia el cursor a mano al pasar por encima */
-    transition: background-color 0.3s; /* Animación suave al hacer hover */
+    cursor: pointer;              /* Mano */
+    font-weight: bold;            /* Le da más presencia gaming */
+    transition: background-color 0.3s, box-shadow 0.3s; /* Animación */
 }
 
 /* Efecto al pasar el mouse sobre el botón */
 #productos article button:hover {
-    background-color: #2980b9;    /* Color azul más oscuro al hover */
+    background-color: #00b8c4;    /* Cambia a cian más oscuro */
+    box-shadow: 0 0 15px rgba(0, 242, 254, 0.5); /* Brillo neón */
 }
 
 /* ============================================
@@ -380,53 +394,57 @@ nav ul li a.active {
 
 /* Estilos para la sección de inicio */
 #inicio {
-    background: linear-gradient(135deg, #2c3e50 0%, #3498db 100%); /* Degradado de fondo azul oscuro a azul claro */
-    color: white;                      /* Texto blanco */
-    padding: 60px 20px;                /* Espacio interior amplio */
+    background: linear-gradient(135deg, #0b0e14 0%, #161a23 100%); /* Degradado oscuro futurista */
+    color: #ffffff;                      /* Texto blanco */
+    padding: 60px 20px;                /* Espacio interior */
     text-align: center;                /* Texto centrado */
+    border-bottom: 1px solid #232a36;  /* Separador sutil */
 }
 
 /* Estilos para el título de inicio */
 #inicio h2 {
     font-size: 42px;                   /* Fuente muy grande */
-    margin-bottom: 20px;               /* Espacio debajo del título */
+    margin-bottom: 20px;               /* Espacio debajo */
+    color: #ffffff;
 }
 
 /* Estilos para el párrafo de inicio */
 #inicio p {
-    font-size: 18px;                   /* Fuente de tamaño medio */
-    margin-bottom: 40px;               /* Espacio amplio debajo del párrafo */
-    opacity: 0.9;                       /* Texto ligeramente transparente */
+    font-size: 18px;                   /* Tamaño medio */
+    margin-bottom: 40px;               /* Espacio amplio */
+    color: #b3b9c9;                    /* Texto gris plata */
 }
 
 /* Contenedor flex para las características */
 .features {
-    display: flex;                     /* Activa flexbox para organizar en fila */
-    justify-content: center;           /* Centra los elementos horizontalmente */
-    gap: 50px;                         /* Espacio de 50px entre cada característica */
-    flex-wrap: wrap;                   /* Permite saltar a siguiente línea si no caben */
+    display: flex;                     /* Activa flexbox */
+    justify-content: center;           /* Centra elementos */
+    gap: 50px;                         /* Espacio */
+    flex-wrap: wrap;                   /* Salto de línea */
 }
 
 /* Estilos para cada caja de característica */
 .feature {
-    background-color: rgba(255, 255, 255, 0.15); /* Fondo semi-transparente blanco */
-    padding: 30px;                     /* Espacio interior amplio */
+    background-color: rgba(22, 26, 35, 0.6); /* Fondo oscuro transparente */
+    border: 1px solid rgba(0, 242, 254, 0.2); /* Borde cian sutil */
+    padding: 30px;                     /* Espacio interior */
     border-radius: 10px;               /* Esquinas redondeadas */
-    width: 250px;                      /* Ancho fijo de 250px */
-    backdrop-filter: blur(5px);        /* Efecto de desenfoque detrás del elemento */
+    width: 250px;                      /* Ancho fijo */
+    backdrop-filter: blur(5px);        /* Desenfoque de fondo moderno */
 }
 
 /* Estilos para el título de la característica */
 .feature h3 {
-    font-size: 20px;                   /* Tamaño de fuente del título */
-    margin-bottom: 10px;               /* Espacio debajo del título */
+    font-size: 20px;                   /* Tamaño de fuente */
+    margin-bottom: 10px;               /* Espacio debajo */
+    color: #00f2fe;                    /* Título de característica en cian */
 }
 
 /* Estilos para el párrafo de la característica */
 .feature p {
-    font-size: 14px;                   /* Tamaño de fuente pequeño */
+    font-size: 14px;                   /* Tamaño pequeño */
     margin-bottom: 0;                  /* Sin margen inferior */
-    opacity: 0.9;                      /* Texto ligeramente transparente */
+    color: #b3b9c9;                    /* Texto descriptivo gris plata */
 }
 
 /* ============================================
@@ -435,85 +453,86 @@ nav ul li a.active {
 
 /* Estilos para la sección nosotros */
 #nosotros {
-    padding: 60px 20px;                /* Espacio interior amplio: 60px arriba/abajo, 20px laterales */
-    background-color: white;            /* Fondo blanco */
+    padding: 60px 20px;                /* Espacio interior amplio */
+    background-color: #161a23;            /* Fondo gris oscuro secundario */
 }
 
 /* Contenedor flex para organizar contenido e imagen lado a lado */
 .nosotros-contenido {
-    display: flex;                      /* Activa flexbox para organizar en línea */
-    align-items: center;                /* Centra verticalmente los elementos */
-    gap: 50px;                         /* Espacio de 50px entre texto e imagen */
-    max-width: 1200px;                  /* Ancho máximo del contenedor */
-    margin: 0 auto;                     /* Centra el contenedor horizontalmente */
+    display: flex;                      /* Activa flexbox */
+    align-items: center;                /* Centra verticalmente */
+    gap: 50px;                          /* Espacio */
+    max-width: 1200px;                  /* Ancho máximo */
+    margin: 0 auto;                     /* Centra horizontalmente */
 }
 
 /* Estilos para el texto de nosotros */
 .nosotros-texto {
-    flex: 1;                           /* Ocupa el espacio restante (1 parte) */
+    flex: 1;                           /* Ocupa el espacio restante */
 }
 
 /* Estilos para el título de la sección */
 #nosotros h2 {
-    font-size: 36px;                   /* Tamaño de fuente grande */
-    color: #2c3e50;                    /* Color del título oscuro */
-    margin-bottom: 30px;                /* Espacio debajo del título */
+    font-size: 36px;                   /* Tamaño grande */
+    color: #ffffff;                    /* Texto blanco */
+    margin-bottom: 30px;                /* Espacio debajo */
     text-align: center;                 /* Centra el texto */
 }
 
 /* Estilos para el párrafo de nosotros */
 .nosotros-texto p {
-    font-size: 16px;                   /* Tamaño de fuente medio */
-    color: #7f8c8d;                    /* Color gris para el texto */
-    line-height: 1.8;                   /* Altura de línea para mejor legibilidad */
+    font-size: 16px;                   /* Tamaño medio */
+    color: #b3b9c9;                    /* Texto gris plata */
+    line-height: 1.8;                   /* Altura de línea */
     margin-bottom: 15px;                /* Espacio entre párrafos */
 }
 
 /* Contenedor para la imagen de nosotros */
 .nosotros-imagen {
-    flex: 1;                           /* Ocupa el espacio restante (1 parte) */
-    background-color: #ecf0f1;         /* Fondo gris claro para el placeholder */
+    flex: 1;                           /* Ocupa espacio restante */
+    background-color: #0b0e14;         /* Fondo negro gamer */
+    border: 1px solid #232a36;
     border-radius: 10px;               /* Esquinas redondeadas */
-    height: 300px;                     /* Altura fija de 300px */
+    height: 300px;                     /* Altura fija */
     display: flex;                     /* Activa flexbox */
     align-items: center;               /* Centra verticalmente */
     justify-content: center;           /* Centra horizontalmente */
-    color: #95a5a6;                    /* Color del texto placeholder */
+    color: #626f8a;                    /* Texto apagado */
     font-size: 18px;                   /* Tamaño de fuente */
 }
 
 /* Contenedor flex para los valores/beneficios */
 .valores {
-    display: flex;                     /* Activa flexbox para organizar en fila */
-    justify-content: center;            /* Centra los elementos horizontalmente */
-    gap: 40px;                         /* Espacio de 40px entre cada valor */
-    margin-top: 50px;                   /* Espacio arriba del contenedor */
-    flex-wrap: wrap;                   /* Permite saltar a siguiente línea si no caben */
+    display: flex;                     /* Activa flexbox */
+    justify-content: center;            /* Centra horizontalmente */
+    gap: 40px;                         /* Espacio */
+    margin-top: 50px;                   /* Espacio arriba */
+    flex-wrap: wrap;                   /* Salto de línea */
 }
 
 /* Estilos para cada caja de valor */
 .valor {
     text-align: center;                /* Centra el texto */
-    width: 200px;                       /* Ancho fijo de 200px */
+    width: 200px;                       /* Ancho fijo */
 }
 
 /* Estilos para el icono/emoji del valor */
 .valor-icon {
-    font-size: 40px;                   /* Tamaño grande del icono */
-    margin-bottom: 15px;                /* Espacio debajo del icono */
+    font-size: 40px;                   /* Tamaño grande */
+    margin-bottom: 15px;                /* Espacio debajo */
 }
 
 /* Estilos para el título del valor */
 .valor h3 {
     font-size: 18px;                   /* Tamaño de fuente */
-    color: #2c3e50;                    /* Color del título oscuro */
-    margin-bottom: 10px;                /* Espacio debajo del título */
+    color: #00f2fe;                    /* Títulos de valores resaltados en cian */
+    margin-bottom: 10px;                /* Espacio debajo */
 }
 
 /* Estilos para el párrafo del valor */
 .valor p {
-    font-size: 14px;                   /* Tamaño de fuente pequeño */
-    color: #7f8c8d;                    /* Color gris */
+    font-size: 14px;                   /* Tamaño pequeño */
+    color: #b3b9c9;                    /* Texto gris plata */
 }
 
 /* ============================================
@@ -523,116 +542,130 @@ nav ul li a.active {
 /* Estilos para la sección contacto */
 #contacto {
     padding: 60px 20px;                /* Espacio interior amplio */
-    background-color: #f5f6fa;          /* Fondo gris claro */
+    background-color: #0b0e14;          /* Fondo oscuro principal */
 }
 
 /* Estilos para el título de la sección */
 #contacto h2 {
-    font-size: 36px;                   /* Tamaño de fuente grande */
-    color: #2c3e50;                    /* Color del título oscuro */
-    margin-bottom: 40px;                /* Espacio debajo del título */
+    font-size: 36px;                   /* Tamaño grande */
+    color: #ffffff;                    /* Texto blanco */
+    margin-bottom: 40px;                /* Espacio debajo */
     text-align: center;                 /* Centra el texto */
 }
 
 /* Contenedor flex para organizar formulario e información lado a lado */
 .contacto-contenido {
-    display: flex;                      /* Activa flexbox para organizar en línea */
-    gap: 50px;                         /* Espacio de 50px entre elementos */
-    max-width: 1000px;                  /* Ancho máximo del contenedor */
-    margin: 0 auto;                     /* Centra el contenedor horizontalmente */
-    flex-wrap: wrap;                   /* Permite saltar a siguiente línea si no caben */
+    display: flex;                      /* Activa flexbox */
+    gap: 50px;                          /* Espacio */
+    max-width: 1000px;                  /* Ancho máximo */
+    margin: 0 auto;                     /* Centra horizontalmente */
+    flex-wrap: wrap;                   /* Salto de línea */
 }
 
 /* Estilos para el formulario */
 form {
-    flex: 1;                           /* Ocupa el espacio restante */
-    min-width: 300px;                   /* Ancho mínimo de 300px */
-    background-color: white;           /* Fondo blanco */
-    padding: 40px;                      /* Espacio interior amplio */
+    flex: 1;                           /* Ocupa espacio restante */
+    min-width: 300px;                   /* Ancho mínimo */
+    background-color: #161a23;           /* Formulario gris oscuro */
+    border: 1px solid #232a36;
+    padding: 40px;                      /* Espacio interior */
     border-radius: 10px;               /* Esquinas redondeadas */
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5); /* Sombra pesada */
 }
 
 /* Estilos para las etiquetas del formulario */
 form label {
-    display: block;                    /* Hace que la etiqueta ocupe toda la línea */
+    display: block;                    /* Ocupa toda la línea */
     font-size: 14px;                   /* Tamaño de fuente */
-    color: #2c3e50;                    /* Color del texto oscuro */
-    margin-bottom: 8px;                 /* Espacio debajo de la etiqueta */
-    font-weight: bold;                 /* Texto en negrita */
+    color: #b3b9c9;                    /* Texto descriptivo gris plata */
+    margin-bottom: 8px;                 /* Espacio debajo */
+    font-weight: bold;                 /* Negrita */
 }
 
 /* Estilos para los campos de entrada y textarea */
 form input,
 form textarea {
-    width: 100%;                       /* Ocupa el 100% del ancho disponible */
+    width: 100%;                       /* Ancho completo */
     padding: 12px;                     /* Espacio interior */
-    border: 1px solid #dcdde1;        /* Borde sólido gris claro */
+    background-color: #0b0e14;         /* Campos de entrada oscuros */
+    border: 1px solid #232a36;        /* Borde oscuro integrado */
     border-radius: 5px;                /* Esquinas redondeadas */
     font-size: 14px;                   /* Tamaño de fuente */
-    margin-bottom: 20px;               /* Espacio debajo de cada campo */
-    font-family: inherit;               /* Usa la fuente del documento */
+    color: #ffffff;                    /* Texto escrito en blanco */
+    margin-bottom: 20px;               /* Espacio debajo */
+    font-family: inherit;              /* Hereda fuente */
+    transition: border-color 0.3s;
+}
+
+/* Focus en los inputs */
+form input:focus,
+form textarea:focus {
+    border-color: #00f2fe;             /* El campo activo se ilumina en cian */
+    outline: none;
 }
 
 /* Estilos para el textarea (campo de mensaje) */
 form textarea {
-    height: 120px;                     /* Altura fija de 120px */
-    resize: vertical;                  /* Permite redimensionar solo verticalmente */
+    height: 120px;                     /* Altura fija */
+    resize: vertical;                  /* Redimensión vertical */
 }
 
 /* Estilos para el botón del formulario */
 form button {
-    background-color: #3498db;          /* Color azul de fondo */
-    color: white;                       /* Texto blanco */
+    background-color: #00f2fe;          /* Botón cian */
+    color: #0b0e14;                       /* Texto oscuro */
     border: none;                        /* Sin borde */
-    padding: 15px 40px;                /* Espacio interior: 15px arriba/abajo, 40px laterales */
+    padding: 15px 40px;                /* Espacio interior */
     border-radius: 5px;                 /* Esquinas redondeadas */
     font-size: 16px;                    /* Tamaño de fuente */
-    cursor: pointer;                   /* Cursor de mano */
-    width: 100%;                        /* Ocupa el 100% del ancho */
-    transition: background-color 0.3s; /* Animación suave al hacer hover */
+    cursor: pointer;                   /* Mano */
+    font-weight: bold;
+    width: 100%;                        /* Ancho completo */
+    transition: background-color 0.3s, box-shadow 0.3s; /* Animación */
 }
 
 /* Efecto al pasar el mouse sobre el botón */
 form button:hover {
-    background-color: #2980b9;          /* Color azul más oscuro al hover */
+    background-color: #00b8c4;          /* Cian más oscuro */
+    box-shadow: 0 0 15px rgba(0, 242, 254, 0.5); /* Brillo gamer */
 }
 
 /* Estilos para la información de contacto */
 .contacto-info {
-    flex: 1;                            /* Ocupa el espacio restante */
-    min-width: 300px;                   /* Ancho mínimo de 300px */
+    flex: 1;                            /* Ocupa espacio restante */
+    min-width: 300px;                   /* Ancho mínimo */
 }
 
 /* Estilos para cada item de información */
 .info-item {
-    background-color: white;            /* Fondo blanco */
-    padding: 25px;                     /* Espacio interior amplio */
+    background-color: #161a23;            /* Cajas de info gris oscuro */
+    border: 1px solid #232a36;
+    padding: 25px;                     /* Espacio interior */
     border-radius: 10px;                /* Esquinas redondeadas */
-    margin-bottom: 20px;                /* Espacio debajo de cada item */
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    margin-bottom: 20px;                /* Espacio debajo */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4); /* Sombra */
     display: flex;                     /* Activa flexbox */
     align-items: center;                /* Centra verticalmente */
-    gap: 20px;                         /* Espacio entre icono y texto */
+    gap: 20px;                         /* Espacio */
 }
 
 /* Estilos para el icono de la info */
 .info-icon {
-    font-size: 30px;                   /* Tamaño grande del icono */
-    color: #3498db;                    /* Color azul para el icono */
+    font-size: 30px;                   /* Tamaño grande */
+    color: #00f2fe;                    /* Iconos de contacto en cian */
 }
 
 /* Estilos para el título de la info */
 .info-item h3 {
     font-size: 16px;                   /* Tamaño de fuente */
-    color: #2c3e50;                    /* Color del título oscuro */
-    margin-bottom: 5px;                 /* Espacio debajo del título */
+    color: #ffffff;                    /* Texto blanco */
+    margin-bottom: 5px;                 /* Espacio debajo */
 }
 
 /* Estilos para el texto de la info */
 .info-item p {
-    font-size: 14px;                   /* Tamaño de fuente pequeño */
-    color: #7f8c8d;                    /* Color gris */
+    font-size: 14px;                   /* Tamaño pequeño */
+    color: #b3b9c9;                    /* Texto gris plata */
 }
 
 /* ============================================
@@ -641,83 +674,84 @@ form button:hover {
 
 /* Estilos para el pie de página */
 footer {
-    background-color: #2c3e50;          /* Color de fondo oscuro (azul grisáceo) */
-    color: white;                       /* Texto blanco */
-    padding: 40px 20px;                 /* Espacio interior: 40px arriba/abajo, 20px laterales */
+    background-color: #0b0e14;          /* Fondo negro profundo */
+    color: #ffffff;                       /* Texto blanco */
+    padding: 40px 20px;                 /* Espacio interior */
+    border-top: 1px solid #232a36;     /* Línea superior sutil */
 }
 
 /* Contenedor flex para organizar el contenido del footer */
 .footer-contenido {
-    display: flex;                      /* Activa flexbox para organizar en línea */
-    justify-content: space-between;     /* Distribuye espacio entre elementos */
-    flex-wrap: wrap;                    /* Permite saltar a siguiente línea si no caben */
-    max-width: 1200px;                  /* Ancho máximo del contenedor */
-    margin: 0 auto;                     /* Centra el contenedor horizontalmente */
-    gap: 30px;                          /* Espacio de 30px entre columnas */
+    display: flex;                      /* Activa flexbox */
+    justify-content: space-between;     /* Distribuye espacio */
+    flex-wrap: wrap;                    /* Salto de línea */
+    max-width: 1200px;                  /* Ancho máximo */
+    margin: 0 auto;                     /* Centra horizontalmente */
+    gap: 30px;                          /* Espacio */
 }
 
 /* Estilos para cada columna del footer */
 .footer-columna {
-    flex: 1;                            /* Ocupa el espacio restante */
-    min-width: 200px;                   /* Ancho mínimo de 200px */
+    flex: 1;                            /* Ocupa espacio restante */
+    min-width: 200px;                   /* Ancho mínimo */
 }
 
 /* Estilos para el título de cada columna */
 .footer-columna h3 {
     font-size: 18px;                    /* Tamaño de fuente */
-    margin-bottom: 20px;                /* Espacio debajo del título */
-    color: #3498db;                     /* Color azul para los títulos */
+    margin-bottom: 20px;                /* Espacio debajo */
+    color: #00f2fe;                     /* Títulos del footer en cian */
 }
 
 /* Estilos para los párrafos y enlaces del footer */
 .footer-columna p,
 .footer-columna a {
-    font-size: 14px;                    /* Tamaño de fuente pequeño */
-    color: #ecf0f1;                     /* Color blanco grisáceo */
-    margin-bottom: 10px;                /* Espacio entre elementos */
-    display: block;                     /* Hace que cada elemento ocupe una línea */
-    text-decoration: none;              /* Elimina el subrayado de los enlaces */
+    font-size: 14px;                    /* Tamaño pequeño */
+    color: #b3b9c9;                     /* Texto gris plata */
+    margin-bottom: 10px;                /* Espacio debajo */
+    display: block;                     /* Ocupa una línea */
+    text-decoration: none;              /* Elimina subrayado */
 }
 
 /* Estilos para los enlaces al pasar el mouse */
 .footer-columna a:hover {
-    color: #3498db;                     /* Color azul al hacer hover */
+    color: #9d4edf;                     /* Los enlaces del footer se vuelven violeta neón en hover */
 }
 
 /* Estilos para la parte inferior del footer (copyright y redes) */
 .footer-inferior {
     display: flex;                      /* Activa flexbox */
-    justify-content: space-between;     /* Distribuye espacio entre elementos */
+    justify-content: space-between;     /* Distribuye espacio */
     align-items: center;                /* Centra verticalmente */
     max-width: 1200px;                  /* Ancho máximo */
-    margin: 30px auto 0;                /* Espacio arriba, centrado horizontalmente */
+    margin: 30px auto 0;                /* Espacio arriba, centrado */
     padding-top: 20px;                  /* Espacio superior */
-    border-top: 1px solid #34495e;      /* Línea divisoria superior */
-    flex-wrap: wrap;                    /* Permite saltar a siguiente línea si no caben */
-    gap: 15px;                          /* Espacio entre elementos */
+    border-top: 1px solid #232a36;      /* Línea divisoria superior */
+    flex-wrap: wrap;                    /* Salto de línea */
+    gap: 15px;                          /* Espacio */
 }
 
 /* Estilos para el texto de copyright */
 .footer-inferior p {
-    font-size: 14px;                    /* Tamaño de fuente pequeño */
-    color: #95a5a6;                     /* Color gris claro */
+    font-size: 14px;                    /* Tamaño pequeño */
+    color: #626f8a;                     /* Gris apagado */
     margin: 0;                          /* Sin margen */
 }
 
 /* Contenedor flex para los iconos de redes sociales */
 .redes-sociales {
-    display: flex;                      /* Activa flexbox para organizar iconos en fila */
-    gap: 15px;                         /* Espacio de 15px entre cada icono */
+    display: flex;                      /* Activa flexbox */
+    gap: 15px;                          /* Espacio */
 }
 
 /* Estilos para los iconos de redes sociales */
 .redes-sociales a {
-    font-size: 24px;                    /* Tamaño grande del icono */
-    color: white;                       /* Color blanco */
-    transition: color 0.3s;             /* Animación suave al cambiar el color */
+    font-size: 24px;                    /* Tamaño grande */
+    color: #ffffff;                       /* Color blanco */
+    transition: color 0.3s;              /* Animación suave */
 }
 
 /* Efecto al pasar el mouse sobre los iconos de redes */
 .redes-sociales a:hover {
-    color: #3498db;                     /* Color azul al hover */
+    color: #00f2fe;                     /* Iconos brillan en cian en hover */
 }
