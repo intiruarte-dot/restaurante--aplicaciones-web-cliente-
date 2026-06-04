@@ -755,3 +755,162 @@ footer {
 .redes-sociales a:hover {
     color: #00f2fe;                     /* Iconos brillan en cian en hover */
 }
+
+/* ============================================
+   ESTILOS PARA LOS MODALES DE DETALLE
+   ============================================ */
+
+/* Estilos para el botón Ver producto dentro del carrusel */
+.btn-ver {
+    display: inline-block;            /* Se muestra como bloque en línea */
+    background-color: #e67e22;        /* Color naranja */
+    color: white;                     /* Texto blanco */
+    border: none;                     /* Sin borde */
+    padding: 12px 30px;              /* Espacio interior */
+    border-radius: 5px;              /* Esquinas redondeadas */
+    cursor: pointer;                  /* Cursor de mano */
+    font-size: 16px;                  /* Tamaño de fuente */
+    text-decoration: none;            /* Sin subrayado */
+    transition: background-color 0.3s; /* Animación suave */
+}
+
+/* Hover del botón Ver producto */
+.btn-ver:hover {
+    background-color: #d35400;        /* Naranja más oscuro */
+}
+
+/* Modal de detalle - oculto por defecto */
+.detalle-modal {
+    display: none;                    /* Oculta el modal inicialmente */
+    position: fixed;                  /* Posición fija en pantalla */
+    top: 0;                           /* Cubre toda la pantalla */
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8); /* Fondo oscuro semi-transparente */
+    z-index: 1000;                    /* Capa superior */
+    justify-content: center;
+    align-items: center;
+    overflow-y: auto;                 /* Scroll si el contenido es largo */
+}
+
+/* Muestra el modal cuando es seleccionado por :target */
+.detalle-modal:target {
+    display: flex;                    /* Muestra el modal como flex */
+}
+
+/* Contenido del modal */
+.detalle-contenido {
+    background-color: white;          /* Fondo blanco */
+    border-radius: 15px;              /* Esquinas redondeadas */
+    max-width: 900px;                 /* Ancho máximo de 900px */
+    width: 90%;                       /* Ocupa el 90% en pantallas pequeñas */
+    max-height: 90vh;                 /* Altura máxima del 90% del viewport */
+    overflow-y: auto;                 /* Scroll interno si es necesario */
+    padding: 30px;                    /* Espacio interior */
+    position: relative;               /* Para posicionar el botón cerrar */
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3); /* Sombra */
+}
+
+/* Botón cerrar del modal */
+.detalle-cerrar {
+    position: absolute;               /* Posición absoluta dentro del modal */
+    top: 15px;                        /* Arriba a la derecha */
+    right: 20px;
+    font-size: 40px;                  /* Tamaño grande */
+    text-decoration: none;            /* Sin subrayado */
+    color: #999;                      /* Color gris */
+    line-height: 1;                   /* Altura de línea */
+    transition: color 0.3s;          /* Animación suave */
+}
+
+/* Hover del botón cerrar */
+.detalle-cerrar:hover {
+    color: #e74c3c;                   /* Rojo al hover */
+}
+
+/* Grid para imagen e info del producto */
+.detalle-grid {
+    display: flex;                    /* Flexbox para lado a lado */
+    gap: 40px;                        /* Espacio entre imagen e info */
+    align-items: flex-start;          /* Alineación superior */
+}
+
+/* Contenedor de la imagen del detalle */
+.detalle-imagen {
+    flex: 1;                          /* Ocupa 1 parte del espacio */
+    min-width: 280px;                 /* Ancho mínimo de 280px */
+}
+
+/* Imagen del detalle */
+.detalle-imagen img {
+    width: 100%;                      /* Ocupa todo el ancho */
+    border-radius: 10px;             /* Esquinas redondeadas */
+    border: 1px solid #e0e0e0;      /* Borde gris claro */
+}
+
+/* Contenedor de la info del detalle */
+.detalle-info {
+    flex: 1;                          /* Ocupa 1 parte del espacio */
+    min-width: 280px;                 /* Ancho mínimo */
+}
+
+/* Título del producto en detalle */
+.detalle-info h2 {
+    font-size: 28px;                  /* Tamaño grande */
+    color: #2c3e50;                   /* Color oscuro */
+    margin-bottom: 15px;              /* Espacio debajo */
+}
+
+/* Precio del producto en detalle */
+.detalle-precio {
+    font-size: 26px;                  /* Tamaño grande */
+    color: #27ae60;                   /* Color verde */
+    font-weight: bold;                /* Negrita */
+    margin-bottom: 20px;              /* Espacio debajo */
+}
+
+/* Descripción del producto en detalle */
+.detalle-descripcion {
+    font-size: 15px;                  /* Tamaño medio */
+    color: #666;                      /* Color gris */
+    line-height: 1.6;                 /* Interlineado */
+    margin-bottom: 20px;              /* Espacio debajo */
+}
+
+/* Lista de especificaciones */
+.detalle-especs {
+    list-style: none;                 /* Sin puntos de lista */
+    margin-bottom: 25px;              /* Espacio debajo */
+}
+
+/* Items de la lista de especificaciones */
+.detalle-especs li {
+    padding: 10px 0;                  /* Espacio interior */
+    border-bottom: 1px solid #eee;   /* Línea divisoria */
+    font-size: 14px;                  /* Tamaño de fuente */
+    color: #555;                      /* Color gris */
+}
+
+/* Quita el borde del último item */
+.detalle-especs li:last-child {
+    border-bottom: none;              /* Sin borde */
+}
+
+/* Botón de agregar al carrito en el modal */
+.btn-carrito-modal {
+    background-color: #3498db;        /* Color azul */
+    color: white;                     /* Texto blanco */
+    border: none;                     /* Sin borde */
+    padding: 15px 40px;              /* Espacio interior */
+    border-radius: 5px;              /* Esquinas redondeadas */
+    cursor: pointer;                  /* Cursor de mano */
+    font-size: 16px;                  /* Tamaño de fuente */
+    width: 100%;                      /* Ocupa todo el ancho */
+    transition: background-color 0.3s; /* Animación suave */
+}
+
+/* Hover del botón en modal */
+.btn-carrito-modal:hover {
+    background-color: #2980b9;        /* Azul más oscuro */
+}
