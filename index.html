@@ -19,6 +19,7 @@
                     <li><a href="contacto.html">Contacto</a></li>
                 </ul>
             </nav>
+            
             <div class="busqueda">
                 <input type="text" placeholder="Buscar productos...">
                 <button type="submit">🔍</button>
@@ -27,73 +28,366 @@
     </header>
 
     <main>
-        <section id="inicio">
-            <h2>Bienvenido a compra electronica.net</h2>
-            <p>Encuentra las mejores computadoras y accesorios para tus necesidades.</p>
-            <div class="features">
-                <div class="feature">
-                    <h3>Envío Gratis</h3>
-                    <p>En pedidos mayores a $500</p>
+        <section id="productos-destacados">
+        <h2>Productos Destacados</h2>
+        <div class="carrusel">
+            <input type="radio" name="carrusel" id="slide1" checked>
+            <input type="radio" name="carrusel" id="slide2">
+            <input type="radio" name="carrusel" id="slide3">
+            <input type="radio" name="carrusel" id="slide4">
+            <input type="radio" name="carrusel" id="slide5">
+            <input type="radio" name="carrusel" id="slide6">
+
+            <div class="slides">
+                <div class="slide">
+                    <img src="https://via.placeholder.com/800x400/2c3e50/ffffff?text=PC+Gamer+Pro" alt="PC Gamer Pro">
+                    <div class="slide-info">
+                        <h3>Computadora Gamer Pro</h3>
+                        <p>$1,299.99</p>
+                        <a href="#detalle1" class="btn-ver">Ver producto</a>
+                    </div>
                 </div>
-                <div class="feature">
-                    <h3>Soporte 24/7</h3>
-                    <p>Asistencia técnica permanente</p>
+                <div class="slide">
+                    <img src="https://via.placeholder.com/800x400/3498db/ffffff?text=Laptop+Ultrabook" alt="Laptop Ultrabook">
+                    <div class="slide-info">
+                        <h3>Laptop Ultrabook 15"</h3>
+                        <p>$899.99</p>
+                        <a href="#detalle2" class="btn-ver">Ver producto</a>
+                    </div>
                 </div>
-                <div class="feature">
-                    <h3>Garantía</h3>
-                    <p>12 meses en todos los productos</p>
+                <div class="slide">
+                    <img src="https://via.placeholder.com/800x400/27ae60/ffffff?text=Monitor+4K" alt="Monitor 4K">
+                    <div class="slide-info">
+                        <h3>Monitor 27" 4K</h3>
+                        <p>$349.99</p>
+                        <a href="#detalle3" class="btn-ver">Ver producto</a>
+                    </div>
+                </div>
+                <div class="slide">
+                    <img src="https://via.placeholder.com/800x400/9b59b6/ffffff?text=Teclado+RGB" alt="Teclado RGB">
+                    <div class="slide-info">
+                        <h3>Teclado Mecánico RGB</h3>
+                        <p>$79.99</p>
+                        <a href="#detalle4" class="btn-ver">Ver producto</a>
+                    </div>
+                </div>
+                <div class="slide">
+                    <img src="https://via.placeholder.com/800x400/e74c3c/ffffff?text=Mouse+Gamer" alt="Mouse Gamer">
+                    <div class="slide-info">
+                        <h3>Mouse Gamer Inalámbrico</h3>
+                        <p>$59.99</p>
+                        <a href="#detalle5" class="btn-ver">Ver producto</a>
+                    </div>
+                </div>
+                <div class="slide">
+                    <img src="https://via.placeholder.com/800x400/f39c12/ffffff?text=Auriculares" alt="Auriculares">
+                    <div class="slide-info">
+                        <h3>Auriculares Bluetooth</h3>
+                        <p>$129.99</p>
+                        <a href="#detalle6" class="btn-ver">Ver producto</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="carrusel-navegacion">
+                <label for="slide1"></label>
+                <label for="slide2"></label>
+                <label for="slide3"></label>
+                <label for="slide4"></label>
+                <label for="slide5"></label>
+                <label for="slide6"></label>
+            </div>
+
+            <div class="carrusel-flechas">
+                <div class="flecha-par">
+                    <label for="slide6" class="flecha">&#10094;</label>
+                    <label for="slide2" class="flecha">&#10095;</label>
+                </div>
+                <div class="flecha-par">
+                    <label for="slide1" class="flecha">&#10094;</label>
+                    <label for="slide3" class="flecha">&#10095;</label>
+                </div>
+                <div class="flecha-par">
+                    <label for="slide2" class="flecha">&#10094;</label>
+                    <label for="slide4" class="flecha">&#10095;</label>
+                </div>
+                <div class="flecha-par">
+                    <label for="slide3" class="flecha">&#10094;</label>
+                    <label for="slide5" class="flecha">&#10095;</label>
+                </div>
+                <div class="flecha-par">
+                    <label for="slide4" class="flecha">&#10094;</label>
+                    <label for="slide6" class="flecha">&#10095;</label>
+                </div>
+                <div class="flecha-par">
+                    <label for="slide5" class="flecha">&#10094;</label>
+                    <label for="slide1" class="flecha">&#10095;</label>
+                </div>
+            </div>
+        </div>
+    </section>
+
+      <section id="productos">
+            <div class="productos-container">
+            <article>
+                <h3>Computadora Gamer Pro</h3>
+                <p>Descripción: Equipo de alto rendimiento para gaming.</p>
+                <p>Precio: $1,299.99</p>
+                <a href="#detalle1" class="btn-detalle">Ver detalle de producto</a>
+                <button>Agregar al carrito</button>
+            </article>
+            <article>
+                <h3>Laptop Ultrabook 15"</h3>
+                <p>Descripción: Ligera y potente para trabajo y estudio.</p>
+                <p>Precio: $899.99</p>
+                <a href="#detalle2" class="btn-detalle">Ver detalle de producto</a>
+                <button>Agregar al carrito</button>
+            </article>
+            <article>
+                <h3>Computadora de Escritorio Office</h3>
+                <p>Descripción: Ideal para tareas diarias de oficina.</p>
+                <p>Precio: $449.99</p>
+                <a href="#detalle7" class="btn-detalle">Ver detalle de producto</a>
+                <button>Agregar al carrito</button>
+            </article>
+            <article>
+                <h3>Monitor 27" 4K</h3>
+                <p>Descripción: Pantalla ultra HD para trabajo y gaming.</p>
+                <p>Precio: $349.99</p>
+                <a href="#detalle3" class="btn-detalle">Ver detalle de producto</a>
+                <button>Agregar al carrito</button>
+            </article>
+            <article>
+                <h3>Teclado Mecánico RGB</h3>
+                <p>Descripción: Switches azules con iluminación RGB.</p>
+                <p>Precio: $79.99</p>
+                <a href="#detalle4" class="btn-detalle">Ver detalle de producto</a>
+                <button>Agregar al carrito</button>
+            </article>
+            <article>
+                <h3>Mouse Gamer Inalámbrico</h3>
+                <p>Descripción: Alta precisión con sensor óptico 16000 DPI.</p>
+                <p>Precio: $59.99</p>
+                <a href="#detalle5" class="btn-detalle">Ver detalle de producto</a>
+                <button>Agregar al carrito</button>
+            </article>
+            <article>
+                <h3>Auriculares Bluetooth</h3>
+                <p>Descripción: Cancelación de ruido con batería 30h.</p>
+                <p>Precio: $129.99</p>
+                <a href="#detalle6" class="btn-detalle">Ver detalle de producto</a>
+                <button>Agregar al carrito</button>
+            </article>
+            <article>
+                <h3>Disco Duro Externo 1TB</h3>
+                <p>Descripción: USB 3.0 con respaldo automático.</p>
+                <p>Precio: $49.99</p>
+                <a href="#detalle8" class="btn-detalle">Ver detalle de producto</a>
+                <button>Agregar al carrito</button>
+            </article>
+            </div>
+        </section>
+
+        <section id="detalle1" class="detalle-modal">
+            <div class="detalle-contenido">
+                <a href="#" class="detalle-cerrar">&times;</a>
+                <div class="detalle-grid">
+                    <div class="detalle-imagen">
+                        <img src="https://via.placeholder.com/600x400/2c3e50/ffffff?text=PC+Gamer+Pro" alt="PC Gamer Pro">
+                    </div>
+                    <div class="detalle-info">
+                        <h2>Computadora Gamer Pro</h2>
+                        <p class="detalle-precio">$1,299.99</p>
+                        <p class="detalle-descripcion">Equipo de alto rendimiento diseñado para gaming profesional. Cuenta con procesador Intel Core i7 13va generación, 32GB de RAM DDR5, tarjeta gráfica NVIDIA RTX 4070, SSD 1TB NVMe y refrigeración líquida.</p>
+                        <ul class="detalle-especs">
+                            <li><strong>Procesador:</strong> Intel Core i7-13700K</li>
+                            <li><strong>RAM:</strong> 32GB DDR5 5200MHz</li>
+                            <li><strong>GPU:</strong> NVIDIA RTX 4070 12GB</li>
+                            <li><strong>Almacenamiento:</strong> SSD 1TB NVMe</li>
+                            <li><strong>Refrigeración:</strong> Líquida 240mm</li>
+                            <li><strong>Fuente:</strong> 750W 80+ Gold</li>
+                        </ul>
+                        <button class="btn-carrito-modal">Agregar al carrito</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="detalle2" class="detalle-modal">
+            <div class="detalle-contenido">
+                <a href="#" class="detalle-cerrar">&times;</a>
+                <div class="detalle-grid">
+                    <div class="detalle-imagen">
+                        <img src="https://via.placeholder.com/600x400/3498db/ffffff?text=Laptop+Ultrabook" alt="Laptop Ultrabook">
+                    </div>
+                    <div class="detalle-info">
+                        <h2>Laptop Ultrabook 15"</h2>
+                        <p class="detalle-precio">$899.99</p>
+                        <p class="detalle-descripcion">Laptop ultraligera y potente para trabajo y estudio. Perfecta para profesionales que necesitan movilidad sin sacrificar rendimiento.</p>
+                        <ul class="detalle-especs">
+                            <li><strong>Procesador:</strong> Intel Core i5-13500U</li>
+                            <li><strong>RAM:</strong> 16GB DDR4</li>
+                            <li><strong>Pantalla:</strong> 15.6" Full HD IPS</li>
+                            <li><strong>Almacenamiento:</strong> SSD 512GB</li>
+                            <li><strong>Batería:</strong> Hasta 12 horas</li>
+                            <li><strong>Peso:</strong> 1.5 kg</li>
+                        </ul>
+                        <button class="btn-carrito-modal">Agregar al carrito</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="detalle3" class="detalle-modal">
+            <div class="detalle-contenido">
+                <a href="#" class="detalle-cerrar">&times;</a>
+                <div class="detalle-grid">
+                    <div class="detalle-imagen">
+                        <img src="https://via.placeholder.com/600x400/27ae60/ffffff?text=Monitor+4K" alt="Monitor 4K">
+                    </div>
+                    <div class="detalle-info">
+                        <h2>Monitor 27" 4K</h2>
+                        <p class="detalle-precio">$349.99</p>
+                        <p class="detalle-descripcion">Monitor 4K Ultra HD con panel IPS para gaming y trabajo profesional. Colores precisos y ángulos de visión amplios.</p>
+                        <ul class="detalle-especs">
+                            <li><strong>Tamaño:</strong> 27 pulgadas</li>
+                            <li><strong>Resolución:</strong> 4K UHD (3840x2160)</li>
+                            <li><strong>Panel:</strong> IPS LED</li>
+                            <li><strong>Tasa:</strong> 144Hz</li>
+                            <li><strong>HDR:</strong> HDR10</li>
+                            <li><strong>Conexiones:</strong> HDMI 2.1, DP 1.4</li>
+                        </ul>
+                        <button class="btn-carrito-modal">Agregar al carrito</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="detalle4" class="detalle-modal">
+            <div class="detalle-contenido">
+                <a href="#" class="detalle-cerrar">&times;</a>
+                <div class="detalle-grid">
+                    <div class="detalle-imagen">
+                        <img src="https://via.placeholder.com/600x400/9b59b6/ffffff?text=Teclado+RGB" alt="Teclado RGB">
+                    </div>
+                    <div class="detalle-info">
+                        <h2>Teclado Mecánico RGB</h2>
+                        <p class="detalle-precio">$79.99</p>
+                        <p class="detalle-descripcion">Teclado mecánico con switches azules y retroiluminación RGB personalizable. Ideal para gaming y escritura.</p>
+                        <ul class="detalle-especs">
+                            <li><strong>Switches:</strong> Cherry MX Blue</li>
+                            <li><strong>Distribución:</strong> Español (ISO)</li>
+                            <li><strong>Retroiluminación:</strong> RGB por tecla</li>
+                            <li><strong>Conexión:</strong> USB-C desmontable</li>
+                            <li><strong>Teclas:</strong> PBT doubleshot</li>
+                            <li><strong>Formato:</strong> Completo 100%</li>
+                        </ul>
+                        <button class="btn-carrito-modal">Agregar al carrito</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="detalle5" class="detalle-modal">
+            <div class="detalle-contenido">
+                <a href="#" class="detalle-cerrar">&times;</a>
+                <div class="detalle-grid">
+                    <div class="detalle-imagen">
+                        <img src="https://via.placeholder.com/600x400/e74c3c/ffffff?text=Mouse+Gamer" alt="Mouse Gamer">
+                    </div>
+                    <div class="detalle-info">
+                        <h2>Mouse Gamer Inalámbrico</h2>
+                        <p class="detalle-precio">$59.99</p>
+                        <p class="detalle-descripcion">Mouse gaming inalámbrico de alta precisión con sensor óptico de 16000 DPI. Diseño ergonómico y batería de larga duración.</p>
+                        <ul class="detalle-especs">
+                            <li><strong>Sensor:</strong> Óptico 16000 DPI</li>
+                            <li><strong>Conexión:</strong> Inalámbrica 2.4GHz</li>
+                            <li><strong>Botones:</strong> 6 programables</li>
+                            <li><strong>Batería:</strong> 70 horas</li>
+                            <li><strong>Peso:</strong> 80g</li>
+                            <li><strong>RGB:</strong> Personalizable</li>
+                        </ul>
+                        <button class="btn-carrito-modal">Agregar al carrito</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="detalle6" class="detalle-modal">
+            <div class="detalle-contenido">
+                <a href="#" class="detalle-cerrar">&times;</a>
+                <div class="detalle-grid">
+                    <div class="detalle-imagen">
+                        <img src="https://via.placeholder.com/600x400/f39c12/ffffff?text=Auriculares" alt="Auriculares">
+                    </div>
+                    <div class="detalle-info">
+                        <h2>Auriculares Bluetooth</h2>
+                        <p class="detalle-precio">$129.99</p>
+                        <p class="detalle-descripcion">Auriculares inalámbricos con cancelación de ruido activa y 30 horas de batería. Sonido envolvente y diseño plegable.</p>
+                        <ul class="detalle-especs">
+                            <li><strong>Tipo:</strong> Over-ear inalámbrico</li>
+                            <li><strong>Cancelación:</strong> Activa (ANC)</li>
+                            <li><strong>Batería:</strong> 30 horas</li>
+                            <li><strong>Carga:</strong> USB-C rápida</li>
+                            <li><strong>Codecs:</strong> aptX, AAC, SBC</li>
+                            <li><strong>Plegable:</strong> Sí, con estuche</li>
+                        </ul>
+                        <button class="btn-carrito-modal">Agregar al carrito</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="detalle7" class="detalle-modal">
+            <div class="detalle-contenido">
+                <a href="#" class="detalle-cerrar">&times;</a>
+                <div class="detalle-grid">
+                    <div class="detalle-imagen">
+                        <img src="https://via.placeholder.com/600x400/1abc9c/ffffff?text=PC+Office" alt="PC Office">
+                    </div>
+                    <div class="detalle-info">
+                        <h2>Computadora de Escritorio Office</h2>
+                        <p class="detalle-precio">$449.99</p>
+                        <p class="detalle-descripcion">Equipo completo ideal para tareas diarias de oficina, navegación web, correo electrónico y suites de productividad.</p>
+                        <ul class="detalle-especs">
+                            <li><strong>Procesador:</strong> Intel Core i5-12400</li>
+                            <li><strong>RAM:</strong> 16GB DDR4</li>
+                            <li><strong>Almacenamiento:</strong> SSD 480GB</li>
+                            <li><strong>GPU:</strong> Integrada Intel UHD</li>
+                            <li><strong>Incluye:</strong> Monitor 22", teclado, mouse</li>
+                            <li><strong>SO:</strong> Windows 11 Pro</li>
+                        </ul>
+                        <button class="btn-carrito-modal">Agregar al carrito</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="detalle8" class="detalle-modal">
+            <div class="detalle-contenido">
+                <a href="#" class="detalle-cerrar">&times;</a>
+                <div class="detalle-grid">
+                    <div class="detalle-imagen">
+                        <img src="https://via.placeholder.com/600x400/34495e/ffffff?text=Disco+Externo" alt="Disco Externo">
+                    </div>
+                    <div class="detalle-info">
+                        <h2>Disco Duro Externo 1TB</h2>
+                        <p class="detalle-precio">$49.99</p>
+                        <p class="detalle-descripcion">Disco duro externo portátil con conexión USB 3.0, ideal para respaldos y almacenamiento adicional de archivos.</p>
+                        <ul class="detalle-especs">
+                            <li><strong>Capacidad:</strong> 1TB</li>
+                            <li><strong>Conexión:</strong> USB 3.0</li>
+                            <li><strong>Velocidad:</strong> Hasta 120MB/s</li>
+                            <li><strong>Compatible con:</strong> Windows, Mac, Linux</li>
+                            <li><strong>Alimentación:</strong> USB (no requiere fuente externa)</li>
+                            <li><strong>Incluye:</strong> Cable USB, estuche protector</li>
+                        </ul>
+                        <button class="btn-carrito-modal">Agregar al carrito</button>
+                    </div>
                 </div>
             </div>
         </section>
     </main>
-
-    <section id="productos-destacados">
-        <h2>Productos Destacados</h2>
-        <div class="productos-destacados-container">
-            <article class="producto-destacado">
-                <img src="https://via.placeholder.com/300x200/2c3e50/ffffff?text=PC+Gamer" alt="Computadora Gamer" class="producto-img">
-                <h3>Computadora Gamer Pro</h3>
-                <p class="descripcion">Equipo de alto rendimiento para gaming</p>
-                <p class="precio">$1,299.99</p>
-                <button>Agregar al carrito</button>
-            </article>
-            <article class="producto-destacado">
-                <img src="https://via.placeholder.com/300x200/3498db/ffffff?text=Laptop" alt="Laptop Ultrabook" class="producto-img">
-                <h3>Laptop Ultrabook 15"</h3>
-                <p class="descripcion">Ligera y potente para trabajo</p>
-                <p class="precio">$899.99</p>
-                <button>Agregar al carrito</button>
-            </article>
-            <article class="producto-destacado">
-                <img src="https://via.placeholder.com/300x200/27ae60/ffffff?text=Monitor" alt="Monitor 4K" class="producto-img">
-                <h3>Monitor 27" 4K</h3>
-                <p class="descripcion">Pantalla ultra HD para gaming</p>
-                <p class="precio">$349.99</p>
-                <button>Agregar al carrito</button>
-            </article>
-            <article class="producto-destacado">
-                <img src="https://via.placeholder.com/300x200/9b59b6/ffffff?text=Teclado" alt="Teclado Mecánico" class="producto-img">
-                <h3>Teclado Mecánico RGB</h3>
-                <p class="descripcion">Switches azules con iluminación</p>
-                <p class="precio">$79.99</p>
-                <button>Agregar al carrito</button>
-            </article>
-            <article class="producto-destacado">
-                <img src="https://via.placeholder.com/300x200/e74c3c/ffffff?text=Mouse" alt="Mouse Gamer" class="producto-img">
-                <h3>Mouse Gamer Inalámbrico</h3>
-                <p class="descripcion">Alta precisión 16000 DPI</p>
-                <p class="precio">$59.99</p>
-                <button>Agregar al carrito</button>
-            </article>
-            <article class="producto-destacado">
-                <img src="https://via.placeholder.com/300x200/f39c12/ffffff?text=Auriculares" alt="Auriculares" class="producto-img">
-                <h3>Auriculares Bluetooth</h3>
-                <p class="descripcion">Cancelación de ruido 30h</p>
-                <p class="precio">$129.99</p>
-                <button>Agregar al carrito</button>
-            </article>
-        </div>
-    </section>
 
     <footer>
         <div class="footer-contenido">
