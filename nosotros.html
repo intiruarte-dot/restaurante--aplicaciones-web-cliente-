@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nosotros - compra electronica.net</title>
+    <title>Nosotros - Compra Gamer INT.net</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
-        <h1>compra electronica</h1>
+        <h1>- Compra Gamer INT</h1>
         <div class="header-derecha">
             <nav>
                 <ul>
@@ -34,24 +34,64 @@
                     <p>Nuestra misión es proporcionar productos tecnológicos de alta calidad a precios competitivos, respaldados por un servicio al cliente excepcional y garantías sólidas.</p>
                 </div>
 
-                <div class="nosotros-imagen">
-                    <img src="/img/tienda.png" 
-                    alt="Fachada de Compra Electrónica" 
-                    style="width: 100%; 
-                    height: 100%; 
-                    object-fit: cover; 
-                    border-radius: 15px; 
-                    display: block;">
-                     <!--src="/img/tienda.png": Es la ruta donde está guardada tu imagen.
+              <div class="carrusel">
+            <input type="radio" name="carrusel" id="slide1" checked>
+            <input type="radio" name="carrusel" id="slide2">
+            <input type="radio" name="carrusel" id="slide3">
 
-                    width/height: 100%: Obliga a la imagen a estirarse para llenar todo el ancho y alto del contenedor gris de tu diseño.
+            <div class="slides">
+                <div class="slide">
+                    <img src="img/afuera.png" alt="">
+                    <div class="slide-info">
 
-                    object-fit: cover: Es la "magia". Evita que la imagen se vea aplastada o deformada; lo que hace es recortar los bordes sobrantes para que siempre mantenga su proporción original.
-
-                    border-radius: 15px: Suaviza las esquinas de la imagen para que coincidan con las curvas de tu diseño actual.
-
-                    display: block: Elimina un pequeño espacio en blanco que a veces queda debajo de las imágenes, ayudando a que encaje perfectamente.-->
+                    </div>
                 </div>
+                <div class="slide">
+                    <img src="img/local.png" alt="">
+                    <div class="slide-info">
+                    </div>
+                </div>
+                <div class="slide">
+                    <img src="img/clientes.png" alt="">
+                    <div class="slide-info">
+                    </div>
+                </div>
+            </div>
+
+            <div class="carrusel-navegacion">
+                <label for="slide1"></label>
+                <label for="slide2"></label>
+                <label for="slide3"></label>
+               
+            </div>
+
+            <div class="carrusel-flechas">
+                <div class="flecha-par">
+                    <label for="slide6" class="flecha">&#10094;</label>
+                    <label for="slide2" class="flecha">&#10095;</label>
+                </div>
+                <div class="flecha-par">
+                    <label for="slide1" class="flecha">&#10094;</label>
+                    <label for="slide3" class="flecha">&#10095;</label>
+                </div>
+                <div class="flecha-par">
+                    <label for="slide2" class="flecha">&#10094;</label>
+                    <label for="slide4" class="flecha">&#10095;</label>
+                </div>
+                <div class="flecha-par">
+                    <label for="slide3" class="flecha">&#10094;</label>
+                    <label for="slide5" class="flecha">&#10095;</label>
+                </div>
+                <div class="flecha-par">
+                    <label for="slide4" class="flecha">&#10094;</label>
+                    <label for="slide6" class="flecha">&#10095;</label>
+                </div>
+                <div class="flecha-par">
+                    <label for="slide5" class="flecha">&#10094;</label>
+                    <label for="slide1" class="flecha">&#10095;</label>
+                </div>
+            </div>
+        </div>
             </div>
             <div class="valores">
                 <div class="valor">
