@@ -26,6 +26,7 @@
         </div>
     </header>
 
+    <button class="btn-login" onclick="window.location.href='#login-modal'">🔐</button>
     <button class="btn-carrito-flotante" onclick="window.location.href='#ventana-carrito'">🛒 <span id="contador-carrito">0</span></button>
 
     <main>
@@ -317,6 +318,58 @@
                 <br>
                 <a href="#" onclick="vaciarCarrito()" class="btn-ver" style="background:#2c3e50; padding:10px 20px;">Volver a la tienda</a>
             </div>
+        </section>
+
+        <!-- MODAL DE LOGIN -->
+        <section id="login-modal" class="detalle-modal">
+            <div class="detalle-contenido" style="max-width: 500px; text-align: center;">
+                <a href="#" class="detalle-cerrar">&times;</a>
+                <h2 style="margin-bottom: 30px;">Iniciar Sesión</h2>
+                <div style="display: flex; gap: 20px; flex-wrap: wrap; justify-content: center;">
+                    <div class="card-login" onclick="loginCliente()">
+                        <div style="font-size: 48px; margin-bottom: 10px;">👤</div>
+                        <h3>Cliente</h3>
+                        <p style="color: #666; font-size: 14px;">Accede a tu cuenta para realizar compras</p>
+                    </div>
+                    <div class="card-login" onclick="loginAdmin()">
+                        <div style="font-size: 48px; margin-bottom: 10px;">🔧</div>
+                        <h3>Administrador</h3>
+                        <p style="color: #666; font-size: 14px;">Gestiona y da de alta productos</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECCIÓN ALTA DE PRODUCTO (solo visible para admin) -->
+        <section id="alta-producto" class="detalle-modal">
+            <div class="detalle-contenido" style="max-width: 600px;">
+                <a href="#" class="detalle-cerrar">&times;</a>
+                <h2 style="margin-bottom: 30px;">Dar de Alta un Producto</h2>
+                <form id="form-alta" onsubmit="guardarProducto(event)">
+                    <label for="prod-nombre">Nombre del producto</label>
+                    <input type="text" id="prod-nombre" placeholder="Ej: Teclado Mecánico" required>
+
+                    <label for="prod-descripcion">Descripción</label>
+                    <textarea id="prod-descripcion" placeholder="Descripción del producto" required></textarea>
+
+                    <label for="prod-precio">Precio ($)</label>
+                    <input type="number" id="prod-precio" placeholder="Ej: 99.99" step="0.01" required>
+
+                    <label for="prod-imagen">URL de la imagen</label>
+                    <input type="url" id="prod-imagen" placeholder="https://ejemplo.com/imagen.jpg">
+
+                    <button type="submit" class="btn-ver" style="width: 100%; margin-top: 20px;">Guardar Producto</button>
+                </form>
+            </div>
+        </section>
+
+        <!-- BOTÓN FLOTANTE ALTA PRODUCTO (solo visible para admin) -->
+        <button id="btn-flotante-alta" class="btn-alta-flotante" onclick="window.location.href='#alta-producto'" style="display: none;">+</button>
+
+        <!-- PRODUCTOS CREADOS POR EL USUARIO -->
+        <section id="productos-usuario" style="display: none;">
+            <h2>Productos Agregados Recientemente</h2>
+            <div class="productos-container" id="contenedor-productos-usuario"></div>
         </section>
 
     </main>

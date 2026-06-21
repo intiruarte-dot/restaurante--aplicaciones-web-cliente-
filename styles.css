@@ -646,6 +646,96 @@ footer { background-color: #0b0e14; color: #ffffff; padding: 40px 20px; border-t
 }
 
 /* ============================================
+   ESTILOS PARA LOGIN Y ALTA DE PRODUCTO
+   ============================================ */
+
+/* Botón flotante de login */
+.btn-login {
+    position: fixed;
+    bottom: 110px;
+    right: 30px;
+    background: linear-gradient(135deg, #161a23 0%, #121620 100%);
+    border: 2px solid #9d4edf;
+    color: #9d4edf;
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 22px;
+    cursor: pointer;
+    z-index: 999;
+    text-decoration: none;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.6), 0 0 15px rgba(157, 78, 223, 0.3);
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.btn-login:hover {
+    transform: scale(1.1) translateY(-3px);
+    background: #9d4edf;
+    color: white;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.7), 0 0 25px rgba(157, 78, 223, 0.8);
+}
+
+/* Tarjetas de login */
+.card-login {
+    background: #f5f6fa;
+    border: 2px solid #e0e0e0;
+    border-radius: 15px;
+    padding: 30px 40px;
+    cursor: pointer;
+    transition: all 0.3s;
+    width: 200px;
+}
+
+.card-login:hover {
+    transform: translateY(-5px);
+    border-color: #3498db;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+}
+
+/* Botón flotante alta producto */
+.btn-alta-flotante {
+    position: fixed;
+    bottom: 190px;
+    right: 30px;
+    background: linear-gradient(135deg, #27ae60, #2ecc71);
+    border: none;
+    color: white;
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    cursor: pointer;
+    z-index: 999;
+    text-decoration: none;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.6), 0 0 15px rgba(39, 174, 96, 0.3);
+    transition: all 0.3s;
+}
+
+.btn-alta-flotante:hover {
+    transform: scale(1.1) translateY(-3px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.7), 0 0 25px rgba(39, 174, 96, 0.8);
+}
+
+/* Sección productos de usuario */
+#productos-usuario {
+    padding: 60px 20px;
+    background: #0b0e14;
+}
+
+#productos-usuario h2 {
+    text-align: center;
+    font-size: 28px;
+    color: #2c3e50;
+    margin-bottom: 40px;
+}
+
+/* ============================================
    RESPONSIVE DESIGN
    ============================================ */
 
@@ -1027,5 +1117,29 @@ footer { background-color: #0b0e14; color: #ffffff; padding: 40px 20px; border-t
     .carrusel-flechas .flecha {
         padding: 8px;
         font-size: 14px;
+    }
+
+    .btn-carrito-flotante {
+        width: 50px;
+        height: 50px;
+        font-size: 20px;
+        bottom: 20px;
+        right: 20px;
+    }
+
+    .btn-login {
+        width: 45px;
+        height: 45px;
+        font-size: 18px;
+        bottom: 85px;
+        right: 20px;
+    }
+
+    .btn-alta-flotante {
+        width: 45px;
+        height: 45px;
+        font-size: 24px;
+        bottom: 145px;
+        right: 20px;
     }
 }
