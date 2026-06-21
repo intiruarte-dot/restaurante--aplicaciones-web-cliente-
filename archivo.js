@@ -126,3 +126,99 @@ function vaciarCarrito() {
 
 // Cargar carrito al iniciar
 cargarCarrito();
+
+// ============================================
+// FUNCIONALIDAD DE BÚSQUEDA
+// ============================================
+
+function buscarProductos(termino) {
+    termino = termino.toLowerCase().trim();
+    if (!termino) {
+        // Si el término está vacío, mostrar todos los productos
+        document.querySelectorAll('#productos article, .producto-destacado').forEach(el => {
+            el.style.display = '';
+        });
+        return;
+    }
+
+    // Buscar en la página actual (productos.html)
+    const productos = document.querySelectorAll('#productos article, .producto-destacado');
+    let encontrados = 0;
+
+    productos.forEach(producto => {
+        const titulo = producto.querySelector('h3');
+        const descripcion = producto.querySelector('.descripcion, p');
+
+        let texto = '';
+        if (titulo) texto += titulo.textContent.toLowerCase();
+        if (descripcion) texto += ' ' + descripcion.textContent.toLowerCase();
+
+        if (texto.includes(termino)) {
+            producto.style.display = '';
+            encontrados++;
+        } else {
+            producto.style.display = 'none';
+        }
+    });
+
+    // Mostrar mensaje si no hay resultados
+    const contenedor = document.querySelector('.productos-container, .productos-destacados-container');
+    let mensaje = document.getElementById('sin-resultados');
+    if (encontrados === 0 && productos.length > 0) {
+        if (!mensaje) {
+            mensaje = document.createElement('p');
+            mensaje.id = 'sin-resultados';
+            mensaje.textContent = 'No se encontraron productos con ese término.';
+            mensaje.style.cssText = 'text-align:center;padding:40px;font-size:18px;color:#666;width:100%;';
+            contenedor.appendChild(mensaje);
+        }
+    } else if (mensaje) {
+        mensaje.remove();
+    }
+}
+
+function realizarBusqueda() {
+    const input = document.querySelector('.busqueda input');
+    if (!input) return;
+    const termino = input.value.trim();
+    const esProductos = window.location.pathname.includes('productos');
+
+    if (esProductos) {
+        buscarProductos(termino);
+    } else {
+        window.location.href = 'productos.html' + (termino ? '?q=' + encodeURIComponent(termino) : '');
+    }
+}
+
+// Evento al hacer clic en el botón de búsqueda
+document.addEventListener('click', (e) => {
+    const botonBuscar = e.target.closest('.busqueda button');
+    if (botonBuscar) {
+        e.preventDefault();
+        realizarBusqueda();
+    }
+});
+
+// Evento al presionar Enter en el input de búsqueda
+document.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter') {
+        const input = e.target.closest('.busqueda input');
+        if (input) {
+            e.preventDefault();
+            realizarBusqueda();
+        }
+    }
+});
+
+// Al cargar la página, leer parámetro ?q= y buscar automáticamente
+(function() {
+    const params = new URLSearchParams(window.location.search);
+    const q = params.get('q');
+    if (q) {
+        const input = document.querySelector('.busqueda input');
+        if (input) {
+            input.value = q;
+            buscarProductos(q);
+        }
+    }
+})();
