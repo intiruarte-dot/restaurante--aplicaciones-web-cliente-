@@ -1,106 +1,128 @@
 // Array global para almacenar los productos en memoria
-        let carrito = [];
+let carrito = [];
 
-        // Escuchar clics en todos los botones que tengan la clase 'btn-add'
-        document.querySelectorAll('.btn-add').forEach(boton => {
-            boton.addEventListener('click', (e) => {
-                const id = e.target.getAttribute('data-id');
-                const nombre = e.target.getAttribute('data-nombre');
-                const precio = parseFloat(e.target.getAttribute('data-precio'));
+// Cargar carrito desde localStorage al iniciar
+function cargarCarrito() {
+    const datos = localStorage.getItem('carrito');
+    if (datos) {
+        carrito = JSON.parse(datos);
+    }
+    actualizarInterfaz();
+}
 
-                agregarAlCarrito(id, nombre, precio);
-            });
-        });
+// Guardar carrito en localStorage
+function guardarCarrito() {
+    localStorage.setItem('carrito', JSON.stringify(carrito));
+}
 
-        function agregarAlCarrito(id, nombre, precio) {
-            // Verificar si el producto ya existe en el carrito
-            const itemExistente = carrito.find(item => item.id === id);
-
-            if (itemExistente) {
-                itemExistente.cantidad++;
-            } else {
-                carrito.push({ id, nombre, precio, cantidad: 1 });
-            }
-
-            actualizarInterfaz();
-            
-            // Animación sencilla o aviso al usuario
-            alert(`"${nombre}" se agregó correctamente al carrito.`);
+// Escuchar clics usando delegación de eventos (funciona incluso en elementos agregados dinámicamente)
+document.addEventListener('click', (e) => {
+    const boton = e.target.closest('.btn-add');
+    if (boton) {
+        const id = boton.getAttribute('data-id');
+        const nombre = boton.getAttribute('data-nombre');
+        const precio = parseFloat(boton.getAttribute('data-precio'));
+        if (id && nombre && !isNaN(precio)) {
+            agregarAlCarrito(id, nombre, precio);
         }
+    }
+});
 
-        function cambiarCantidad(id, cambio) {
-            const item = carrito.find(item => item.id === id);
-            if (item) {
-                item.cantidad += cambio;
-                if (item.cantidad <= 0) {
-                    // Si llega a cero, lo removemos del array
-                    carrito = carrito.filter(i => i.id !== id);
-                }
-            }
-            actualizarInterfaz();
+function agregarAlCarrito(id, nombre, precio) {
+    const itemExistente = carrito.find(item => item.id === id);
+
+    if (itemExistente) {
+        itemExistente.cantidad++;
+    } else {
+        carrito.push({ id, nombre, precio, cantidad: 1 });
+    }
+
+    actualizarInterfaz();
+    guardarCarrito();
+    alert(`"${nombre}" se agregó correctamente al carrito.`);
+}
+
+function cambiarCantidad(id, cambio) {
+    const item = carrito.find(item => item.id === id);
+    if (item) {
+        item.cantidad += cambio;
+        if (item.cantidad <= 0) {
+            carrito = carrito.filter(i => i.id !== id);
         }
+    }
+    actualizarInterfaz();
+    guardarCarrito();
+}
 
-        function actualizarInterfaz() {
-            // 1. Actualizar contador del botón flotante
-            const totalItems = carrito.reduce((acc, item) => acc + item.cantidad, 0);
-            document.getElementById('contador-carrito').innerText = totalItems;
+function actualizarInterfaz() {
+    const contador = document.getElementById('contador-carrito');
+    if (contador) {
+        const totalItems = carrito.reduce((acc, item) => acc + item.cantidad, 0);
+        contador.innerText = totalItems;
+    }
 
-            // 2. Renderizar la lista del carrito dentro del modal
-            const listaHTML = document.getElementById('lista-carrito');
-            if (carrito.length === 0) {
-                listaHTML.innerHTML = `<p style="color:#777;">El carrito está vacío.</p>`;
-                document.getElementById('total-precio').innerText = "0.00";
-                return;
-            }
+    const listaHTML = document.getElementById('lista-carrito');
+    if (!listaHTML) return;
 
-            let html = "";
-            let subtotalGral = 0;
+    if (carrito.length === 0) {
+        listaHTML.innerHTML = `<p style="color:#777;">El carrito está vacío.</p>`;
+        const total = document.getElementById('total-precio');
+        if (total) total.innerText = "0.00";
+        return;
+    }
 
-            carrito.forEach(item => {
-                const totalPorProducto = item.precio * item.cantidad;
-                subtotalGral += totalPorProducto;
+    let html = "";
+    let subtotalGral = 0;
 
-                html += `
-                    <div class="item-carrito">
-                        <div>
-                            <strong>${item.nombre}</strong><br>
-                            <small>$${item.precio} c/u</small>
-                        </div>
-                        <div>
-                            <button class="btn-cant" onclick="cambiarCantidad('${item.id}', -1)">-</button>
-                            <span>${item.cantidad}</span>
-                            <button class="btn-cant" onclick="cambiarCantidad('${item.id}', 1)">+</button>
-                            <span style="margin-left:15px; font-weight:bold;">$${totalPorProducto.toFixed(2)}</span>
-                        </div>
-                    </div>
-                `;
-            });
+    carrito.forEach(item => {
+        const totalPorProducto = item.precio * item.cantidad;
+        subtotalGral += totalPorProducto;
 
-            listaHTML.innerHTML = html;
-            document.getElementById('total-precio').innerText = subtotalGral.toFixed(2);
-        }
+        html += `
+            <div class="item-carrito">
+                <div>
+                    <strong>${item.nombre}</strong><br>
+                    <small>$${item.precio.toFixed(2)} c/u</small>
+                </div>
+                <div>
+                    <button class="btn-cant" onclick="cambiarCantidad('${item.id}', -1)">-</button>
+                    <span>${item.cantidad}</span>
+                    <button class="btn-cant" onclick="cambiarCantidad('${item.id}', 1)">+</button>
+                    <span style="margin-left:15px; font-weight:bold;">$${totalPorProducto.toFixed(2)}</span>
+                </div>
+            </div>
+        `;
+    });
 
-        function procesarPago(event) {
-            event.preventDefault(); // Evita que la página recargue el formulario
+    listaHTML.innerHTML = html;
+    const total = document.getElementById('total-precio');
+    if (total) total.innerText = subtotalGral.toFixed(2);
+}
 
-            if(carrito.length === 0) {
-                alert("Tu carrito está vacío. Agrega productos antes de pagar.");
-                window.location.href = "#";
-                return;
-            }
+function procesarPago(event) {
+    event.preventDefault();
 
-            // Simulación de pasarela de pago (Ej. lo que haría Stripe o Mercado Pago en background)
-            // Genera un número de pedido randomizado
-            const numPedidoRandom = Math.floor(100000 + Math.random() * 900000);
-            document.getElementById('num-pedido').innerText = numPedidoRandom;
+    if (carrito.length === 0) {
+        alert("Tu carrito está vacío. Agrega productos antes de pagar.");
+        window.location.href = "#";
+        return;
+    }
 
-            // Redireccionar al modal de éxito de forma nativa mediante el hash id
-            window.location.href = "#ventana-exito";
-        }
+    const numPedidoRandom = Math.floor(100000 + Math.random() * 900000);
+    const numPedido = document.getElementById('num-pedido');
+    if (numPedido) numPedido.innerText = numPedidoRandom;
 
-        function vaciarCarrito() {
-            carrito = [];
-            actualizarInterfaz();
-            document.getElementById('checkout-form').reset();
-            window.location.href = "#"; // Cierra cualquier ventana modal regresando al Inicio
-        }
+    window.location.href = "#ventana-exito";
+}
+
+function vaciarCarrito() {
+    carrito = [];
+    actualizarInterfaz();
+    guardarCarrito();
+    const form = document.getElementById('checkout-form');
+    if (form) form.reset();
+    window.location.href = "#";
+}
+
+// Cargar carrito al iniciar
+cargarCarrito();
