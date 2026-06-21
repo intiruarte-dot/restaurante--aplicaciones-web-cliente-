@@ -1,314 +1,298 @@
 /* ============================================
-   ESTILOS PARA LA BARRA DE NAVEGACIÓN
-   TechComputers - Tienda de Computadoras (Gamer Edition)
+   ESTILOS BASE Y BARRA DE NAVEGACIÓN
+   TechComputers - Tienda Gamer Edition
    ============================================ */
 
-/* Reset básico para eliminar márgenes y padding por defecto del navegador */
+/* Reset básico para eliminar márgenes y padding por defecto */
 * {
-    margin: 0;          /* Elimina el margen exterior de todos los elementos */
-    padding: 0;         /* Elimina el relleno interior de todos los elementos */
-    box-sizing: border-box; /* Incluye padding y borde en el ancho/alto total */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
 }
 
-/* Estilos para el header que contiene la barra de navegación */
-header {
-    background-color: #0b0e14;  /* Fondo negro profundo gamer */
-    color: #ffffff;              /* Color del texto blanco */
-    padding: 20px;             /* Espacio interior de 20px en todos los lados */
-}
-
-/* Estilos para el contenedor flex del header (título + navegación) */
-header {
-    display: flex;             /* Activa flexbox para organizar elementos en línea */
-    justify-content: space-between; /* Distribuye espacio entre elementos */
-    align-items: center;      /* Centra verticalmente los elementos */
-}
-
-/* Estilos para el título principal del sitio */
-header h1 {
-    font-size: 28px;           /* Tamaño de fuente de 28 píxeles */
+/* Configuración del cuerpo de la página */
+body {
+    background-color: #0b0e14; /* Fondo oscuro base */
     color: #ffffff;
-    text-shadow: 0 0 10px rgba(0, 242, 254, 0.3); /* Sutil brillo cian */
 }
 
-/* Contenedor para agrupar nav y búsqueda */
+/* Header principal */
+header {
+    background-color: #0b0e14;
+    color: #ffffff;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    font-size: 28px;
+    color: #ffffff;
+    text-shadow: 0 0 10px rgba(0, 242, 254, 0.3); /* Brillo cian */
+}
+
+/* Contenedor derecho (Nav + Búsqueda) */
 .header-derecha {
-    display: flex;             /* Activa flexbox para alinear elementos */
-    align-items: center;       /* Centra verticalmente */
-    gap: 30px;                 /* Espacio de 30px entre nav y búsqueda */
+    display: flex;
+    align-items: center;
+    gap: 30px;
 }
 
 /* ============================================
    ESTILOS PARA LA BARRA DE BÚSQUEDA
    ============================================ */
 
-/* Contenedor de la barra de búsqueda */
 .busqueda {
-    display: flex;                  /* Activa flexbox para organizar input y botón en línea */
-    align-items: center;            /* Centra verticalmente los elementos */
-    background-color: #161a23;        /* Fondo gris oscuro */
-    border: 1px solid #232a36;      /* Borde oscuro integrado */
-    border-radius: 25px;            /* Bordes redondeados en forma de píldora */
-    padding: 5px;                   /* Espacio interior pequeño */
-    overflow: hidden;               /* Oculta el contenido que desborda */
+    display: flex;
+    align-items: center;
+    background-color: #161a23;
+    border: 1px solid #232a36;
+    border-radius: 25px;
+    padding: 5px;
+    overflow: hidden;
 }
 
-/* Estilos para el campo de texto de búsqueda */
 .busqueda input {
-    border: none;                   /* Sin borde */
-    outline: none;                  /* Sin contorno al hacer focus */
-    padding: 10px 15px;             /* Espacio interior: 10px arriba/abajo, 15px laterales */
-    font-size: 14px;                /* Tamaño de fuente */
-    width: 250px;                   /* Ancho fijo de 250px */
-    background: transparent;        /* Fondo transparente */
-    color: #ffffff;                    /* Texto blanco */
+    border: none;
+    outline: none;
+    padding: 10px 15px;
+    font-size: 14px;
+    width: 250px;
+    background: transparent;
+    color: #ffffff;
 }
 
-/* Placeholder del campo de búsqueda */
 .busqueda input::placeholder {
-    color: #626f8a;                    /* Gris azulado apagado */
+    color: #626f8a;
 }
 
-/* Estilos para el botón de búsqueda */
 .busqueda button {
-    background-color: #00f2fe;      /* Cian eléctrico gamer */
-    border: none;                   /* Sin borde */
-    color: #0b0e14;                   /* Icono oscuro para contraste */
-    padding: 10px 15px;             /* Espacio interior */
-    border-radius: 20px;            /* Bordes redondeados */
-    cursor: pointer;                /* Cursor de mano */
-    font-size: 16px;                /* Tamaño del icono */
-    transition: background-color 0.3s, box-shadow 0.3s; /* Animación suave */
+    background-color: #00f2fe;
+    border: none;
+    color: #0b0e14;
+    padding: 10px 15px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s, box-shadow 0.3s;
 }
 
-/* Efecto al pasar el mouse sobre el botón */
 .busqueda button:hover {
-    background-color: #00b8c4;      /* Cian más oscuro */
-    box-shadow: 0 0 10px rgba(0, 242, 254, 0.5); /* Brillo neón al hover */
+    background-color: #00b8c4;
+    box-shadow: 0 0 10px rgba(0, 242, 254, 0.5);
 }
 
-/* Estilos para la barra de navegación */
+/* Navegación */
 nav ul {
-    list-style: none;          /* Elimina los puntos de lista por defecto */
-    display: flex;             /* Organiza los elementos de lista en una fila horizontal */
-    gap: 30px;                 /* Espacio de 30px entre cada elemento de menú */
+    list-style: none;
+    display: flex;
+    gap: 30px;
 }
 
-/* Estilos para los enlaces de navegación */
 nav ul li a {
-    color: #b3b9c9;              /* Color plata/gris claro */
-    text-decoration: none;    /* Elimina el subrayado de los enlaces */
-    font-size: 16px;           /* Tamaño de fuente de 16 píxeles */
-    padding: 10px 15px;        /* Espacio interior para crear área clickeable */
-    border-radius: 5px;        /* Esquinas redondeadas de 5px */
-    transition: background-color 0.3s, color 0.3s; /* Animación suave */
+    color: #b3b9c9;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
 }
 
-/* Estilos para enlaces al pasar el mouse por encima */
 nav ul li a:hover {
-    background-color: #161a23;  /* Fondo gris oscuro en hover */
-    color: #00f2fe;             /* Texto cian eléctrico */
+    background-color: #161a23;
+    color: #00f2fe;
 }
 
-/* Estilos para el enlace activo (página actual) */
 nav ul li a.active {
-    background-color: rgba(0, 242, 254, 0.1);  /* Fondo cian semi-transparente */
-    color: #00f2fe;             /* Texto cian activo */
+    background-color: rgba(0, 242, 254, 0.1);
+    color: #00f2fe;
 }
 
 /* ============================================
-   ESTILOS PARA LA SECCIÓN DE PRODUCTOS
+   SECCIÓN DE PRODUCTOS Y TARJETAS
    ============================================ */
 
-/* Estilos para la sección de productos */
 #productos {
-    padding: 40px 20px;          /* Espacio interior */
-    background-color: #0b0e14;    /* Fondo oscuro principal */
+    padding: 40px 20px;
+    background-color: #0b0e14;
 }
 
-/* Estilos para el título de la sección */
 #productos h2 {
-    text-align: center;           /* Centra el texto del título */
-    margin-bottom: 40px;          /* Espacio debajo del título */
-    font-size: 32px;              /* Tamaño de fuente grande */
-    color: #ffffff;               /* Texto blanco */
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 32px;
+    color: #ffffff;
 }
 
-/* Contenedor flex para organizar las cajas de productos en fila */
 .productos-container {
-    display: flex;                /* Activa flexbox */
-    flex-wrap: wrap;              /* Permite salto de línea */
-    justify-content: center;      /* Centra los productos */
-    gap: 30px;                    /* Espacio entre cajas */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
 }
 
-/* Estilos para cada caja de producto */
 #productos article {
-    background-color: #161a23;      /* Tarjeta gris oscuro */
-    border: 1px solid #232a36;   /* Borde sutil oscuro */
-    border-radius: 10px;          /* Esquinas redondeadas */
-    padding: 25px;                /* Espacio interior */
-    width: 300px;                 /* Ancho fijo */
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4); /* Sombra más pesada y gamer */
-    transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s; /* Animación */
-    text-align: center;           /* Centra el texto */
+    background-color: #161a23;
+    border: 1px solid #232a36;
+    border-radius: 10px;
+    padding: 25px;
+    width: 300px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+    transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
+    text-align: center;
 }
 
-/* Efecto al pasar el mouse sobre la caja del producto */
 #productos article:hover {
-    transform: translateY(-5px);  /* Mueve la caja 5px hacia arriba */
-    border-color: #00f2fe;        /* Borde se ilumina en cian */
-    box-shadow: 0 5px 20px rgba(0, 242, 254, 0.2); /* Resplandor cian suave */
+    transform: translateY(-5px);
+    border-color: #00f2fe;
+    box-shadow: 0 5px 20px rgba(0, 242, 254, 0.2);
 }
 
-/* Estilos para el título del producto */
+/* ... Todo tu CSS anterior se queda igual ... */
+
+/* CAMBIA ESTA SECCIÓN: Reemplazamos .producto-img por la etiqueta directa */
+#productos article img {
+    width: 100%;
+    height: 180px;
+    object-fit: contain; /* Cambié 'cover' por 'contain' para que no corte los bordes de tus productos */
+    border-radius: 8px;
+    margin-bottom: 15px;
+    background-color: #0b0e14; /* Mantiene un fondo oscuro estético si la imagen es transparente */
+}
+
+/* ... El resto de tu CSS hacia abajo sigue igual ... */
+
 #productos article h3 {
-    color: #ffffff;               /* Título de producto en blanco */
-    margin-bottom: 15px;          /* Espacio debajo del título */
-    font-size: 20px;              /* Tamaño de fuente */
+    color: #ffffff;
+    margin-bottom: 15px;
+    font-size: 20px;
 }
 
-/* Estilos para los párrafos de descripción y precio */
 #productos article p {
-    color: #b3b9c9;               /* Texto de descripción gris plata */
-    margin-bottom: 10px;           /* Espacio entre párrafos */
-    font-size: 14px;              /* Tamaño de fuente */
+    color: #b3b9c9;
+    margin-bottom: 10px;
+    font-size: 14px;
 }
 
-/* Estilos para el precio (más destacado) */
 #productos article p:last-of-type {
-    color: #9d4edf;               /* Violeta neón para el precio gamer */
-    font-size: 22px;              /* Fuente más grande */
-    font-weight: bold;            /* Negrita */
-    margin-bottom: 20px;          /* Espacio debajo */
-    text-shadow: 0 0 10px rgba(157, 78, 223, 0.3); /* Brillo violeta */
+    color: #9d4edf;
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-shadow: 0 0 10px rgba(157, 78, 223, 0.3);
 }
 
-/* Estilos para la imagen del producto */
 .producto-img {
-    width: 100%;                  /* Ocupa el 100% del ancho */
-    height: 180px;                /* Altura fija */
-    object-fit: cover;            /* Ajusta sin deformar */
-    border-radius: 8px;           /* Esquinas redondeadas */
-    margin-bottom: 15px;          /* Espacio debajo */
-    background-color: #0b0e14;   /* Fondo oscuro para las fotos por si tienen transparencia */
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    background-color: #0b0e14;
 }
 
-/* Estilos para sección de productos destacados en inicio */
 #productos-destacados {
-    padding: 60px 20px;            /* Espacio interior amplio */
-    background-color: #0b0e14;    /* Fondo oscuro principal */
+    padding: 60px 20px;
+    background-color: #0b0e14;
 }
 
-/* Estilos para el título de la sección */
 #productos-destacados h2 {
-    text-align: center;            /* Centra el texto */
-    font-size: 36px;               /* Tamaño de fuente grande */
-    color: #ffffff;                /* Texto blanco */
-    margin-bottom: 40px;           /* Espacio debajo */
+    text-align: center;
+    font-size: 36px;
+    color: #ffffff;
+    margin-bottom: 40px;
 }
 
 /* ============================================
-   ESTILOS PARA EL CARRUSEL (Mantenidos Originales)
+   ESTILOS PARA EL CARRUSEL
    ============================================ */
 
-/* Contenedor principal del carrusel */
 .carrusel {
-    max-width: 800px;              /* Ancho máximo del carrusel */
-    margin: 0 auto;                /* Centra horizontalmente */
-    position: relative;            /* Posición relativa para los elementos internos */
-    overflow: hidden;              /* Oculta los slides que desbordan */
-    border-radius: 15px;           /* Esquinas redondeadas */
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2); /* Sombra suave */
+    max-width: 800px;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
 }
 
-/* Oculta los radio buttons de navegación */
 .carrusel input {
-    display: none;                 /* Oculta los inputs */
+    display: none;
 }
 
-/* Contenedor de todos los slides */
 .slides {
-    display: flex;                 /* Organiza los slides en fila horizontal */
-    width: 600%;                  /* 6 slides x 100% = 600% del ancho visible */
-    transition: transform 0.5s ease; /* Animación suave al desplazar */
+    display: flex;
+    width: 600%;
+    transition: transform 0.5s ease;
 }
 
-/* Estilos para cada slide */
 .slide {
-    width: 16.666%;               /* 100% / 6 slides = 16.666% cada uno */
-    position: relative;            /* Para posicionar la info encima */
+    width: 16.666%;
+    position: relative;
 }
 
-/* Imagen del slide */
 .slide img {
-    width: 100%;                   /* Ocupa todo el ancho del slide */
-    height: 400px;                 /* Altura fija de 400px */
-    object-fit: cover;             /* Ajusta la imagen sin deformar */
-    display: block;                /* Elimina espacio extra debajo */
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    display: block;
 }
 
-/* Información superpuesta en la imagen */
 .slide-info {
-    position: absolute;            /* Posiciona sobre la imagen */
-    bottom: 0;                     /* Alinea al borde inferior */
-    left: 0;                       /* Alinea al borde izquierdo */
-    right: 0;                      /* Alinea al borde derecho */
-    background: linear-gradient(transparent, rgba(0,0,0,0.8)); /* Degradado oscuro */
-    color: white;                  /* Texto blanco */
-    padding: 40px 30px 30px;       /* Espacio interior */
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(transparent, rgba(0,0,0,0.8));
+    color: white;
+    padding: 40px 30px 30px;
 }
 
-/* Título del slide */
 .slide-info h3 {
-    font-size: 24px;               /* Tamaño de fuente */
-    margin-bottom: 10px;           /* Espacio debajo */
+    font-size: 24px;
+    margin-bottom: 10px;
 }
 
-/* Precio del slide */
 .slide-info p {
-    font-size: 20px;               /* Tamaño de fuente */
-    font-weight: bold;             /* Negrita */
-    margin-bottom: 15px;           /* Espacio debajo */
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 15px;
 }
 
-/* Botón del slide */
 .slide-info button {
-    background-color: #e67e22;     /* Color naranja */
-    color: white;                  /* Texto blanco */
-    border: none;                  /* Sin borde */
-    padding: 12px 30px;            /* Espacio interior */
-    border-radius: 5px;            /* Esquinas redondeadas */
-    cursor: pointer;               /* Cursor de mano */
-    font-size: 16px;               /* Tamaño de fuente */
-    transition: background-color 0.3s; /* Animación suave */
+    background-color: #e67e22;
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
 }
 
-/* Hover del botón */
 .slide-info button:hover {
-    background-color: #d35400;     /* Naranja más oscuro */
+    background-color: #d35400;
 }
 
-/* Indicadores (puntos) de navegación */
 .carrusel-navegacion {
-    display: flex;                 /* Organiza los puntos en fila */
-    justify-content: center;       /* Centra los puntos */
-    gap: 10px;                     /* Espacio entre puntos */
-    padding: 15px 0;               /* Espacio interior */
-    background-color: white;       /* Fondo blanco */
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    padding: 15px 0;
+    background-color: #161a23;
 }
 
-/* Estilos para cada punto indicador */
 .carrusel-navegacion label {
-    width: 12px;                   /* Ancho del punto */
-    height: 12px;                  /* Altura del punto */
-    border-radius: 50%;            /* Forma circular */
-    background-color: #bdc3c7;     /* Color gris claro */
-    cursor: pointer;               /* Cursor de mano */
-    transition: background-color 0.3s; /* Animación suave */
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: #bdc3c7;
+    cursor: pointer;
+    transition: background-color 0.3s;
 }
 
-/* Cambio de slide al seleccionar cada radio */
 #slide1:checked ~ .slides { transform: translateX(0); }
 #slide2:checked ~ .slides { transform: translateX(-16.666%); }
 #slide3:checked ~ .slides { transform: translateX(-33.333%); }
@@ -316,31 +300,27 @@ nav ul li a.active {
 #slide5:checked ~ .slides { transform: translateX(-66.666%); }
 #slide6:checked ~ .slides { transform: translateX(-83.333%); }
 
-/* Color del punto activo según el slide seleccionado */
-#slide1:checked ~ .carrusel-navegacion label:nth-child(1) { background-color: #2c3e50; }
-#slide2:checked ~ .carrusel-navegacion label:nth-child(2) { background-color: #2c3e50; }
-#slide3:checked ~ .carrusel-navegacion label:nth-child(3) { background-color: #2c3e50; }
-#slide4:checked ~ .carrusel-navegacion label:nth-child(4) { background-color: #2c3e50; }
-#slide5:checked ~ .carrusel-navegacion label:nth-child(5) { background-color: #2c3e50; }
-#slide6:checked ~ .carrusel-navegacion label:nth-child(6) { background-color: #2c3e50; }
+#slide1:checked ~ .carrusel-navegacion label:nth-child(1) { background-color: #00f2fe; }
+#slide2:checked ~ .carrusel-navegacion label:nth-child(2) { background-color: #00f2fe; }
+#slide3:checked ~ .carrusel-navegacion label:nth-child(3) { background-color: #00f2fe; }
+#slide4:checked ~ .carrusel-navegacion label:nth-child(4) { background-color: #00f2fe; }
+#slide5:checked ~ .carrusel-navegacion label:nth-child(5) { background-color: #00f2fe; }
+#slide6:checked ~ .carrusel-navegacion label:nth-child(6) { background-color: #00f2fe; }
 
-/* Flechas de navegación */
 .carrusel-flechas {
-    position: absolute;            /* Posición absoluta sobre el carrusel */
-    top: 50%;                      /* Centrado vertical */
-    width: 100%;                   /* Ancho completo */
-    transform: translateY(-50%);   /* Ajuste de centrado */
-    pointer-events: none;          /* Permite click a través del contenedor */
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    transform: translateY(-50%);
+    pointer-events: none;
 }
 
-/* Oculta todos los pares de flechas por defecto */
 .flecha-par {
     display: none;
     justify-content: space-between;
     pointer-events: none;
 }
 
-/* Muestra solo el par de flechas del slide activo */
 #slide1:checked ~ .carrusel-flechas .flecha-par:nth-child(1) { display: flex; }
 #slide2:checked ~ .carrusel-flechas .flecha-par:nth-child(2) { display: flex; }
 #slide3:checked ~ .carrusel-flechas .flecha-par:nth-child(3) { display: flex; }
@@ -348,569 +328,704 @@ nav ul li a.active {
 #slide5:checked ~ .carrusel-flechas .flecha-par:nth-child(5) { display: flex; }
 #slide6:checked ~ .carrusel-flechas .flecha-par:nth-child(6) { display: flex; }
 
-/* Estilos para cada flecha */
 .carrusel-flechas .flecha {
-    pointer-events: auto;          /* Activa clicks en las etiquetas */
-    background-color: rgba(0,0,0,0.5); /* Fondo semi-transparente */
-    color: white;                  /* Flecha blanca */
-    padding: 15px;                 /* Espacio interior */
-    cursor: pointer;               /* Cursor de mano */
-    font-size: 24px;               /* Tamaño de la flecha */
-    transition: background-color 0.3s; /* Animación suave */
-    user-select: none;             /* Evita selección de texto */
+    pointer-events: auto;
+    background-color: rgba(0,0,0,0.5);
+    color: white;
+    padding: 15px;
+    cursor: pointer;
+    font-size: 24px;
+    transition: background-color 0.3s;
+    user-select: none;
 }
 
-/* Hover de la flecha */
 .carrusel-flechas .flecha:hover {
-    background-color: rgba(0,0,0,0.8); /* Más oscuro al hover */
+    background-color: rgba(0,0,0,0.8);
 }
 
 /* ============================================
-   SECCIÓN DE PRODUCTOS (BOTONES)
+   SECCIONES SECUNDARIAS (INICIO, NOSOTROS, CONTACTO)
    ============================================ */
 
-/* Estilos para el botón de agregar al carrito */
-#productos article button {
-    background-color: #00f2fe;    /* Botón cian eléctrico */
-    color: #0b0e14;                 /* Texto oscuro para legibilidad */
-    border: none;                 /* Sin borde */
-    padding: 12px 30px;           /* Espacio interior */
-    border-radius: 5px;            /* Esquinas redondeadas */
-    font-size: 16px;              /* Tamaño de fuente */
-    cursor: pointer;              /* Mano */
-    font-weight: bold;            /* Le da más presencia gaming */
-    transition: background-color 0.3s, box-shadow 0.3s; /* Animación */
-}
-
-/* Efecto al pasar el mouse sobre el botón */
-#productos article button:hover {
-    background-color: #00b8c4;    /* Cambia a cian más oscuro */
-    box-shadow: 0 0 15px rgba(0, 242, 254, 0.5); /* Brillo neón */
-}
-
-/* ============================================
-   ESTILOS PARA LA SECCIÓN DE INICIO
-   ============================================ */
-
-/* Estilos para la sección de inicio */
 #inicio {
-    background: linear-gradient(135deg, #0b0e14 0%, #161a23 100%); /* Degradado oscuro futurista */
-    color: #ffffff;                      /* Texto blanco */
-    padding: 60px 20px;                /* Espacio interior */
-    text-align: center;                /* Texto centrado */
-    border-bottom: 1px solid #232a36;  /* Separador sutil */
-}
-
-/* Estilos para el título de inicio */
-#inicio h2 {
-    font-size: 42px;                   /* Fuente muy grande */
-    margin-bottom: 20px;               /* Espacio debajo */
+    background: linear-gradient(135deg, #0b0e14 0%, #161a23 100%);
     color: #ffffff;
+    padding: 60px 20px;
+    text-align: center;
+    border-bottom: 1px solid #232a36;
 }
 
-/* Estilos para el párrafo de inicio */
-#inicio p {
-    font-size: 18px;                   /* Tamaño medio */
-    margin-bottom: 40px;               /* Espacio amplio */
-    color: #b3b9c9;                    /* Texto gris plata */
-}
+#inicio h2 { font-size: 42px; margin-bottom: 20px; }
+#inicio p { font-size: 18px; margin-bottom: 40px; color: #b3b9c9; }
 
-/* Contenedor flex para las características */
-.features {
-    display: flex;                     /* Activa flexbox */
-    justify-content: center;           /* Centra elementos */
-    gap: 50px;                         /* Espacio */
-    flex-wrap: wrap;                   /* Salto de línea */
-}
-
-/* Estilos para cada caja de característica */
+.features { display: flex; justify-content: center; gap: 50px; flex-wrap: wrap; }
 .feature {
-    background-color: rgba(22, 26, 35, 0.6); /* Fondo oscuro transparente */
-    border: 1px solid rgba(0, 242, 254, 0.2); /* Borde cian sutil */
-    padding: 30px;                     /* Espacio interior */
-    border-radius: 10px;               /* Esquinas redondeadas */
-    width: 250px;                      /* Ancho fijo */
-    backdrop-filter: blur(5px);        /* Desenfoque de fondo moderno */
+    background-color: rgba(22, 26, 35, 0.6);
+    border: 1px solid rgba(0, 242, 254, 0.2);
+    padding: 30px;
+    border-radius: 10px;
+    width: 250px;
+    backdrop-filter: blur(5px);
 }
+.feature h3 { font-size: 20px; margin-bottom: 10px; color: #00f2fe; }
+.feature p { font-size: 14px; color: #b3b9c9; }
 
-/* Estilos para el título de la característica */
-.feature h3 {
-    font-size: 20px;                   /* Tamaño de fuente */
-    margin-bottom: 10px;               /* Espacio debajo */
-    color: #00f2fe;                    /* Título de característica en cian */
-}
-
-/* Estilos para el párrafo de la característica */
-.feature p {
-    font-size: 14px;                   /* Tamaño pequeño */
-    margin-bottom: 0;                  /* Sin margen inferior */
-    color: #b3b9c9;                    /* Texto descriptivo gris plata */
-}
-
-/* ============================================
-   ESTILOS PARA LA SECCIÓN NOSOTROS
-   ============================================ */
-
-/* Estilos para la sección nosotros */
-#nosotros {
-    padding: 60px 20px;                /* Espacio interior amplio */
-    background-color: #161a23;            /* Fondo gris oscuro secundario */
-}
-
-/* Contenedor flex para organizar contenido e imagen lado a lado */
-.nosotros-contenido {
-    display: flex;                      /* Activa flexbox */
-    align-items: center;                /* Centra verticalmente */
-    gap: 50px;                          /* Espacio */
-    max-width: 1200px;                  /* Ancho máximo */
-    margin: 0 auto;                     /* Centra horizontalmente */
-}
-
-/* Estilos para el texto de nosotros */
-.nosotros-texto {
-    flex: 1;                           /* Ocupa el espacio restante */
-}
-
-/* Estilos para el título de la sección */
-#nosotros h2 {
-    font-size: 36px;                   /* Tamaño grande */
-    color: #ffffff;                    /* Texto blanco */
-    margin-bottom: 30px;                /* Espacio debajo */
-    text-align: center;                 /* Centra el texto */
-}
-
-/* Estilos para el párrafo de nosotros */
-.nosotros-texto p {
-    font-size: 16px;                   /* Tamaño medio */
-    color: #b3b9c9;                    /* Texto gris plata */
-    line-height: 1.8;                   /* Altura de línea */
-    margin-bottom: 15px;                /* Espacio entre párrafos */
-}
-
-/* Contenedor para la imagen de nosotros */
+#nosotros { padding: 60px 20px; background-color: #161a23; }
+.nosotros-contenido { display: flex; align-items: center; gap: 50px; max-width: 1200px; margin: 0 auto; }
+.nosotros-texto { flex: 1; }
+#nosotros h2 { font-size: 36px; color: #ffffff; margin-bottom: 30px; text-align: center; }
+.nosotros-texto p { font-size: 16px; color: #b3b9c9; line-height: 1.8; margin-bottom: 15px; }
 .nosotros-imagen {
-    flex: 1;                           /* Ocupa espacio restante */
-    background-color: #0b0e14;         /* Fondo negro gamer */
-    border: 1px solid #232a36;
-    border-radius: 10px;               /* Esquinas redondeadas */
-    height: 300px;                     /* Altura fija */
-    display: flex;                     /* Activa flexbox */
-    align-items: center;               /* Centra verticalmente */
-    justify-content: center;           /* Centra horizontalmente */
-    color: #626f8a;                    /* Texto apagado */
-    font-size: 18px;                   /* Tamaño de fuente */
+    flex: 1; background-color: #0b0e14; border: 1px solid #232a36;
+    border-radius: 10px; height: 300px; display: flex; align-items: center;
+    justify-content: center; color: #626f8a; font-size: 18px;
 }
 
-/* Contenedor flex para los valores/beneficios */
-.valores {
-    display: flex;                     /* Activa flexbox */
-    justify-content: center;            /* Centra horizontalmente */
-    gap: 40px;                         /* Espacio */
-    margin-top: 50px;                   /* Espacio arriba */
-    flex-wrap: wrap;                   /* Salto de línea */
-}
+.valores { display: flex; justify-content: center; gap: 40px; margin-top: 50px; flex-wrap: wrap; }
+.valor { text-align: center; width: 200px; }
+.valor-icon { font-size: 40px; margin-bottom: 15px; }
+.valor h3 { font-size: 18px; color: #00f2fe; margin-bottom: 10px; }
+.valor p { font-size: 14px; color: #b3b9c9; }
 
-/* Estilos para cada caja de valor */
-.valor {
-    text-align: center;                /* Centra el texto */
-    width: 200px;                       /* Ancho fijo */
-}
+#contacto { padding: 60px 20px; background-color: #0b0e14; }
+#contacto h2 { font-size: 36px; color: #ffffff; margin-bottom: 40px; text-align: center; }
+.contacto-contenido { display: flex; gap: 50px; max-width: 1000px; margin: 0 auto; flex-wrap: wrap; }
 
-/* Estilos para el icono/emoji del valor */
-.valor-icon {
-    font-size: 40px;                   /* Tamaño grande */
-    margin-bottom: 15px;                /* Espacio debajo */
-}
-
-/* Estilos para el título del valor */
-.valor h3 {
-    font-size: 18px;                   /* Tamaño de fuente */
-    color: #00f2fe;                    /* Títulos de valores resaltados en cian */
-    margin-bottom: 10px;                /* Espacio debajo */
-}
-
-/* Estilos para el párrafo del valor */
-.valor p {
-    font-size: 14px;                   /* Tamaño pequeño */
-    color: #b3b9c9;                    /* Texto gris plata */
-}
-
-/* ============================================
-   ESTILOS PARA LA SECCIÓN CONTACTO
-   ============================================ */
-
-/* Estilos para la sección contacto */
-#contacto {
-    padding: 60px 20px;                /* Espacio interior amplio */
-    background-color: #0b0e14;          /* Fondo oscuro principal */
-}
-
-/* Estilos para el título de la sección */
-#contacto h2 {
-    font-size: 36px;                   /* Tamaño grande */
-    color: #ffffff;                    /* Texto blanco */
-    margin-bottom: 40px;                /* Espacio debajo */
-    text-align: center;                 /* Centra el texto */
-}
-
-/* Contenedor flex para organizar formulario e información lado a lado */
-.contacto-contenido {
-    display: flex;                      /* Activa flexbox */
-    gap: 50px;                          /* Espacio */
-    max-width: 1000px;                  /* Ancho máximo */
-    margin: 0 auto;                     /* Centra horizontalmente */
-    flex-wrap: wrap;                   /* Salto de línea */
-}
-
-/* Estilos para el formulario */
 form {
-    flex: 1;                           /* Ocupa espacio restante */
-    min-width: 300px;                   /* Ancho mínimo */
-    background-color: #161a23;           /* Formulario gris oscuro */
-    border: 1px solid #232a36;
-    padding: 40px;                      /* Espacio interior */
-    border-radius: 10px;               /* Esquinas redondeadas */
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5); /* Sombra pesada */
+    flex: 1; min-width: 300px; background-color: #161a23; border: 1px solid #232a36;
+    padding: 40px; border-radius: 10px; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
 }
-
-/* Estilos para las etiquetas del formulario */
-form label {
-    display: block;                    /* Ocupa toda la línea */
-    font-size: 14px;                   /* Tamaño de fuente */
-    color: #b3b9c9;                    /* Texto descriptivo gris plata */
-    margin-bottom: 8px;                 /* Espacio debajo */
-    font-weight: bold;                 /* Negrita */
+form label { display: block; font-size: 14px; color: #b3b9c9; margin-bottom: 8px; font-weight: bold; }
+form input, form textarea {
+    width: 100%; padding: 12px; background-color: #0b0e14; border: 1px solid #232a36;
+    border-radius: 5px; font-size: 14px; color: #ffffff; margin-bottom: 20px; transition: border-color 0.3s;
 }
-
-/* Estilos para los campos de entrada y textarea */
-form input,
-form textarea {
-    width: 100%;                       /* Ancho completo */
-    padding: 12px;                     /* Espacio interior */
-    background-color: #0b0e14;         /* Campos de entrada oscuros */
-    border: 1px solid #232a36;        /* Borde oscuro integrado */
-    border-radius: 5px;                /* Esquinas redondeadas */
-    font-size: 14px;                   /* Tamaño de fuente */
-    color: #ffffff;                    /* Texto escrito en blanco */
-    margin-bottom: 20px;               /* Espacio debajo */
-    font-family: inherit;              /* Hereda fuente */
-    transition: border-color 0.3s;
-}
-
-/* Focus en los inputs */
-form input:focus,
-form textarea:focus {
-    border-color: #00f2fe;             /* El campo activo se ilumina en cian */
-    outline: none;
-}
-
-/* Estilos para el textarea (campo de mensaje) */
-form textarea {
-    height: 120px;                     /* Altura fija */
-    resize: vertical;                  /* Redimensión vertical */
-}
-
-/* Estilos para el botón del formulario */
+form input:focus, form textarea:focus { border-color: #00f2fe; outline: none; }
+form textarea { height: 120px; resize: vertical; }
 form button {
-    background-color: #00f2fe;          /* Botón cian */
-    color: #0b0e14;                       /* Texto oscuro */
-    border: none;                        /* Sin borde */
-    padding: 15px 40px;                /* Espacio interior */
-    border-radius: 5px;                 /* Esquinas redondeadas */
-    font-size: 16px;                    /* Tamaño de fuente */
-    cursor: pointer;                   /* Mano */
-    font-weight: bold;
-    width: 100%;                        /* Ancho completo */
-    transition: background-color 0.3s, box-shadow 0.3s; /* Animación */
+    background-color: #00f2fe; color: #0b0e14; border: none; padding: 15px 40px;
+    border-radius: 5px; font-size: 16px; cursor: pointer; font-weight: bold; width: 100%;
+    transition: background-color 0.3s, box-shadow 0.3s;
 }
+form button:hover { background-color: #00b8c4; box-shadow: 0 0 15px rgba(0, 242, 254, 0.5); }
 
-/* Efecto al pasar el mouse sobre el botón */
-form button:hover {
-    background-color: #00b8c4;          /* Cian más oscuro */
-    box-shadow: 0 0 15px rgba(0, 242, 254, 0.5); /* Brillo gamer */
-}
-
-/* Estilos para la información de contacto */
-.contacto-info {
-    flex: 1;                            /* Ocupa espacio restante */
-    min-width: 300px;                   /* Ancho mínimo */
-}
-
-/* Estilos para cada item de información */
+.contacto-info { flex: 1; min-width: 300px; }
 .info-item {
-    background-color: #161a23;            /* Cajas de info gris oscuro */
-    border: 1px solid #232a36;
-    padding: 25px;                     /* Espacio interior */
-    border-radius: 10px;                /* Esquinas redondeadas */
-    margin-bottom: 20px;                /* Espacio debajo */
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4); /* Sombra */
-    display: flex;                     /* Activa flexbox */
-    align-items: center;                /* Centra verticalmente */
-    gap: 20px;                         /* Espacio */
+    background-color: #161a23; border: 1px solid #232a36; padding: 25px;
+    border-radius: 10px; margin-bottom: 20px; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+    display: flex; align-items: center; gap: 20px;
 }
+.info-icon { font-size: 30px; color: #00f2fe; }
+.info-item h3 { font-size: 16px; color: #ffffff; margin-bottom: 5px; }
+.info-item p { font-size: 14px; color: #b3b9c9; }
 
-/* Estilos para el icono de la info */
-.info-icon {
-    font-size: 30px;                   /* Tamaño grande */
-    color: #00f2fe;                    /* Iconos de contacto en cian */
-}
-
-/* Estilos para el título de la info */
-.info-item h3 {
-    font-size: 16px;                   /* Tamaño de fuente */
-    color: #ffffff;                    /* Texto blanco */
-    margin-bottom: 5px;                 /* Espacio debajo */
-}
-
-/* Estilos para el texto de la info */
-.info-item p {
-    font-size: 14px;                   /* Tamaño pequeño */
-    color: #b3b9c9;                    /* Texto gris plata */
-}
+/* Footer */
+footer { background-color: #0b0e14; color: #ffffff; padding: 40px 20px; border-top: 1px solid #232a36; }
+.footer-contenido { display: flex; justify-content: space-between; flex-wrap: wrap; max-width: 1200px; margin: 0 auto; gap: 30px; }
+.footer-columna { flex: 1; min-width: 200px; }
+.footer-columna h3 { font-size: 18px; margin-bottom: 20px; color: #00f2fe; }
+.footer-columna p, .footer-columna a { font-size: 14px; color: #b3b9c9; margin-bottom: 10px; display: block; text-decoration: none; }
+.footer-columna a:hover { color: #9d4edf; }
+.footer-inferior { display: flex; justify-content: space-between; align-items: center; max-width: 1200px; margin: 30px auto 0; padding-top: 20px; border-top: 1px solid #232a36; flex-wrap: wrap; gap: 15px; }
+.footer-inferior p { font-size: 14px; color: #626f8a; }
+.redes-sociales { display: flex; gap: 15px; }
+.redes-sociales a { font-size: 24px; color: #ffffff; transition: color 0.3s; }
+.redes-sociales a:hover { color: #00f2fe; }
 
 /* ============================================
-   ESTILOS PARA EL FOOTER
+   ESTILOS GENERALES PARA MODALES NATIVOS (:target)
    ============================================ */
 
-/* Estilos para el pie de página */
-footer {
-    background-color: #0b0e14;          /* Fondo negro profundo */
-    color: #ffffff;                       /* Texto blanco */
-    padding: 40px 20px;                 /* Espacio interior */
-    border-top: 1px solid #232a36;     /* Línea superior sutil */
-}
-
-/* Contenedor flex para organizar el contenido del footer */
-.footer-contenido {
-    display: flex;                      /* Activa flexbox */
-    justify-content: space-between;     /* Distribuye espacio */
-    flex-wrap: wrap;                    /* Salto de línea */
-    max-width: 1200px;                  /* Ancho máximo */
-    margin: 0 auto;                     /* Centra horizontalmente */
-    gap: 30px;                          /* Espacio */
-}
-
-/* Estilos para cada columna del footer */
-.footer-columna {
-    flex: 1;                            /* Ocupa espacio restante */
-    min-width: 200px;                   /* Ancho mínimo */
-}
-
-/* Estilos para el título de cada columna */
-.footer-columna h3 {
-    font-size: 18px;                    /* Tamaño de fuente */
-    margin-bottom: 20px;                /* Espacio debajo */
-    color: #00f2fe;                     /* Títulos del footer en cian */
-}
-
-/* Estilos para los párrafos y enlaces del footer */
-.footer-columna p,
-.footer-columna a {
-    font-size: 14px;                    /* Tamaño pequeño */
-    color: #b3b9c9;                     /* Texto gris plata */
-    margin-bottom: 10px;                /* Espacio debajo */
-    display: block;                     /* Ocupa una línea */
-    text-decoration: none;              /* Elimina subrayado */
-}
-
-/* Estilos para los enlaces al pasar el mouse */
-.footer-columna a:hover {
-    color: #9d4edf;                     /* Los enlaces del footer se vuelven violeta neón en hover */
-}
-
-/* Estilos para la parte inferior del footer (copyright y redes) */
-.footer-inferior {
-    display: flex;                      /* Activa flexbox */
-    justify-content: space-between;     /* Distribuye espacio */
-    align-items: center;                /* Centra verticalmente */
-    max-width: 1200px;                  /* Ancho máximo */
-    margin: 30px auto 0;                /* Espacio arriba, centrado */
-    padding-top: 20px;                  /* Espacio superior */
-    border-top: 1px solid #232a36;      /* Línea divisoria superior */
-    flex-wrap: wrap;                    /* Salto de línea */
-    gap: 15px;                          /* Espacio */
-}
-
-/* Estilos para el texto de copyright */
-.footer-inferior p {
-    font-size: 14px;                    /* Tamaño pequeño */
-    color: #626f8a;                     /* Gris apagado */
-    margin: 0;                          /* Sin margen */
-}
-
-/* Contenedor flex para los iconos de redes sociales */
-.redes-sociales {
-    display: flex;                      /* Activa flexbox */
-    gap: 15px;                          /* Espacio */
-}
-
-/* Estilos para los iconos de redes sociales */
-.redes-sociales a {
-    font-size: 24px;                    /* Tamaño grande */
-    color: #ffffff;                       /* Color blanco */
-    transition: color 0.3s;              /* Animación suave */
-}
-
-/* Efecto al pasar el mouse sobre los iconos de redes */
-.redes-sociales a:hover {
-    color: #00f2fe;                     /* Iconos brillan en cian en hover */
-}
-
-/* ============================================
-   ESTILOS PARA LOS MODALES DE DETALLE
-   ============================================ */
-
-/* Estilos para el botón Ver producto dentro del carrusel */
 .btn-ver {
-    display: inline-block;            /* Se muestra como bloque en línea */
-    background-color: #e67e22;        /* Color naranja */
-    color: white;                     /* Texto blanco */
-    border: none;                     /* Sin borde */
-    padding: 12px 30px;              /* Espacio interior */
-    border-radius: 5px;              /* Esquinas redondeadas */
-    cursor: pointer;                  /* Cursor de mano */
-    font-size: 16px;                  /* Tamaño de fuente */
-    text-decoration: none;            /* Sin subrayado */
-    transition: background-color 0.3s; /* Animación suave */
+    display: inline-block;
+    background-color: #e67e22;
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    text-decoration: none;
+    transition: background-color 0.3s;
 }
+.btn-ver:hover { background-color: #d35400; }
 
-/* Hover del botón Ver producto */
-.btn-ver:hover {
-    background-color: #d35400;        /* Naranja más oscuro */
-}
-
-/* Modal de detalle - oculto por defecto */
+/* Fondo oscuro de las ventanas modales */
 .detalle-modal {
-    display: none;                    /* Oculta el modal inicialmente */
-    position: fixed;                  /* Posición fija en pantalla */
-    top: 0;                           /* Cubre toda la pantalla */
+    display: none;
+    position: fixed;
+    top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.8); /* Fondo oscuro semi-transparente */
-    z-index: 1000;                    /* Capa superior */
+    background-color: rgba(11, 14, 20, 0.9);
+    z-index: 1000;
     justify-content: center;
     align-items: center;
-    overflow-y: auto;                 /* Scroll si el contenido es largo */
+    backdrop-filter: blur(5px);
 }
 
-/* Muestra el modal cuando es seleccionado por :target */
 .detalle-modal:target {
-    display: flex;                    /* Muestra el modal como flex */
+    display: flex;
 }
 
-/* Contenido del modal */
+/* ============================================
+   DISEÑO EXCLUSIVO: .detalle-contenido (TARJETA MODAL)
+   ============================================ */
+
 .detalle-contenido {
-    background-color: white;          /* Fondo blanco */
-    border-radius: 15px;              /* Esquinas redondeadas */
-    max-width: 900px;                 /* Ancho máximo de 900px */
-    width: 90%;                       /* Ocupa el 90% en pantallas pequeñas */
-    max-height: 90vh;                 /* Altura máxima del 90% del viewport */
-    overflow-y: auto;                 /* Scroll interno si es necesario */
-    padding: 30px;                    /* Espacio interior */
-    position: relative;               /* Para posicionar el botón cerrar */
-    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3); /* Sombra */
+    background: linear-gradient(145deg, #161a23 0%, #0b0e14 100%) !important; /* Cristal oscuro */
+    border: 2px solid #00f2fe !important;         /* Marco neón cian */
+    padding: 40px !important;
+    border-radius: 20px !important;              /* Bordes redondeados futuristas */
+    max-width: 800px;
+    width: 95%;
+    position: relative;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.9), 
+                0 0 20px rgba(0, 242, 254, 0.2) !important; /* Resplandor exterior */
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    color: #ffffff !important;                    /* Asegura textos primarios blancos */
 }
 
-/* Botón cerrar del modal */
-.detalle-cerrar {
-    position: absolute;               /* Posición absoluta dentro del modal */
-    top: 15px;                        /* Arriba a la derecha */
-    right: 20px;
-    font-size: 40px;                  /* Tamaño grande */
-    text-decoration: none;            /* Sin subrayado */
-    color: #999;                      /* Color gris */
-    line-height: 1;                   /* Altura de línea */
-    transition: color 0.3s;          /* Animación suave */
-}
-
-/* Hover del botón cerrar */
-.detalle-cerrar:hover {
-    color: #e74c3c;                   /* Rojo al hover */
-}
-
-/* Grid para imagen e info del producto */
+/* Distribución interna del detalle (Grid Inteligente) */
 .detalle-grid {
-    display: flex;                    /* Flexbox para lado a lado */
-    gap: 40px;                        /* Espacio entre imagen e info */
-    align-items: flex-start;          /* Alineación superior */
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;             /* Imagen izquierda, textos derecha */
+    gap: 30px;
+    align-items: center;
 }
 
 /* Contenedor de la imagen del detalle */
-.detalle-imagen {
-    flex: 1;                          /* Ocupa 1 parte del espacio */
-    min-width: 280px;                 /* Ancho mínimo de 280px */
-}
-
-/* Imagen del detalle */
 .detalle-imagen img {
-    width: 100%;                      /* Ocupa todo el ancho */
-    border-radius: 10px;             /* Esquinas redondeadas */
-    border: 1px solid #e0e0e0;      /* Borde gris claro */
+    width: 100%;
+    border-radius: 12px;
+    border: 1px solid #232a36;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+    background-color: #05070a;
 }
 
-/* Contenedor de la info del detalle */
-.detalle-info {
-    flex: 1;                          /* Ocupa 1 parte del espacio */
-    min-width: 280px;                 /* Ancho mínimo */
-}
-
-/* Título del producto en detalle */
+/* Títulos H2 dentro de la tarjeta de detalle */
 .detalle-info h2 {
-    font-size: 28px;                  /* Tamaño grande */
-    color: #2c3e50;                   /* Color oscuro */
-    margin-bottom: 15px;              /* Espacio debajo */
+    font-size: 32px !important;
+    color: #ffffff !important;
+    margin-bottom: 10px;
+    text-shadow: 0 0 10px rgba(0, 242, 254, 0.3);
 }
 
-/* Precio del producto en detalle */
+/* Precio en el detalle */
 .detalle-precio {
-    font-size: 26px;                  /* Tamaño grande */
-    color: #27ae60;                   /* Color verde */
-    font-weight: bold;                /* Negrita */
-    margin-bottom: 20px;              /* Espacio debajo */
+    font-size: 28px !important;
+    color: #9d4edf !important;                   /* Violeta neón */
+    font-weight: bold;
+    margin-bottom: 20px;
+    display: block;
+    text-shadow: 0 0 10px rgba(157, 78, 223, 0.4);
 }
 
-/* Descripción del producto en detalle */
+/* Descripción del producto en el detalle */
 .detalle-descripcion {
-    font-size: 15px;                  /* Tamaño medio */
-    color: #666;                      /* Color gris */
-    line-height: 1.6;                 /* Interlineado */
-    margin-bottom: 20px;              /* Espacio debajo */
+    color: #b3b9c9 !important;                   /* Gris plata para lectura descansada */
+    line-height: 1.6;
+    font-size: 16px;
+    margin-bottom: 25px;
 }
 
-/* Lista de especificaciones */
-.detalle-especs {
-    list-style: none;                 /* Sin puntos de lista */
-    margin-bottom: 25px;              /* Espacio debajo */
+/* Botón de cerrar de la tarjeta (.detalle-cerrar) */
+.detalle-cerrar {
+    position: absolute;
+    top: 20px;
+    right: 25px;
+    font-size: 35px;
+    color: #626f8a;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    line-height: 1;
 }
 
-/* Items de la lista de especificaciones */
-.detalle-especs li {
-    padding: 10px 0;                  /* Espacio interior */
-    border-bottom: 1px solid #eee;   /* Línea divisoria */
-    font-size: 14px;                  /* Tamaño de fuente */
-    color: #555;                      /* Color gris */
+.detalle-cerrar:hover {
+    color: #ff3838;                              /* Brilla en rojo */
+    transform: rotate(90deg);                    /* Gira suavemente */
 }
 
-/* Quita el borde del último item */
-.detalle-especs li:last-child {
-    border-bottom: none;              /* Sin borde */
+/* ============================================
+   CORRECCIÓN COMPLETA DE CONTRASTE EN BOTONES
+   ============================================ */
+
+/* Botón Agregar al Carrito (.btn-add) */
+.btn-add {
+    background-color: #00f2fe !important;      /* Cian eléctrico puro */
+    color: #0b0e14 !important;                 /* Texto negro sólido para contraste perfecto */
+    border: none !important;
+    padding: 12px 30px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    font-weight: bold !important;
+    opacity: 1 !important;                     /* Elimina cualquier opacidad residual */
+    display: inline-block;
+    transition: background-color 0.3s, box-shadow 0.3s;
 }
 
-/* Botón de agregar al carrito en el modal */
-.btn-carrito-modal {
-    background-color: #3498db;        /* Color azul */
-    color: white;                     /* Texto blanco */
-    border: none;                     /* Sin borde */
-    padding: 15px 40px;              /* Espacio interior */
-    border-radius: 5px;              /* Esquinas redondeadas */
-    cursor: pointer;                  /* Cursor de mano */
-    font-size: 16px;                  /* Tamaño de fuente */
-    width: 100%;                      /* Ocupa todo el ancho */
-    transition: background-color 0.3s; /* Animación suave */
+.btn-add:hover {
+    background-color: #00b8c4 !important;
+    box-shadow: 0 0 15px rgba(0, 242, 254, 0.8) !important;
 }
 
-/* Hover del botón en modal */
-.btn-carrito-modal:hover {
-    background-color: #2980b9;        /* Azul más oscuro */
+/* Botones de cantidad del carrito (+ / -) */
+.btn-cant {
+    background-color: #232a36 !important;
+    color: #ffffff !important;                 /* Signos blancos */
+    border: 1px solid #00f2fe !important;      /* Borde cian */
+    padding: 5px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 14px;
+    transition: all 0.2s ease;
+}
+
+.btn-cant:hover {
+    background-color: #00f2fe !important;
+    color: #0b0e14 !important;
+}
+
+/* ============================================
+   ESTILOS PARA EL BOTÓN DE CARRITO FLOTANTE (HUD)
+   ============================================ */
+
+.btn-carrito-flotante {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background: linear-gradient(135deg, #161a23 0%, #121620 100%) !important;
+    border: 2px solid #00f2fe !important;
+    color: #00f2fe !important;
+    width: 65px;
+    height: 65px;
+    border-radius: 50% !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 999;
+    text-decoration: none;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.6), 
+                0 0 15px rgba(0, 242, 254, 0.3) !important;
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.btn-carrito-flotante:hover {
+    transform: scale(1.1) translateY(-3px);
+    background: #00f2fe !important;
+    color: #0b0e14 !important;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.7), 
+                0 0 25px rgba(0, 242, 254, 0.8) !important;
+}
+
+/* Burbuja del contador encima del carrito flotante */
+#contador-carrito {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    background-color: #9d4edf !important; /* Violeta neón */
+    color: #ffffff !important;
+    font-size: 12px !important;
+    font-weight: bold;
+    min-width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2px;
+    border: 2px solid #121620 !important;
+    box-shadow: 0 0 10px rgba(157, 78, 223, 0.6);
+}
+
+/* ============================================
+   RESPONSIVE DESIGN
+   ============================================ */
+
+/* Tablets y pantallas medianas (1024px) */
+@media (max-width: 1024px) {
+    .slide img {
+        height: 350px;
+    }
+
+    .detalle-grid {
+        gap: 30px;
+    }
+}
+
+/* Móviles y tablets pequeñas (768px) */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        gap: 15px;
+        padding: 15px;
+        text-align: center;
+    }
+
+    header h1 {
+        font-size: 24px;
+    }
+
+    .header-derecha {
+        flex-direction: column;
+        gap: 15px;
+        width: 100%;
+    }
+
+    nav ul {
+        gap: 15px;
+        justify-content: center;
+    }
+
+    nav ul li a {
+        font-size: 14px;
+        padding: 8px 12px;
+    }
+
+    .busqueda input {
+        width: 180px;
+    }
+
+    #inicio h2 {
+        font-size: 28px;
+    }
+
+    .features {
+        gap: 20px;
+    }
+
+    .feature {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .slide img {
+        height: 250px;
+    }
+
+    .slide-info h3 {
+        font-size: 18px;
+    }
+
+    .slide-info p {
+        font-size: 16px;
+    }
+
+    .slide-info {
+        padding: 25px 20px 20px;
+    }
+
+    #productos-destacados h2 {
+        font-size: 28px;
+    }
+
+    #productos h2 {
+        font-size: 28px;
+    }
+
+    #productos article {
+        width: 250px;
+    }
+
+    .nosotros-contenido {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .nosotros-imagen {
+        height: 200px;
+        width: 100%;
+    }
+
+    #nosotros h2 {
+        font-size: 28px;
+    }
+
+    .valores {
+        gap: 25px;
+    }
+
+    .valor {
+        width: 160px;
+    }
+
+    #contacto h2 {
+        font-size: 28px;
+    }
+
+    .contacto-contenido {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    form {
+        min-width: auto;
+    }
+
+    .contacto-info {
+        min-width: auto;
+    }
+
+    .detalle-grid {
+        flex-direction: column;
+        gap: 25px;
+    }
+
+    .detalle-contenido {
+        padding: 20px;
+        width: 95%;
+    }
+
+    .detalle-info h2 {
+        font-size: 22px;
+    }
+
+    .detalle-precio {
+        font-size: 22px;
+    }
+
+    .detalle-imagen {
+        min-width: auto;
+    }
+
+    .detalle-info {
+        min-width: auto;
+    }
+
+    .footer-contenido {
+        flex-direction: column;
+        text-align: center;
+        gap: 30px;
+    }
+
+    .footer-columna {
+        min-width: auto;
+    }
+
+    .footer-inferior {
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+    }
+
+    .carrusel {
+        border-radius: 10px;
+    }
+
+    .carrusel-flechas .flecha {
+        padding: 10px;
+        font-size: 18px;
+    }
+
+    .carrusel-navegacion label {
+        width: 10px;
+        height: 10px;
+    }
+}
+
+/* Móviles pequeños (480px) */
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 20px;
+    }
+
+    nav ul {
+        gap: 8px;
+        flex-wrap: wrap;
+    }
+
+    nav ul li a {
+        font-size: 12px;
+        padding: 6px 10px;
+    }
+
+    .busqueda {
+        width: 100%;
+    }
+
+    .busqueda input {
+        width: 100%;
+        font-size: 12px;
+        padding: 8px 12px;
+    }
+
+    .busqueda button {
+        padding: 8px 12px;
+        font-size: 14px;
+    }
+
+    #inicio h2 {
+        font-size: 22px;
+    }
+
+    #inicio p {
+        font-size: 14px;
+    }
+
+    .feature {
+        padding: 20px;
+    }
+
+    .feature h3 {
+        font-size: 16px;
+    }
+
+    .slide img {
+        height: 180px;
+    }
+
+    .slide-info h3 {
+        font-size: 15px;
+    }
+
+    .slide-info p {
+        font-size: 14px;
+    }
+
+    .slide-info button,
+    .btn-ver {
+        font-size: 12px;
+        padding: 8px 20px;
+    }
+
+    #productos-destacados h2 {
+        font-size: 22px;
+    }
+
+    #productos-destacados {
+        padding: 40px 15px;
+    }
+
+    #productos {
+        padding: 40px 15px;
+    }
+
+    #productos h2 {
+        font-size: 22px;
+    }
+
+    #productos article {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    #nosotros h2 {
+        font-size: 22px;
+    }
+
+    #nosotros {
+        padding: 40px 15px;
+    }
+
+    .nosotros-texto p {
+        font-size: 14px;
+    }
+
+    .valor {
+        width: 140px;
+    }
+
+    .valor-icon {
+        font-size: 30px;
+    }
+
+    .valor h3 {
+        font-size: 15px;
+    }
+
+    #contacto h2 {
+        font-size: 22px;
+    }
+
+    #contacto {
+        padding: 40px 15px;
+    }
+
+    form {
+        padding: 25px;
+    }
+
+    form input,
+    form textarea {
+        padding: 10px;
+        font-size: 13px;
+    }
+
+    .info-item {
+        padding: 18px;
+        gap: 15px;
+    }
+
+    .info-icon {
+        font-size: 24px;
+    }
+
+    .detalle-contenido {
+        padding: 15px;
+    }
+
+    .detalle-info h2 {
+        font-size: 18px;
+    }
+
+    .detalle-precio {
+        font-size: 18px;
+    }
+
+    .detalle-descripcion {
+        font-size: 13px;
+    }
+
+    .detalle-especs li {
+        font-size: 12px;
+        padding: 8px 0;
+    }
+
+    .btn-carrito-modal {
+        padding: 12px 30px;
+        font-size: 14px;
+    }
+
+    .detalle-cerrar {
+        font-size: 30px;
+        top: 10px;
+        right: 15px;
+    }
+
+    footer {
+        padding: 30px 15px;
+    }
+
+    .footer-columna h3 {
+        font-size: 16px;
+    }
+
+    .footer-columna p,
+    .footer-columna a {
+        font-size: 12px;
+    }
+
+    .redes-sociales a {
+        font-size: 20px;
+    }
+
+    .carrusel {
+        border-radius: 8px;
+    }
+
+    .carrusel-navegacion {
+        padding: 10px 0;
+    }
+
+    .carrusel-flechas .flecha {
+        padding: 8px;
+        font-size: 14px;
+    }
 }

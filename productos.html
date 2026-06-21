@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Productos - compra electronica.net</title>
+    <title>compra gramer</title>
     <link rel="stylesheet" href="styles.css">
+
 </head>
 <body>
     <header>
@@ -24,69 +25,268 @@
             </div>
         </div>
     </header>
-    
+
+    <button class="btn-carrito-flotante" onclick="window.location.href='#ventana-carrito'">🛒 <span id="contador-carrito">0</span></button>
+
     <main>
-        <section id="productos">
-            <h2>Nuestros Productos</h2>
+        <section id="productos-destacados">
+        <h2>nuestros productos</h2>
+     
+    </section>
+
+    <section id="productos">
             <div class="productos-container">
             <article>
+                <img src="https://http2.mlstatic.com/D_NQ_NP_2X_892795-MLA95502865654_102025-F.webp" alt="">
                 <h3>Computadora Gamer Pro</h3>
                 <p>Descripción: Equipo de alto rendimiento para gaming.</p>
                 <p>Precio: $1,299.99</p>
-                <button class="btn-detalle">Ver detalle de producto</button>
-                <button>Agregar al carrito</button>
+                <a href="#detalle1" class="btn-detalle">Ver detalle de producto</a>
+                <button class="btn-add" data-id="1" data-nombre="Computadora Gamer Pro" data-precio="1299.99">Agregar al carrito</button>
             </article>
             <article>
+                <img src="https://http2.mlstatic.com/D_NQ_NP_2X_734719-MLA110992589963_042026-F.webp" alt="">
                 <h3>Laptop Ultrabook 15"</h3>
                 <p>Descripción: Ligera y potente para trabajo y estudio.</p>
                 <p>Precio: $899.99</p>
-                <button class="btn-detalle">Ver detalle de producto</button>
-                <button>Agregar al carrito</button>
+                <a href="#detalle2" class="btn-detalle">Ver detalle de producto</a>
+                <button class="btn-add" data-id="2" data-nombre="Laptop Ultrabook 15\" data-precio="899.99">Agregar al carrito</button>
             </article>
             <article>
+                <img src="https://http2.mlstatic.com/D_NQ_NP_2X_733171-MLA108440863755_032026-F.webp" alt="">
                 <h3>Computadora de Escritorio Office</h3>
                 <p>Descripción: Ideal para tareas diarias de oficina.</p>
                 <p>Precio: $449.99</p>
-                <button class="btn-detalle">Ver detalle de producto</button>
-                <button>Agregar al carrito</button>
+                <a href="#detalle7" class="btn-detalle">Ver detalle de producto</a>
+                <button class="btn-add" data-id="7" data-nombre="Computadora de Escritorio Office" data-precio="449.99">Agregar al carrito</button>
             </article>
             <article>
+                <img src="https://http2.mlstatic.com/D_NQ_NP_2X_927860-MLA85941720995_062025-F.webp" alt="">
                 <h3>Monitor 27" 4K</h3>
                 <p>Descripción: Pantalla ultra HD para trabajo y gaming.</p>
                 <p>Precio: $349.99</p>
-               <button class="btn-detalle">Ver detalle de producto</button>
-                <button>Agregar al carrito</button>
+                <a href="#detalle3" class="btn-detalle">Ver detalle de producto</a>
+                <button class="btn-add" data-id="3" data-nombre="Monitor 27\" data-precio="349.99">Agregar al carrito</button>
             </article>
             <article>
+                <img src="https://http2.mlstatic.com/D_NQ_NP_2X_646241-MLA82105229115_012025-F.webp" alt="">
                 <h3>Teclado Mecánico RGB</h3>
                 <p>Descripción: Switches azules con iluminación RGB.</p>
                 <p>Precio: $79.99</p>
-               <button class="btn-detalle">Ver detalle de producto</button>   
-                <button>Agregar al carrito</button>
+                <a href="#detalle4" class="btn-detalle">Ver detalle de producto</a>
+                <button class="btn-add" data-id="4" data-nombre="Teclado Mecánico RGB" data-precio="79.99">Agregar al carrito</button>
             </article>
             <article>
+                <img src="https://http2.mlstatic.com/D_NQ_NP_2X_626508-MLA100008251821_122025-F.webp" alt="">
                 <h3>Mouse Gamer Inalámbrico</h3>
                 <p>Descripción: Alta precisión con sensor óptico 16000 DPI.</p>
                 <p>Precio: $59.99</p>
-                <button class="btn-detalle">Ver detalle de producto</button>     
-                <button>Agregar al carrito</button>
+                <a href="#detalle5" class="btn-detalle">Ver detalle de producto</a>
+                <button class="btn-add" data-id="5" data-nombre="Mouse Gamer Inalámbrico" data-precio="59.99">Agregar al carrito</button>
             </article>
             <article>
+                <img src="https://http2.mlstatic.com/D_NQ_NP_2X_622554-MLA54908877703_042023-F.webp" alt="">
                 <h3>Auriculares Bluetooth</h3>
                 <p>Descripción: Cancelación de ruido con batería 30h.</p>
                 <p>Precio: $129.99</p>
-                <button class="btn-detalle">Ver detalle de producto</button>   
-                <button>Agregar al carrito</button>
+                <a href="#detalle6" class="btn-detalle">Ver detalle de producto</a>
+                <button class="btn-add" data-id="6" data-nombre="Auriculares Bluetooth" data-precio="129.99">Agregar al carrito</button>
             </article>
             <article>
+                <img src="https://http2.mlstatic.com/D_NQ_NP_2X_840162-MLA96152747513_102025-F.webp" alt="">
                 <h3>Disco Duro Externo 1TB</h3>
                 <p>Descripción: USB 3.0 con respaldo automático.</p>
                 <p>Precio: $49.99</p>
-                <button class="btn-detalle">Ver detalle de producto</button>
-                <button>Agregar al carrito</button>
+                <a href="#detalle8" class="btn-detalle">Ver detalle de producto</a>
+                <button class="btn-add" data-id="8" data-nombre="Disco Duro Externo 1TB" data-precio="49.99">Agregar al carrito</button>
             </article>
             </div>
         </section>
+
+        <section id="detalle1" class="detalle-modal">
+            <div class="detalle-contenido">
+                <a href="#" class="detalle-cerrar">&times;</a>
+                <div class="detalle-grid">
+                    <div class="detalle-imagen">
+                        <img src="https://via.placeholder.com/600x400/2c3e50/ffffff?text=PC+Gamer+Pro" alt="PC Gamer Pro">
+                    </div>
+                    <div class="detalle-info">
+                        <h2>Computadora Gamer Pro</h2>
+                        <p class="detalle-precio">$1,299.99</p>
+                        <p class="detalle-descripcion">Equipo de alto rendimiento diseñado para gaming profesional...</p>
+                        <button class="btn-carrito-modal btn-add" data-id="1" data-nombre="Computadora Gamer Pro" data-precio="1299.99">Agregar al carrito</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="detalle2" class="detalle-modal">
+            <div class="detalle-contenido">
+                <a href="#" class="detalle-cerrar">&times;</a>
+                <div class="detalle-grid">
+                    <div class="detalle-imagen">
+                        <img src="https://via.placeholder.com/600x400/3498db/ffffff?text=Laptop+Ultrabook" alt="Laptop Ultrabook">
+                    </div>
+                    <div class="detalle-info">
+                        <h2>Laptop Ultrabook 15"</h2>
+                        <p class="detalle-precio">$899.99</p>
+                        <p class="detalle-descripcion">Laptop ultraligera y potente para trabajo y estudio...</p>
+                        <button class="btn-carrito-modal btn-add" data-id="2" data-nombre="Laptop Ultrabook 15\" data-precio="899.99">Agregar al carrito</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="detalle3" class="detalle-modal">
+            <div class="detalle-contenido">
+                <a href="#" class="detalle-cerrar">&times;</a>
+                <div class="detalle-grid">
+                    <div class="detalle-imagen">
+                        <img src="https://via.placeholder.com/600x400/27ae60/ffffff?text=Monitor+4K" alt="Monitor 4K">
+                    </div>
+                    <div class="detalle-info">
+                        <h2>Monitor 27" 4K</h2>
+                        <p class="detalle-precio">$349.99</p>
+                        <button class="btn-carrito-modal btn-add" data-id="3" data-nombre="Monitor 27\" data-precio="349.99">Agregar al carrito</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="detalle4" class="detalle-modal">
+            <div class="detalle-contenido">
+                <a href="#" class="detalle-cerrar">&times;</a>
+                <div class="detalle-grid">
+                    <div class="detalle-imagen">
+                        <img src="https://via.placeholder.com/600x400/9b59b6/ffffff?text=Teclado+RGB" alt="Teclado RGB">
+                    </div>
+                    <div class="detalle-info">
+                        <h2>Teclado Mecánico RGB</h2>
+                        <p class="detalle-precio">$79.99</p>
+                        <button class="btn-carrito-modal btn-add" data-id="4" data-nombre="Teclado Mecánico RGB" data-precio="79.99">Agregar al carrito</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="detalle5" class="detalle-modal">
+            <div class="detalle-contenido">
+                <a href="#" class="detalle-cerrar">&times;</a>
+                <div class="detalle-grid">
+                    <div class="detalle-imagen">
+                        <img src="https://via.placeholder.com/600x400/e74c3c/ffffff?text=Mouse+Gamer" alt="Mouse Gamer">
+                    </div>
+                    <div class="detalle-info">
+                        <h2>Mouse Gamer Inalámbrico</h2>
+                        <p class="detalle-precio">$59.99</p>
+                        <button class="btn-carrito-modal btn-add" data-id="5" data-nombre="Mouse Gamer Inalámbrico" data-precio="59.99">Agregar al carrito</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="detalle6" class="detalle-modal">
+            <div class="detalle-contenido">
+                <a href="#" class="detalle-cerrar">&times;</a>
+                <div class="detalle-grid">
+                    <div class="detalle-imagen">
+                        <img src="https://via.placeholder.com/600x400/f39c12/ffffff?text=Auriculares" alt="Auriculares">
+                    </div>
+                    <div class="detalle-info">
+                        <h2>Auriculares Bluetooth</h2>
+                        <p class="detalle-precio">$129.99</p>
+                        <button class="btn-carrito-modal btn-add" data-id="6" data-nombre="Auriculares Bluetooth" data-precio="129.99">Agregar al carrito</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="detalle7" class="detalle-modal">
+            <div class="detalle-contenido">
+                <a href="#" class="detalle-cerrar">&times;</a>
+                <div class="detalle-grid">
+                    <div class="detalle-imagen">
+                        <img src="https://via.placeholder.com/600x400/1abc9c/ffffff?text=PC+Office" alt="PC Office">
+                    </div>
+                    <div class="detalle-info">
+                        <h2>Computadora de Escritorio Office</h2>
+                        <p class="detalle-precio">$449.99</p>
+                        <button class="btn-carrito-modal btn-add" data-id="7" data-nombre="Computadora de Escritorio Office" data-precio="449.99">Agregar al carrito</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="detalle8" class="detalle-modal">
+            <div class="detalle-contenido">
+                <a href="#" class="detalle-cerrar">&times;</a>
+                <div class="detalle-grid">
+                    <div class="detalle-imagen">
+                        <img src="https://via.placeholder.com/600x400/34495e/ffffff?text=Disco+Externo" alt="Disco Externo">
+                    </div>
+                    <div class="detalle-info">
+                        <h2>Disco Duro Externo 1TB</h2>
+                        <p class="detalle-precio">$49.99</p>
+                        <button class="btn-carrito-modal btn-add" data-id="8" data-nombre="Disco Duro Externo 1TB" data-precio="49.99">Agregar al carrito</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="ventana-carrito" class="detalle-modal">
+            <div class="detalle-contenido">
+                <a href="#" class="detalle-cerrar">&times;</a>
+                <h2>Tu Carrito de Compras</h2>
+                <div id="lista-carrito">
+                    <p style="color:#777;">El carrito está vacío.</p>
+                </div>
+                <div style="margin-top: 20px; text-align: right;">
+                    <h3>Total: $<span id="total-precio">0.00</span></h3>
+                    <br>
+                    <a href="#ventana-envio" class="btn-ver" style="background:#27ae60; padding:10px 20px;">Proceder al Pago</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="ventana-envio" class="detalle-modal">
+            <div class="detalle-contenido">
+                <a href="#ventana-carrito" class="detalle-cerrar">&times;</a>
+                <h2>Datos de Envío y Pago Seguro</h2>
+                <form class="form-checkout" id="checkout-form" onsubmit="procesarPago(event)">
+                    
+                    <h3>1. Datos de Entrega</h3>
+                    <input type="text" placeholder="Nombre Completo" required>
+                    <input type="email" placeholder="Correo Electrónico" required>
+                    <input type="text" placeholder="Dirección de entrega (Calle, Número, Localidad)" required>
+                    
+                    <h3>2. Información de la Tarjeta</h3>
+                    <input type="text" placeholder="Nombre impreso en la tarjeta" required>
+                    <input type="text" placeholder="Número de Tarjeta (16 dígitos)" pattern="\d{16}" title="Deben ser 16 números seguidos" required>
+                    
+                    <div style="display: flex; gap: 10px;">
+                        <input type="text" placeholder="MM/AA" pattern="(0[1-9]|1[0-2])\/\d{2}" title="Formato MM/AA" style="flex: 1;" required>
+                        <input type="password" placeholder="CVV" pattern="\d{3,4}" title="3 o 4 números de seguridad" style="flex: 1;" required>
+                    </div>
+
+                    <button type="submit" style="background:#2980b9; color:white; padding:12px; border:none; border-radius:5px; font-size:16px; cursor:pointer; margin-top:15px;">
+                        Confirmar Pago Seguro
+                    </button>
+                </form>
+            </div>
+        </section>
+
+        <section id="ventana-exito" class="detalle-modal">
+            <div class="detalle-contenido" style="text-align: center; padding: 40px;">
+                <a href="#" onclick="vaciarCarrito()" class="detalle-cerrar">&times;</a>
+                <h1 style="color: #27ae60; font-size: 48px;">✓</h1>
+                <h2>¡Pago Procesado con Éxito!</h2>
+                <p>Tu orden ha sido registrada. Te enviamos un correo electrónico con el resumen detallado y los datos de seguimiento.</p>
+                <p><strong>Código de Operación:</strong> #<span id="num-pedido"></span></p>
+                <br>
+                <a href="#" onclick="vaciarCarrito()" class="btn-ver" style="background:#2c3e50; padding:10px 20px;">Volver a la tienda</a>
+            </div>
+        </section>
+
     </main>
 
     <footer>
@@ -126,5 +326,6 @@
             </div>
         </div>
     </footer>
+    <script src="archivo.js"></script>
 </body>
 </html>
