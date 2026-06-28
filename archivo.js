@@ -290,7 +290,7 @@ async function guardarProducto(event) {
         return;
     }
 
-    const id = crypto.randomUUID();
+    const id = Date.now();
 
     const { error } = await supabaseCliente
         .from('productos')
