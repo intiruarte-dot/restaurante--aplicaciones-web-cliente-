@@ -114,74 +114,33 @@ nav ul li a.active {
    SECCIÓN DE PRODUCTOS Y TARJETAS
    ============================================ */
 
-#productos {
-    padding: 40px 20px;
-    background-color: #0b0e14;
-}
-
-#productos h2 {
-    text-align: center;
-    margin-bottom: 40px;
-    font-size: 32px;
-    color: #ffffff;
-}
-
 .productos-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 30px;
+    padding: 40px 30px;
+    background: linear-gradient(145deg, #0b0e14 0%, #11151e 100%);
+    border: 1px solid #1a202c;
+    border-radius: 16px;
+    box-shadow: inset 0 2px 15px rgba(0, 0, 0, 0.6), 0 4px 20px rgba(0, 0, 0, 0.4);
+    max-width: 1300px;
+    margin: 0 auto;
 }
 
-#productos article {
-    background-color: #161a23;
-    border: 1px solid #232a36;
-    border-radius: 10px;
-    padding: 25px;
-    width: 300px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
-    transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
-    text-align: center;
+.productos-container article {
+    background: linear-gradient(145deg, #131822, #0b0e14);
+    border: 1px solid #1f2836;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.03);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
 }
 
-#productos article:hover {
+.productos-container article:hover {
     transform: translateY(-5px);
-    border-color: #00f2fe;
-    box-shadow: 0 5px 20px rgba(0, 242, 254, 0.2);
-}
-
-/* ... Todo tu CSS anterior se queda igual ... */
-
-/* CAMBIA ESTA SECCIÓN: Reemplazamos .producto-img por la etiqueta directa */
-#productos article img {
-    width: 100%;
-    height: 180px;
-    object-fit: contain; /* Cambié 'cover' por 'contain' para que no corte los bordes de tus productos */
-    border-radius: 8px;
-    margin-bottom: 15px;
-    background-color: #0b0e14; /* Mantiene un fondo oscuro estético si la imagen es transparente */
-}
-
-/* ... El resto de tu CSS hacia abajo sigue igual ... */
-
-#productos article h3 {
-    color: #ffffff;
-    margin-bottom: 15px;
-    font-size: 20px;
-}
-
-#productos article p {
-    color: #b3b9c9;
-    margin-bottom: 10px;
-    font-size: 14px;
-}
-
-#productos article p:last-of-type {
-    color: #9d4edf;
-    font-size: 22px;
-    font-weight: bold;
-    margin-bottom: 20px;
-    text-shadow: 0 0 10px rgba(157, 78, 223, 0.3);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.7), 0 0 15px rgba(0, 242, 254, 0.1);
+    border-color: rgba(0, 242, 254, 0.3);
 }
 
 .producto-img {
@@ -341,6 +300,41 @@ nav ul li a.active {
 
 .carrusel-flechas .flecha:hover {
     background-color: rgba(0,0,0,0.8);
+}
+
+/* ============================================
+   ESTILO BASE PARA TODOS LOS SECTION
+   ============================================ */
+
+section {
+    position: relative;
+}
+
+section:not(.detalle-modal)::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 10%;
+    right: 10%;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, #00f2fe, #9d4edf, transparent);
+    opacity: 0.3;
+}
+
+section:first-of-type::before {
+    display: none;
+}
+
+#productos {
+    padding: 60px 20px;
+    background-color: #0b0e14;
+}
+
+#productos h2 {
+    text-align: center;
+    font-size: 36px;
+    color: #ffffff;
+    margin-bottom: 40px;
 }
 
 /* ============================================
@@ -550,6 +544,30 @@ footer { background-color: #0b0e14; color: #ffffff; padding: 40px 20px; border-t
 }
 
 /* ============================================
+   BOTÓN VER DETALLE DE PRODUCTO
+   ============================================ */
+
+.btn-detalle {
+    display: inline-block;
+    background: transparent;
+    color: #00f2fe;
+    border: 1px solid #00f2fe;
+    padding: 10px 25px;
+    border-radius: 5px;
+    font-size: 14px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-bottom: 10px;
+}
+
+.btn-detalle:hover {
+    background-color: #00f2fe;
+    color: #0b0e14;
+    box-shadow: 0 0 15px rgba(0, 242, 254, 0.4);
+}
+
+/* ============================================
    CORRECCIÓN COMPLETA DE CONTRASTE EN BOTONES
    ============================================ */
 
@@ -725,14 +743,15 @@ footer { background-color: #0b0e14; color: #ffffff; padding: 40px 20px; border-t
 /* Sección productos de usuario */
 #productos-usuario {
     padding: 60px 20px;
-    background: #0b0e14;
+    background: linear-gradient(135deg, #0b0e14 0%, #161a23 100%);
 }
 
 #productos-usuario h2 {
     text-align: center;
     font-size: 28px;
-    color: #2c3e50;
+    color: #ffffff;
     margin-bottom: 40px;
+    text-shadow: 0 0 10px rgba(0, 242, 254, 0.3);
 }
 
 /* ============================================
@@ -993,19 +1012,6 @@ footer { background-color: #0b0e14; color: #ffffff; padding: 40px 20px; border-t
         padding: 40px 15px;
     }
 
-    #productos {
-        padding: 40px 15px;
-    }
-
-    #productos h2 {
-        font-size: 22px;
-    }
-
-    #productos article {
-        width: 100%;
-        max-width: 300px;
-    }
-
     #nosotros h2 {
         font-size: 22px;
     }
@@ -1142,4 +1148,14 @@ footer { background-color: #0b0e14; color: #ffffff; padding: 40px 20px; border-t
         bottom: 145px;
         right: 20px;
     }
+}
+
+
+element.style {
+    background: white;
+    border-radius: 10px;
+    padding: 20px;
+    width: 280px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
 }

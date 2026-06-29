@@ -253,6 +253,10 @@ function actualizarEstadoLogin() {
         if (usuario.tipo === 'admin') {
             if (botonAlta) botonAlta.style.display = 'block';
             if (seccionProductosUsuario) seccionProductosUsuario.style.display = 'block';
+            renderizarProductosUsuario();
+        } else {
+            if (botonAlta) botonAlta.style.display = 'none';
+            if (seccionProductosUsuario) seccionProductosUsuario.style.display = 'none';
         }
     } else {
         if (botonLogin) {
@@ -274,6 +278,78 @@ const SUPABASE_ANON_KEY = 'sb_publishable_DIH9CdSpy8OxDlZd-swhhA_CiNYVbYw';
 const supabaseCliente = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
 
 // ============================================
+// PRODUCTOS — VITRINA PÚBLICA (clientes)
+// ============================================
+
+async function renderizarProductosTienda() {
+    const contenedor = document.querySelector('#productos .productos-container');
+    if (!contenedor) return;
+
+    let productos;
+    try {
+        const { data, error } = await supabaseCliente
+            .from('productos')
+            .select('*')
+            .order('created_at', { ascending: false });
+        if (error) {
+            console.warn('Supabase error (vitrina pública):', error.message);
+            return;
+        }
+        productos = data;
+    } catch (err) {
+        console.warn('Supabase no disponible (vitrina pública):', err);
+        return;
+    }
+
+    if (!productos || productos.length === 0) return;
+
+    document.querySelectorAll('.detalle-modal-dinamico').forEach(el => el.remove());
+
+    const sectionProductos = document.getElementById('productos');
+    let html = '';
+    let modalsHtml = '';
+    productos.forEach(p => {
+        const precioFmt = Number(p.precio || 0).toFixed(2);
+        const id = p.id;
+
+        html += `
+            <article style="width:280px;padding:20px;text-align:center;">
+                <img src="${p.imagen || ''}" alt="${p.nombre || ''}" style="width:100%;height:180px;object-fit:cover;border-radius:8px;margin-bottom:15px;background:#0b0e14;">
+                <h3 style="font-size:18px;color:#ffffff;margin-bottom:10px;">${p.nombre || ''}</h3>
+                <p style="font-size:14px;color:#b3b9c9;margin-bottom:10px;">${p.descripcion || ''}</p>
+                <p style="font-size:20px;color:#9d4edf;font-weight:bold;margin-bottom:15px;">$${precioFmt}</p>
+                <a class="btn-detalle" href="#detalle${id}">Ver detalle de producto</a>
+                <button class="btn-add" data-id="${id}" data-nombre="${p.nombre || ''}" data-precio="${p.precio || 0}">Agregar al carrito</button>
+            </article>
+        `;
+
+        modalsHtml += `
+            <section id="detalle${id}" class="detalle-modal detalle-modal-dinamico">
+                <div class="detalle-contenido">
+                    <a href="#" class="detalle-cerrar">&times;</a>
+                    <div class="detalle-grid">
+                        <div class="detalle-imagen">
+                            <img src="${p.imagen || ''}" alt="${p.nombre || ''}">
+                        </div>
+                        <div class="detalle-info">
+                            <h2>${p.nombre || ''}</h2>
+                            <p class="detalle-precio">$${precioFmt}</p>
+                            <p class="detalle-descripcion">${p.descripcion || ''}</p>
+                            <button class="btn-carrito-modal btn-add" data-id="${id}" data-nombre="${p.nombre || ''}" data-precio="${p.precio || 0}">Agregar al carrito</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        `;
+    });
+
+    contenedor.innerHTML = html;
+    if (sectionProductos) {
+        sectionProductos.insertAdjacentHTML('afterend', modalsHtml);
+    }
+}
+
+// ============================================
 // ALTA DE PRODUCTO (Supabase)
 // ============================================
 
@@ -290,11 +366,9 @@ async function guardarProducto(event) {
         return;
     }
 
-    const id = Date.now();
-
     const { error } = await supabaseCliente
         .from('productos')
-        .insert([{ id, nombre, descripcion, precio, imagen }]);
+        .insert([{ nombre, descripcion, precio, imagen }]);
 
     if (error) {
         alert('Error al guardar en Supabase: ' + error.message);
@@ -303,9 +377,14 @@ async function guardarProducto(event) {
 
     document.getElementById('form-alta').reset();
     window.location.href = '#';
+    renderizarProductosTienda();
     renderizarProductosUsuario();
     alert('Producto "' + nombre + '" agregado correctamente!');
 }
+
+// ============================================
+// PRODUCTOS — PANEL ADMIN (con Eliminar)
+// ============================================
 
 async function renderizarProductosUsuario() {
     const contenedor = document.getElementById('contenedor-productos-usuario');
@@ -362,6 +441,7 @@ async function eliminarProductoUsuario(id) {
         return;
     }
 
+    renderizarProductosTienda();
     renderizarProductosUsuario();
     alert('Producto eliminado.');
 }
@@ -380,5 +460,7 @@ document.addEventListener('submit', (e) => {
 // INICIALIZACIÓN
 // ============================================
 
-actualizarEstadoLogin();
-renderizarProductosUsuario();
+document.addEventListener('DOMContentLoaded', () => {
+    actualizarEstadoLogin();
+    renderizarProductosTienda();
+});
