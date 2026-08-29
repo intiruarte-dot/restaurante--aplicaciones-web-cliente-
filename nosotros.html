@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nosotros - compra electronica.net</title>
+    <title>Nosotros - Compra Gamer INT.net</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
-        <h1>compra electronica</h1>
+        <h1>- Compra Gamer INT</h1>
         <div class="header-derecha">
             <nav>
                 <ul>
@@ -25,6 +25,9 @@
         </div>
     </header>
 
+    <button class="btn-login" onclick="window.location.href='#login-modal'">🔐</button>
+    <button class="btn-carrito-flotante" onclick="window.location.href='#ventana-carrito'">🛒 <span id="contador-carrito">0</span></button>
+
     <main>
         <section id="nosotros">
             <h2>Sobre Nosotros</h2>
@@ -34,24 +37,64 @@
                     <p>Nuestra misión es proporcionar productos tecnológicos de alta calidad a precios competitivos, respaldados por un servicio al cliente excepcional y garantías sólidas.</p>
                 </div>
 
-                <div class="nosotros-imagen">
-                    <img src="/img/tienda.png" 
-                    alt="Fachada de Compra Electrónica" 
-                    style="width: 100%; 
-                    height: 100%; 
-                    object-fit: cover; 
-                    border-radius: 15px; 
-                    display: block;">
-                     <!--src="/img/tienda.png": Es la ruta donde está guardada tu imagen.
+              <div class="carrusel">
+            <input type="radio" name="carrusel" id="slide1" checked>
+            <input type="radio" name="carrusel" id="slide2">
+            <input type="radio" name="carrusel" id="slide3">
 
-                    width/height: 100%: Obliga a la imagen a estirarse para llenar todo el ancho y alto del contenedor gris de tu diseño.
+            <div class="slides">
+                <div class="slide">
+                    <img src="img/afuera.png" alt="">
+                    <div class="slide-info">
 
-                    object-fit: cover: Es la "magia". Evita que la imagen se vea aplastada o deformada; lo que hace es recortar los bordes sobrantes para que siempre mantenga su proporción original.
-
-                    border-radius: 15px: Suaviza las esquinas de la imagen para que coincidan con las curvas de tu diseño actual.
-
-                    display: block: Elimina un pequeño espacio en blanco que a veces queda debajo de las imágenes, ayudando a que encaje perfectamente.-->
+                    </div>
                 </div>
+                <div class="slide">
+                    <img src="img/local.png" alt="">
+                    <div class="slide-info">
+                    </div>
+                </div>
+                <div class="slide">
+                    <img src="img/clientes.png" alt="">
+                    <div class="slide-info">
+                    </div>
+                </div>
+            </div>
+
+            <div class="carrusel-navegacion">
+                <label for="slide1"></label>
+                <label for="slide2"></label>
+                <label for="slide3"></label>
+               
+            </div>
+
+            <div class="carrusel-flechas">
+                <div class="flecha-par">
+                    <label for="slide6" class="flecha">&#10094;</label>
+                    <label for="slide2" class="flecha">&#10095;</label>
+                </div>
+                <div class="flecha-par">
+                    <label for="slide1" class="flecha">&#10094;</label>
+                    <label for="slide3" class="flecha">&#10095;</label>
+                </div>
+                <div class="flecha-par">
+                    <label for="slide2" class="flecha">&#10094;</label>
+                    <label for="slide4" class="flecha">&#10095;</label>
+                </div>
+                <div class="flecha-par">
+                    <label for="slide3" class="flecha">&#10094;</label>
+                    <label for="slide5" class="flecha">&#10095;</label>
+                </div>
+                <div class="flecha-par">
+                    <label for="slide4" class="flecha">&#10094;</label>
+                    <label for="slide6" class="flecha">&#10095;</label>
+                </div>
+                <div class="flecha-par">
+                    <label for="slide5" class="flecha">&#10094;</label>
+                    <label for="slide1" class="flecha">&#10095;</label>
+                </div>
+            </div>
+        </div>
             </div>
             <div class="valores">
                 <div class="valor">
@@ -71,6 +114,113 @@
                 </div>
             </div>
         </section>
+        <!-- MODAL DE LOGIN -->
+        <section id="login-modal" class="detalle-modal">
+            <div class="detalle-contenido" style="max-width: 500px; text-align: center;">
+                <a href="#" class="detalle-cerrar">&times;</a>
+                <h2 style="margin-bottom: 30px;">Iniciar Sesión</h2>
+                <div style="display: flex; gap: 20px; flex-wrap: wrap; justify-content: center;">
+                    <div class="card-login" onclick="loginCliente()">
+                        <div style="font-size: 48px; margin-bottom: 10px;">👤</div>
+                        <h3>Cliente</h3>
+                        <p style="color: #666; font-size: 14px;">Accede a tu cuenta para realizar compras</p>
+                    </div>
+                    <div class="card-login" onclick="loginAdmin()">
+                        <div style="font-size: 48px; margin-bottom: 10px;">🔧</div>
+                        <h3>Administrador</h3>
+                        <p style="color: #666; font-size: 14px;">Gestiona y da de alta productos</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECCIÓN ALTA DE PRODUCTO (solo visible para admin) -->
+        <section id="alta-producto" class="detalle-modal">
+            <div class="detalle-contenido" style="max-width: 600px;">
+                <a href="#" class="detalle-cerrar">&times;</a>
+                <h2 style="margin-bottom: 30px;">Dar de Alta un Producto</h2>
+                <form id="form-alta" onsubmit="guardarProducto(event)">
+                    <label for="prod-nombre">Nombre del producto</label>
+                    <input type="text" id="prod-nombre" placeholder="Ej: Teclado Mecánico" required>
+
+                    <label for="prod-descripcion">Descripción</label>
+                    <textarea id="prod-descripcion" placeholder="Descripción del producto" required></textarea>
+
+                    <label for="prod-precio">Precio ($)</label>
+                    <input type="number" id="prod-precio" placeholder="Ej: 99.99" step="0.01" required>
+
+                    <label for="prod-imagen">URL de la imagen</label>
+                    <input type="url" id="prod-imagen" placeholder="https://ejemplo.com/imagen.jpg">
+
+                    <button type="submit" class="btn-ver" style="width: 100%; margin-top: 20px;">Guardar Producto</button>
+                </form>
+            </div>
+        </section>
+
+        <!-- BOTÓN FLOTANTE ALTA PRODUCTO (solo visible para admin) -->
+        <button id="btn-flotante-alta" class="btn-alta-flotante" onclick="window.location.href='#alta-producto'" style="display: none;">+</button>
+
+        <!-- PRODUCTOS CREADOS POR EL USUARIO -->
+        <section id="productos-usuario" style="display: none;">
+            <h2>Productos Agregados Recientemente</h2>
+            <div class="productos-container" id="contenedor-productos-usuario"></div>
+        </section>
+
+        <!-- CARRITO MODALS -->
+        <section id="ventana-carrito" class="detalle-modal">
+            <div class="detalle-contenido">
+                <a href="#" class="detalle-cerrar">&times;</a>
+                <h2>Tu Carrito de Compras</h2>
+                <div id="lista-carrito">
+                    <p style="color:#777;">El carrito está vacío.</p>
+                </div>
+                <div style="margin-top: 20px; text-align: right;">
+                    <h3>Total: $<span id="total-precio">0.00</span></h3>
+                    <br>
+                    <a href="#ventana-envio" class="btn-ver" style="background:#27ae60; padding:10px 20px;">Proceder al Pago</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="ventana-envio" class="detalle-modal">
+            <div class="detalle-contenido">
+                <a href="#ventana-carrito" class="detalle-cerrar">&times;</a>
+                <h2>Datos de Envío y Pago Seguro</h2>
+                <form class="form-checkout" id="checkout-form" onsubmit="procesarPago(event)">
+                    
+                    <h3>1. Datos de Entrega</h3>
+                    <input type="text" placeholder="Nombre Completo" required>
+                    <input type="email" placeholder="Correo Electrónico" required>
+                    <input type="text" placeholder="Dirección de entrega (Calle, Número, Localidad)" required>
+                    
+                    <h3>2. Información de la Tarjeta</h3>
+                    <input type="text" placeholder="Nombre impreso en la tarjeta" required>
+                    <input type="text" placeholder="Número de Tarjeta (16 dígitos)" pattern="\d{16}" title="Deben ser 16 números seguidos" required>
+                    
+                    <div style="display: flex; gap: 10px;">
+                        <input type="text" placeholder="MM/AA" pattern="(0[1-9]|1[0-2])\/\d{2}" title="Formato MM/AA" style="flex: 1;" required>
+                        <input type="password" placeholder="CVV" pattern="\d{3,4}" title="3 o 4 números de seguridad" style="flex: 1;" required>
+                    </div>
+
+                    <button type="submit" style="background:#2980b9; color:white; padding:12px; border:none; border-radius:5px; font-size:16px; cursor:pointer; margin-top:15px;">
+                        Confirmar Pago Seguro
+                    </button>
+                </form>
+            </div>
+        </section>
+
+        <section id="ventana-exito" class="detalle-modal">
+            <div class="detalle-contenido" style="text-align: center; padding: 40px;">
+                <a href="#" onclick="vaciarCarrito()" class="detalle-cerrar">&times;</a>
+                <h1 style="color: #27ae60; font-size: 48px;">✓</h1>
+                <h2>¡Pago Procesado con Éxito!</h2>
+                <p>Tu orden ha sido registrada. Te enviamos un correo electrónico con el resumen detallado y los datos de seguimiento.</p>
+                <p><strong>Código de Operación:</strong> #<span id="num-pedido"></span></p>
+                <br>
+                <a href="#" onclick="vaciarCarrito()" class="btn-ver" style="background:#2c3e50; padding:10px 20px;">Volver a la tienda</a>
+            </div>
+        </section>
+
     </main>
 
     <footer>
@@ -110,5 +260,7 @@
             </div>
         </div>
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="archivo.js"></script>
 </body>
 </html>
